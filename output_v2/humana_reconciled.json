@@ -1,0 +1,1008 @@
+{
+  "payer": "Humana",
+  "payer_key": "humana",
+  "executive_summary": "Here is a comprehensive 5-7 sentence executive summary for the Humana prior authorization process based on the provided reconciled route data:\n\nThe preferred method for submitting prior authorizations to Humana is through the Availity portal at www.availity.com. The fallback option is to fax requests to (800) 523-0023. However, it is critical to note that the fallback fax number should not be used, as it is deprecated per the source data. Standard prior authorization turnaround time is 7 business days, but actual timelines are currently 10-14 days due to system migration delays. Urgent requests have a 48-hour turnaround. Required documents include the Humana PA request form HUM-AUTH-2026, recent chart notes, step therapy/prior treatment documentation, and biosimilar trial information. For the focus drug Rituxan, specific requirements include a 6-month authorization period, biosimilar use, step therapy, and CD20+ testing. The data indicates 3 conflicts were detected, so confidence in some fields may be lower. Lastly, the payer warns of a challenging phone experience, with 3 transfers and over 1 hour of total call time on average.",
+  "summary": {
+    "total_fields_discovered": 32,
+    "total_fields_output": 13,
+    "conflicts_detected": 3,
+    "focus_drug": "Rituxan",
+    "focus_drug_selection": "Data-driven (high-signal): Rituxan (2 mentions in phone/denial) [Rituxan: 2]",
+    "fields_validated_against_raw": 13,
+    "json_raw_conflicts": 1
+  },
+  "payer_warnings": [
+    "Phone experience: 3 transfers, 1hr 12min total call time (source: HUM-SRC-002)"
+  ],
+  "best_route": {
+    "submission": {
+      "preferred_method": "portal",
+      "fallback_method": "fax",
+      "preferred_url": "www.availity.com",
+      "portal_notes": [
+        "Availity integration having issues \u2014 rep recommends faxing instead"
+      ],
+      "fallback_fax": "(800) 523-0023"
+    },
+    "required_documents": [
+      "PA request form (retrieve from www.availity.com; best-known version: HUM-AUTH-2026)",
+      "Chart notes within 90 days",
+      "Step therapy / prior treatment failure documentation",
+      "Biosimilar trial documentation or medical justification for brand"
+    ],
+    "turnaround": {
+      "standard": "7 business days",
+      "urgent": "48 hours",
+      "standard_actual": "10-14 days (system migration delays)",
+      "fax_actual": "7-10 days"
+    },
+    "contact": {
+      "status_phone": "(800) 555-2546, Option 2",
+      "urgent_phone": "(800) 555-2546",
+      "appeal_fax": "(800) 523-0028",
+      "appeal_phone": "(800) 555-2546, Option 4",
+      "appeal_mail": "Humana Appeals, PO Box 14165, Lexington KY 40512",
+      "appeal_deadline_days": 60
+    },
+    "all_drug_requirements": {
+      "Entyvio": {
+        "drug_name": "Entyvio",
+        "auth_period_months": 6,
+        "notes": [
+          "Anti-TNF failure/contraindication"
+        ]
+      },
+      "Ocrevus": {
+        "drug_name": "Ocrevus",
+        "auth_period_months": 12,
+        "specialist_required": true,
+        "specific_testing": [
+          "JCV"
+        ],
+        "notes": [
+          "MS specialist must submit"
+        ]
+      },
+      "Remicade": {
+        "drug_name": "Remicade",
+        "step_therapy_required": true,
+        "biosimilar_attestation": true,
+        "auth_period_months": 6,
+        "biosimilar_required": true
+      },
+      "Rituxan": {
+        "drug_name": "Rituxan",
+        "auth_period_months": 6,
+        "biosimilar_required": true,
+        "step_therapy_required": true,
+        "specific_testing": [
+          "CD20+"
+        ],
+        "notes": [
+          "CD20+ docs, step therapy for RA only",
+          "Biosimilar trial required for RA, not required for lymphoma/CLL"
+        ]
+      }
+    },
+    "restrictions": [
+      "Phone experience: 3 transfers, 1hr 12min total call time (source: HUM-SRC-002)",
+      "Ocrevus: Specialist diagnosis confirmation required",
+      "Ocrevus: MS specialist must submit",
+      "Remicade: Biosimilar trial required before brand drug approval",
+      "Remicade: Step therapy / prior treatment failure required"
+    ],
+    "data_coverage": {
+      "fields_extracted": 32,
+      "sources_used": [
+        "HUM-SRC-001",
+        "HUM-SRC-002",
+        "HUM-SRC-003",
+        "HUM-SRC-004"
+      ],
+      "potentially_missing": [
+        "Letter Of Medical Necessity",
+        "Prescription Order",
+        "Diagnosis Codes",
+        "Prior Treatment History",
+        "Specialist Attestation",
+        "Clinical Rationale"
+      ],
+      "extraction_note": "Based on 4 sources. Cross-validated 13 fields against raw text (1 discrepancies found). Verify with payer if additional documentation needed: Letter Of Medical Necessity, Prescription Order, Diagnosis Codes..."
+    }
+  },
+  "payer_context": {
+    "phone_experience_note": {
+      "value": "3 transfers, 1hr 12min total call time",
+      "source_id": "HUM-SRC-002",
+      "source_date": "2026-03-19"
+    },
+    "denial_reasons": [
+      {
+        "value": [
+          "Missing biosimilar trial for RA indication",
+          "Outdated chart notes",
+          "Wrong form version"
+        ],
+        "source_id": "HUM-SRC-004",
+        "source_date": "2026-03-08"
+      }
+    ]
+  },
+  "fields": {
+    "turnaround_stated_days": {
+      "value": {
+        "stated_policy": {
+          "default": 7,
+          "urgent_hours": 48
+        },
+        "operational_reality": {
+          "standard": {
+            "min": 10,
+            "max": 14
+          },
+          "standard_cause": "system migration delays",
+          "fax": {
+            "min": 7,
+            "max": 10
+          }
+        }
+      },
+      "confidence": 0.628,
+      "source_id": "HUM-SRC-002",
+      "source_type": "phone_transcript",
+      "source_date": "2026-03-19",
+      "decision_path": [
+        "field: turnaround_stated_days",
+        "sources: 1",
+        "freshness: 2026-03-19 (27d old) -> 0.901",
+        "authority: phone_transcript -> 0.750",
+        "corroboration: 1/1 agree -> 0.000",
+        "total: 0.578",
+        "selected: 7 from HUM-SRC-002",
+        "raw_text_validation: Validated against raw text (adjustment: +0.05)"
+      ],
+      "has_conflicts": false,
+      "all_values": {
+        "HUM-SRC-002": 7
+      },
+      "superseded_values": [],
+      "supersession_reasons": [],
+      "notes": [],
+      "operational_reality": null
+    },
+    "pa_form": {
+      "value": "HUM-AUTH-2026",
+      "confidence": 0.9,
+      "source_id": "HUM-SRC-002",
+      "source_type": "phone_transcript",
+      "source_date": "2026-03-19",
+      "decision_path": [
+        "field: pa_form",
+        "sources: 4",
+        "Value 'HUM-AUTH-2024' deprecated by *_old field in HUM-SRC-002",
+        "Version HUM-AUTH-2024 (2024) superseded by newer version (2026)",
+        "Version HUM-AUTH-2024 (2024) superseded by newer version (2026)",
+        "Value matches deprecated *_old value",
+        "Value matches deprecated *_old value",
+        "freshness: 2026-03-19 (27d old) -> 0.901",
+        "authority: phone_transcript -> 0.750",
+        "corroboration: 2/2 agree -> 0.500",
+        "confidence_floor: 2/2 universal agreement -> 0.850",
+        "total: 0.850",
+        "selected: HUM-AUTH-2026 from HUM-SRC-002",
+        "raw_text_validation: Validated against raw text (adjustment: +0.05)"
+      ],
+      "has_conflicts": true,
+      "all_values": {
+        "HUM-SRC-001": "HUM-AUTH-2024",
+        "HUM-SRC-002": "HUM-AUTH-2026",
+        "HUM-SRC-003": "HUM-AUTH-2024",
+        "HUM-SRC-004": "HUM-AUTH-2026"
+      },
+      "superseded_values": [
+        "HUM-SRC-001",
+        "HUM-SRC-003"
+      ],
+      "supersession_reasons": [
+        "Value 'HUM-AUTH-2024' deprecated by *_old field in HUM-SRC-002",
+        "Version HUM-AUTH-2024 (2024) superseded by newer version (2026)",
+        "Version HUM-AUTH-2024 (2024) superseded by newer version (2026)",
+        "Value matches deprecated *_old value",
+        "Value matches deprecated *_old value"
+      ],
+      "notes": [
+        "Old form may get kicked back \u2014 missing biosimilar attestation section",
+        "HUM-AUTH-2024 no longer accepted \u2014 missing biosimilar attestation"
+      ],
+      "operational_reality": null
+    },
+    "portal_url": {
+      "value": "www.availity.com",
+      "confidence": 0.95,
+      "source_id": "HUM-SRC-001",
+      "source_type": "provider_manual",
+      "source_date": "2024-01-01",
+      "decision_path": [
+        "field: portal_url",
+        "sources: 4",
+        "freshness: 2024-01-01 (835d old) -> 0.040",
+        "authority: provider_manual -> 0.500",
+        "corroboration: 4/4 agree -> 0.875",
+        "confidence_floor: 4/4 universal agreement -> 0.950",
+        "total: 0.950",
+        "selected: www.availity.com from HUM-SRC-001",
+        "raw_text_validation: Validated against raw text (adjustment: +0.05)"
+      ],
+      "has_conflicts": false,
+      "all_values": {
+        "HUM-SRC-001": "www.availity.com",
+        "HUM-SRC-002": "www.availity.com",
+        "HUM-SRC-003": "www.availity.com",
+        "HUM-SRC-004": "www.availity.com"
+      },
+      "superseded_values": [],
+      "supersession_reasons": [],
+      "notes": [
+        "Availity integration having issues \u2014 rep recommends faxing instead"
+      ],
+      "operational_reality": null
+    },
+    "chart_note_window_days": {
+      "value": 90,
+      "confidence": 0.902,
+      "source_id": "HUM-SRC-004",
+      "source_type": "denial_letter",
+      "source_date": "2026-03-08",
+      "decision_path": [
+        "field: chart_note_window_days",
+        "sources: 4",
+        "Source HUM-SRC-001 (2024-01-01) predates policy update (2026-01-01)",
+        "Source HUM-SRC-003 (2025-04-01) predates policy update (2026-01-01)",
+        "Policy update (2026-01-01) found in source HUM-SRC-004",
+        "freshness: 2026-03-08 (38d old) -> 0.864",
+        "authority: denial_letter -> 1.000",
+        "corroboration: 2/2 agree -> 0.500",
+        "policy_boost: source has policy_update -> +1.000",
+        "total: 0.852",
+        "selected: 90 from HUM-SRC-004",
+        "raw_text_validation: Validated against raw text (adjustment: +0.05)"
+      ],
+      "has_conflicts": true,
+      "all_values": {
+        "HUM-SRC-001": 60,
+        "HUM-SRC-002": 90,
+        "HUM-SRC-003": 60,
+        "HUM-SRC-004": 90
+      },
+      "superseded_values": [
+        "HUM-SRC-001",
+        "HUM-SRC-003"
+      ],
+      "supersession_reasons": [
+        "Source HUM-SRC-001 (2024-01-01) predates policy update (2026-01-01)",
+        "Source HUM-SRC-003 (2025-04-01) predates policy update (2026-01-01)",
+        "Policy update (2026-01-01) found in source HUM-SRC-004"
+      ],
+      "notes": [],
+      "operational_reality": null
+    },
+    "appeal_phone": {
+      "value": "(800) 555-2546, Option 4",
+      "confidence": 0.75,
+      "source_id": "HUM-SRC-004",
+      "source_type": "denial_letter",
+      "source_date": "2026-03-08",
+      "decision_path": [
+        "field: appeal_phone",
+        "sources: 1",
+        "freshness: 2026-03-08 (38d old) -> 0.864",
+        "authority: denial_letter -> 1.000",
+        "corroboration: 1/1 agree -> 0.000",
+        "confidence_floor: single-source denial_letter (official policy) -> 0.700",
+        "total: 0.700",
+        "selected: (800) 555-2546, Option 4 from HUM-SRC-004",
+        "raw_text_validation: Validated against raw text (adjustment: +0.05)"
+      ],
+      "has_conflicts": false,
+      "all_values": {
+        "HUM-SRC-004": "(800) 555-2546, Option 4"
+      },
+      "superseded_values": [],
+      "supersession_reasons": [],
+      "notes": [],
+      "operational_reality": null
+    },
+    "phone_urgent": {
+      "value": "(800) 555-2546",
+      "confidence": 0.9,
+      "source_id": "HUM-SRC-001",
+      "source_type": "provider_manual",
+      "source_date": "2024-01-01",
+      "decision_path": [
+        "field: phone_urgent",
+        "sources: 2",
+        "freshness: 2024-01-01 (835d old) -> 0.040",
+        "authority: provider_manual -> 0.500",
+        "corroboration: 2/2 agree -> 0.500",
+        "confidence_floor: 2/2 universal agreement -> 0.850",
+        "total: 0.850",
+        "selected: (800) 555-2546 from HUM-SRC-001",
+        "raw_text_validation: Validated against raw text (adjustment: +0.05)"
+      ],
+      "has_conflicts": false,
+      "all_values": {
+        "HUM-SRC-001": "(800) 555-2546",
+        "HUM-SRC-003": "(800) 555-2546"
+      },
+      "superseded_values": [],
+      "supersession_reasons": [],
+      "notes": [],
+      "operational_reality": null
+    },
+    "appeal_mail": {
+      "value": "Humana Appeals, PO Box 14165, Lexington KY 40512",
+      "confidence": 0.75,
+      "source_id": "HUM-SRC-004",
+      "source_type": "denial_letter",
+      "source_date": "2026-03-08",
+      "decision_path": [
+        "field: appeal_mail",
+        "sources: 1",
+        "freshness: 2026-03-08 (38d old) -> 0.864",
+        "authority: denial_letter -> 1.000",
+        "corroboration: 1/1 agree -> 0.000",
+        "confidence_floor: single-source denial_letter (official policy) -> 0.700",
+        "total: 0.700",
+        "selected: Humana Appeals, PO Box 14165, Lexington KY 40512 from HUM-SRC-004",
+        "raw_text_validation: Validated against raw text (adjustment: +0.05)"
+      ],
+      "has_conflicts": false,
+      "all_values": {
+        "HUM-SRC-004": "Humana Appeals, PO Box 14165, Lexington KY 40512"
+      },
+      "superseded_values": [],
+      "supersession_reasons": [],
+      "notes": [],
+      "operational_reality": null
+    },
+    "appeal_fax": {
+      "value": "(800) 523-0028",
+      "confidence": 0.9,
+      "source_id": "HUM-SRC-003",
+      "source_type": "web_page",
+      "source_date": "2025-04-01",
+      "decision_path": [
+        "field: appeal_fax",
+        "sources: 2",
+        "freshness: 2025-04-01 (379d old) -> 0.232",
+        "authority: web_page -> 0.500",
+        "corroboration: 2/2 agree -> 0.500",
+        "confidence_floor: 2/2 universal agreement -> 0.850",
+        "total: 0.850",
+        "selected: (800) 523-0028 from HUM-SRC-003",
+        "raw_text_validation: Validated against raw text (adjustment: +0.05)"
+      ],
+      "has_conflicts": false,
+      "all_values": {
+        "HUM-SRC-003": "(800) 523-0028",
+        "HUM-SRC-004": "(800) 523-0028"
+      },
+      "superseded_values": [],
+      "supersession_reasons": [],
+      "notes": [],
+      "operational_reality": null
+    },
+    "appeal_deadline_days": {
+      "value": 60,
+      "confidence": 0.75,
+      "source_id": "HUM-SRC-004",
+      "source_type": "denial_letter",
+      "source_date": "2026-03-08",
+      "decision_path": [
+        "field: appeal_deadline_days",
+        "sources: 1",
+        "freshness: 2026-03-08 (38d old) -> 0.864",
+        "authority: denial_letter -> 1.000",
+        "corroboration: 1/1 agree -> 0.000",
+        "confidence_floor: single-source denial_letter (official policy) -> 0.700",
+        "total: 0.700",
+        "selected: 60 from HUM-SRC-004",
+        "raw_text_validation: Validated against raw text (adjustment: +0.05)"
+      ],
+      "has_conflicts": false,
+      "all_values": {
+        "HUM-SRC-004": 60
+      },
+      "superseded_values": [],
+      "supersession_reasons": [],
+      "notes": [],
+      "operational_reality": null
+    },
+    "phone_hours": {
+      "value": "M-F 8am-5pm CST",
+      "confidence": 0.65,
+      "source_id": "HUM-SRC-001",
+      "source_type": "provider_manual",
+      "source_date": "2024-01-01",
+      "decision_path": [
+        "field: phone_hours",
+        "sources: 1",
+        "freshness: 2024-01-01 (835d old) -> 0.040",
+        "authority: provider_manual -> 0.500",
+        "corroboration: 1/1 agree -> 0.000",
+        "confidence_floor: single-source provider_manual (official policy) -> 0.700",
+        "total: 0.700",
+        "selected: M-F 8am-5pm CST from HUM-SRC-001",
+        "raw_text_validation: Day value M-F 8am-5pm CST not confirmed in raw text (adjustment: -0.05)"
+      ],
+      "has_conflicts": false,
+      "all_values": {
+        "HUM-SRC-001": "M-F 8am-5pm CST"
+      },
+      "superseded_values": [],
+      "supersession_reasons": [],
+      "notes": [],
+      "operational_reality": null
+    },
+    "phone_status": {
+      "value": "(800) 555-2546, Option 2",
+      "confidence": 0.75,
+      "source_id": "HUM-SRC-001",
+      "source_type": "provider_manual",
+      "source_date": "2024-01-01",
+      "decision_path": [
+        "field: phone_status",
+        "sources: 1",
+        "freshness: 2024-01-01 (835d old) -> 0.040",
+        "authority: provider_manual -> 0.500",
+        "corroboration: 1/1 agree -> 0.000",
+        "confidence_floor: single-source provider_manual (official policy) -> 0.700",
+        "total: 0.700",
+        "selected: (800) 555-2546, Option 2 from HUM-SRC-001",
+        "raw_text_validation: Validated against raw text (adjustment: +0.05)"
+      ],
+      "has_conflicts": false,
+      "all_values": {
+        "HUM-SRC-001": "(800) 555-2546, Option 2"
+      },
+      "superseded_values": [],
+      "supersession_reasons": [],
+      "notes": [],
+      "operational_reality": null
+    },
+    "fax_number": {
+      "value": "(800) 523-0023",
+      "confidence": 0.95,
+      "source_id": "HUM-SRC-001",
+      "source_type": "provider_manual",
+      "source_date": "2024-01-01",
+      "decision_path": [
+        "field: fax_number",
+        "sources: 4",
+        "freshness: 2024-01-01 (835d old) -> 0.040",
+        "authority: provider_manual -> 0.500",
+        "corroboration: 4/4 agree -> 0.875",
+        "confidence_floor: 4/4 universal agreement -> 0.950",
+        "total: 0.950",
+        "selected: (800) 523-0023 from HUM-SRC-001",
+        "raw_text_validation: Validated against raw text (adjustment: +0.05)"
+      ],
+      "has_conflicts": false,
+      "all_values": {
+        "HUM-SRC-001": "(800) 523-0023",
+        "HUM-SRC-002": "(800) 523-0023",
+        "HUM-SRC-003": "(800) 523-0023",
+        "HUM-SRC-004": "(800) 523-0023"
+      },
+      "superseded_values": [],
+      "supersession_reasons": [],
+      "notes": [],
+      "operational_reality": null
+    },
+    "submission_methods": {
+      "value": [
+        "fax",
+        "portal"
+      ],
+      "confidence": 0.578,
+      "source_id": "HUM-SRC-002",
+      "source_type": "phone_transcript",
+      "source_date": "2026-03-19",
+      "decision_path": [
+        "field: submission_methods",
+        "sources: 3",
+        "freshness: 2026-03-19 (27d old) -> 0.901",
+        "authority: phone_transcript -> 0.750",
+        "corroboration: 1/3 agree -> 0.000",
+        "total: 0.578",
+        "selected: ['fax', 'portal'] from HUM-SRC-002"
+      ],
+      "has_conflicts": true,
+      "all_values": {
+        "HUM-SRC-001": [
+          "portal",
+          "fax",
+          "phone_urgent_only"
+        ],
+        "HUM-SRC-002": [
+          "fax",
+          "portal"
+        ],
+        "HUM-SRC-003": [
+          "portal",
+          "fax",
+          "phone_urgent_only"
+        ]
+      },
+      "superseded_values": [],
+      "supersession_reasons": [],
+      "notes": [],
+      "operational_reality": null
+    }
+  },
+  "all_drugs": {
+    "Entyvio": {
+      "drug_name": "Entyvio",
+      "fields": {
+        "auth_period_months": 6
+      },
+      "sources": [
+        "HUM-SRC-001"
+      ],
+      "notes": [
+        "Anti-TNF failure/contraindication"
+      ]
+    },
+    "Ocrevus": {
+      "drug_name": "Ocrevus",
+      "fields": {
+        "auth_period_months": 12,
+        "specialist_required": true,
+        "specific_testing": [
+          "JCV"
+        ]
+      },
+      "sources": [
+        "HUM-SRC-001"
+      ],
+      "notes": [
+        "MS specialist must submit"
+      ]
+    },
+    "Remicade": {
+      "drug_name": "Remicade",
+      "fields": {
+        "step_therapy_required": true,
+        "biosimilar_attestation": true,
+        "auth_period_months": 6,
+        "biosimilar_required": true
+      },
+      "sources": [
+        "HUM-SRC-001"
+      ],
+      "notes": []
+    },
+    "Rituxan": {
+      "drug_name": "Rituxan",
+      "fields": {
+        "auth_period_months": 6,
+        "biosimilar_required": true,
+        "step_therapy_required": true,
+        "specific_testing": [
+          "CD20+"
+        ]
+      },
+      "sources": [
+        "HUM-SRC-002",
+        "HUM-SRC-001"
+      ],
+      "notes": [
+        "CD20+ docs, step therapy for RA only",
+        "Biosimilar trial required for RA, not required for lymphoma/CLL"
+      ]
+    }
+  },
+  "raw_text_validations": {
+    "turnaround_stated_days": {
+      "field_name": "turnaround_stated_days",
+      "json_value": "7",
+      "found_in_raw": true,
+      "raw_matches": [
+        "7"
+      ],
+      "confidence_adjustment": 0.05,
+      "note": "Validated against raw text"
+    },
+    "pa_form": {
+      "field_name": "pa_form",
+      "json_value": "HUM-AUTH-2026",
+      "found_in_raw": true,
+      "raw_matches": [
+        "HUM-AUTH-2026"
+      ],
+      "confidence_adjustment": 0.05,
+      "note": "Validated against raw text"
+    },
+    "portal_url": {
+      "field_name": "portal_url",
+      "json_value": "www.availity.com",
+      "found_in_raw": true,
+      "raw_matches": [
+        "www.availity.com"
+      ],
+      "confidence_adjustment": 0.05,
+      "note": "Validated against raw text"
+    },
+    "chart_note_window_days": {
+      "field_name": "chart_note_window_days",
+      "json_value": "90",
+      "found_in_raw": true,
+      "raw_matches": [
+        "90"
+      ],
+      "confidence_adjustment": 0.05,
+      "note": "Validated against raw text"
+    },
+    "appeal_phone": {
+      "field_name": "appeal_phone",
+      "json_value": "(800) 555-2546, Option 4",
+      "found_in_raw": true,
+      "raw_matches": [
+        "(800) 555-2546"
+      ],
+      "confidence_adjustment": 0.05,
+      "note": "Validated against raw text"
+    },
+    "phone_urgent": {
+      "field_name": "phone_urgent",
+      "json_value": "(800) 555-2546",
+      "found_in_raw": true,
+      "raw_matches": [
+        "(800) 555-2546"
+      ],
+      "confidence_adjustment": 0.05,
+      "note": "Validated against raw text"
+    },
+    "appeal_mail": {
+      "field_name": "appeal_mail",
+      "json_value": "Humana Appeals, PO Box 14165, Lexington KY 40512",
+      "found_in_raw": true,
+      "raw_matches": [
+        "humana appeals, po box 14165, lexington ky 40512"
+      ],
+      "confidence_adjustment": 0.05,
+      "note": "Validated against raw text"
+    },
+    "appeal_fax": {
+      "field_name": "appeal_fax",
+      "json_value": "(800) 523-0028",
+      "found_in_raw": true,
+      "raw_matches": [
+        "(800) 523-0028"
+      ],
+      "confidence_adjustment": 0.05,
+      "note": "Validated against raw text"
+    },
+    "appeal_deadline_days": {
+      "field_name": "appeal_deadline_days",
+      "json_value": "60",
+      "found_in_raw": true,
+      "raw_matches": [
+        "60"
+      ],
+      "confidence_adjustment": 0.05,
+      "note": "Validated against raw text"
+    },
+    "phone_hours": {
+      "field_name": "phone_hours",
+      "json_value": "M-F 8am-5pm CST",
+      "found_in_raw": false,
+      "raw_matches": [],
+      "confidence_adjustment": -0.05,
+      "note": "Day value M-F 8am-5pm CST not confirmed in raw text"
+    },
+    "phone_status": {
+      "field_name": "phone_status",
+      "json_value": "(800) 555-2546, Option 2",
+      "found_in_raw": true,
+      "raw_matches": [
+        "(800) 555-2546"
+      ],
+      "confidence_adjustment": 0.05,
+      "note": "Validated against raw text"
+    },
+    "fax_number": {
+      "field_name": "fax_number",
+      "json_value": "(800) 523-0023",
+      "found_in_raw": true,
+      "raw_matches": [
+        "(800) 523-0023"
+      ],
+      "confidence_adjustment": 0.05,
+      "note": "Validated against raw text"
+    },
+    "submission_methods": {
+      "field_name": "submission_methods",
+      "json_value": "['fax', 'portal']",
+      "found_in_raw": false,
+      "raw_matches": [],
+      "confidence_adjustment": 0.0,
+      "note": "Skipped validation for complex type (list/dict)"
+    }
+  },
+  "raw_fields": {
+    "turnaround_stated_days": {
+      "source_count": 1,
+      "values": [
+        {
+          "value": 7,
+          "source_id": "HUM-SRC-002",
+          "source_type": "phone_transcript",
+          "source_date": "2026-03-19"
+        }
+      ]
+    },
+    "pa_form": {
+      "source_count": 4,
+      "values": [
+        {
+          "value": "HUM-AUTH-2024",
+          "source_id": "HUM-SRC-001",
+          "source_type": "provider_manual",
+          "source_date": "2024-01-01"
+        },
+        {
+          "value": "HUM-AUTH-2026",
+          "source_id": "HUM-SRC-002",
+          "source_type": "phone_transcript",
+          "source_date": "2026-03-19"
+        },
+        {
+          "value": "HUM-AUTH-2024",
+          "source_id": "HUM-SRC-003",
+          "source_type": "web_page",
+          "source_date": "2025-04-01"
+        },
+        {
+          "value": "HUM-AUTH-2026",
+          "source_id": "HUM-SRC-004",
+          "source_type": "denial_letter",
+          "source_date": "2026-03-08"
+        }
+      ]
+    },
+    "turnaround_emergency": {
+      "source_count": 0,
+      "values": []
+    },
+    "phone_experience": {
+      "source_count": 0,
+      "values": []
+    },
+    "portal_url": {
+      "source_count": 4,
+      "values": [
+        {
+          "value": "www.availity.com",
+          "source_id": "HUM-SRC-001",
+          "source_type": "provider_manual",
+          "source_date": "2024-01-01"
+        },
+        {
+          "value": "www.availity.com",
+          "source_id": "HUM-SRC-002",
+          "source_type": "phone_transcript",
+          "source_date": "2026-03-19"
+        },
+        {
+          "value": "www.availity.com",
+          "source_id": "HUM-SRC-003",
+          "source_type": "web_page",
+          "source_date": "2025-04-01"
+        },
+        {
+          "value": "www.availity.com",
+          "source_id": "HUM-SRC-004",
+          "source_type": "denial_letter",
+          "source_date": "2026-03-08"
+        }
+      ]
+    },
+    "chart_note_window_days": {
+      "source_count": 4,
+      "values": [
+        {
+          "value": 60,
+          "source_id": "HUM-SRC-001",
+          "source_type": "provider_manual",
+          "source_date": "2024-01-01"
+        },
+        {
+          "value": 90,
+          "source_id": "HUM-SRC-002",
+          "source_type": "phone_transcript",
+          "source_date": "2026-03-19"
+        },
+        {
+          "value": 60,
+          "source_id": "HUM-SRC-003",
+          "source_type": "web_page",
+          "source_date": "2025-04-01"
+        },
+        {
+          "value": 90,
+          "source_id": "HUM-SRC-004",
+          "source_type": "denial_letter",
+          "source_date": "2026-03-08"
+        }
+      ]
+    },
+    "appeal_phone": {
+      "source_count": 1,
+      "values": [
+        {
+          "value": "(800) 555-2546, Option 4",
+          "source_id": "HUM-SRC-004",
+          "source_type": "denial_letter",
+          "source_date": "2026-03-08"
+        }
+      ]
+    },
+    "phone_urgent": {
+      "source_count": 2,
+      "values": [
+        {
+          "value": "(800) 555-2546",
+          "source_id": "HUM-SRC-001",
+          "source_type": "provider_manual",
+          "source_date": "2024-01-01"
+        },
+        {
+          "value": "(800) 555-2546",
+          "source_id": "HUM-SRC-003",
+          "source_type": "web_page",
+          "source_date": "2025-04-01"
+        }
+      ]
+    },
+    "appeal_mail": {
+      "source_count": 1,
+      "values": [
+        {
+          "value": "Humana Appeals, PO Box 14165, Lexington KY 40512",
+          "source_id": "HUM-SRC-004",
+          "source_type": "denial_letter",
+          "source_date": "2026-03-08"
+        }
+      ]
+    },
+    "appeal_fax": {
+      "source_count": 2,
+      "values": [
+        {
+          "value": "(800) 523-0028",
+          "source_id": "HUM-SRC-003",
+          "source_type": "web_page",
+          "source_date": "2025-04-01"
+        },
+        {
+          "value": "(800) 523-0028",
+          "source_id": "HUM-SRC-004",
+          "source_type": "denial_letter",
+          "source_date": "2026-03-08"
+        }
+      ]
+    },
+    "appeal_deadline_days": {
+      "source_count": 1,
+      "values": [
+        {
+          "value": 60,
+          "source_id": "HUM-SRC-004",
+          "source_type": "denial_letter",
+          "source_date": "2026-03-08"
+        }
+      ]
+    },
+    "phone_hours": {
+      "source_count": 1,
+      "values": [
+        {
+          "value": "M-F 8am-5pm CST",
+          "source_id": "HUM-SRC-001",
+          "source_type": "provider_manual",
+          "source_date": "2024-01-01"
+        }
+      ]
+    },
+    "phone_status": {
+      "source_count": 1,
+      "values": [
+        {
+          "value": "(800) 555-2546, Option 2",
+          "source_id": "HUM-SRC-001",
+          "source_type": "provider_manual",
+          "source_date": "2024-01-01"
+        }
+      ]
+    },
+    "denial_reasons": {
+      "source_count": 1,
+      "values": [
+        {
+          "value": [
+            "Missing biosimilar trial for RA indication",
+            "Outdated chart notes",
+            "Wrong form version"
+          ],
+          "source_id": "HUM-SRC-004",
+          "source_type": "denial_letter",
+          "source_date": "2026-03-08"
+        }
+      ]
+    },
+    "fax_number": {
+      "source_count": 4,
+      "values": [
+        {
+          "value": "(800) 523-0023",
+          "source_id": "HUM-SRC-001",
+          "source_type": "provider_manual",
+          "source_date": "2024-01-01"
+        },
+        {
+          "value": "(800) 523-0023",
+          "source_id": "HUM-SRC-002",
+          "source_type": "phone_transcript",
+          "source_date": "2026-03-19"
+        },
+        {
+          "value": "(800) 523-0023",
+          "source_id": "HUM-SRC-003",
+          "source_type": "web_page",
+          "source_date": "2025-04-01"
+        },
+        {
+          "value": "(800) 523-0023",
+          "source_id": "HUM-SRC-004",
+          "source_type": "denial_letter",
+          "source_date": "2026-03-08"
+        }
+      ]
+    },
+    "submission_methods": {
+      "source_count": 3,
+      "values": [
+        {
+          "value": [
+            "portal",
+            "fax",
+            "phone_urgent_only"
+          ],
+          "source_id": "HUM-SRC-001",
+          "source_type": "provider_manual",
+          "source_date": "2024-01-01"
+        },
+        {
+          "value": [
+            "fax",
+            "portal"
+          ],
+          "source_id": "HUM-SRC-002",
+          "source_type": "phone_transcript",
+          "source_date": "2026-03-19"
+        },
+        {
+          "value": [
+            "portal",
+            "fax",
+            "phone_urgent_only"
+          ],
+          "source_id": "HUM-SRC-003",
+          "source_type": "web_page",
+          "source_date": "2025-04-01"
+        }
+      ]
+    }
+  }
+}

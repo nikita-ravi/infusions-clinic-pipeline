@@ -1,0 +1,5 @@
+{
+  "response": "{\n  \"specialist_required\": true,\n  \"specialist_required_source\": \"Neurologist must submit\",\n  \"documentation_requirements\": [\n    \"MRI within 12 months\"\n  ],\n  \"documentation_requirements_source\": \"MRI within 12 months\"\n}",
+  "model": "claude-3-haiku-20240307",
+  "prompt_preview": "Analyze the source text for Ocrevus from Anthem Blue Cross Blue Shield and extract structured requirements.\n\n=== SOURCE TEXT (THIS IS YOUR ONLY ALLOWED SOURCE) ===\n\nNOTES:\n- Neurologist must submit, M..."
+}

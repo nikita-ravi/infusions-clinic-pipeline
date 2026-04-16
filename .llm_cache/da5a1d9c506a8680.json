@@ -1,0 +1,5 @@
+{
+  "response": "{\n  \"specialist_required\": false,\n  \"prior_treatment_failure_required\": false,\n  \"step_therapy_required\": false,\n  \"biosimilar_required\": false,\n  \"biosimilar_preferred\": false,\n  \"specific_testing\": [\n    \"CD20 positive\"\n  ],\n  \"specific_testing_source\": \"CD20 positive documentation required\",\n  \"documentation_requirements\": [\n    \"CD20+ documentation\",\n    \"CD20 positive documentation\"\n  ],\n  \"documentation_requirements_source\": \"CD20+ documentation, CD20 positive documentation\",\n  \"diagnosis_restrictions\": []\n}",
+  "model": "claude-3-haiku-20240307",
+  "prompt_preview": "Analyze the source text for Rituxan from Aetna and extract structured requirements.\n\n=== SOURCE TEXT (THIS IS YOUR ONLY ALLOWED SOURCE) ===\n\nNOTES:\n- CD20+ documentation\n- CD20 positive documentation\n..."
+}
