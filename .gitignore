@@ -24,3 +24,7 @@ Thumbs.db
 # Cache
 .cache/
 .pytest_cache/
+
+# Auto-generated
+uv.lock
+.claude/
