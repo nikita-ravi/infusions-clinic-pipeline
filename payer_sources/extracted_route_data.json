@@ -1,0 +1,617 @@
+{
+  "aetna": {
+    "payer": "Aetna",
+    "sources": [
+      {
+        "source_id": "AET-SRC-001",
+        "source_type": "provider_manual",
+        "source_name": "Aetna Provider Manual 2025, Chapter 12",
+        "source_date": "2025-01-15",
+        "retrieved_date": "2025-03-01",
+        "data": {
+          "submission_methods": [
+            "fax",
+            "portal"
+          ],
+          "fax_number": "(888) 267-3277",
+          "portal_url": "www.availity.com",
+          "phone_status_only": "(800) 624-0756, Option 3, Option 1",
+          "pa_form": "AET-PA-2025",
+          "chart_note_window_days": 60,
+          "lab_window_days": 90,
+          "turnaround_standard_days": 5,
+          "turnaround_urgent_hours": 24,
+          "drugs": {
+            "Remicade": {
+              "step_therapy_required": true,
+              "auth_period_months": 6,
+              "notes": "Specialist diagnosis, conventional therapy failure"
+            },
+            "Keytruda": {
+              "step_therapy_required": false,
+              "auth_period_months": 3,
+              "notes": "PD-L1 testing required, oncologist LMN"
+            },
+            "Rituxan": {
+              "step_therapy_required": false,
+              "auth_period_months": 6,
+              "notes": "CD20 positive documentation"
+            }
+          }
+        }
+      },
+      {
+        "source_id": "AET-SRC-002",
+        "source_type": "phone_transcript",
+        "source_name": "Call to (800) 624-0756, Rep Karen #4412",
+        "source_date": "2026-03-22",
+        "retrieved_date": "2026-03-22",
+        "data": {
+          "submission_methods": [
+            "portal",
+            "fax"
+          ],
+          "fax_number": "(888) 267-3300",
+          "fax_number_old": "(888) 267-3277",
+          "fax_old_status": "Decommissioned February 1, 2026",
+          "portal_url": "www.availity.com",
+          "portal_note": "Preferred \u2014 faster than fax",
+          "pa_form": null,
+          "chart_note_window_days": 90,
+          "turnaround_standard_days": 5,
+          "turnaround_fax_days": "7-10 (during transition)",
+          "turnaround_urgent_hours": 24,
+          "drugs": {
+            "Remicade": {
+              "step_therapy_required": true,
+              "notes": "Step therapy docs required"
+            }
+          }
+        }
+      },
+      {
+        "source_id": "AET-SRC-003",
+        "source_type": "web_page",
+        "source_name": "aetna.com/health-care-professionals/prior-authorization/infusion-medications.html",
+        "source_date": "2024-10-01",
+        "retrieved_date": "2026-03-25",
+        "data": {
+          "submission_methods": [
+            "portal",
+            "fax"
+          ],
+          "fax_number": "(888) 267-3277",
+          "portal_url": "www.availity.com",
+          "phone_status_only": "(800) 624-0756, Option 3",
+          "pa_form": "AET-PA-2024",
+          "chart_note_window_days": 60,
+          "turnaround_portal_days": "3-5",
+          "turnaround_fax_days": "5-7",
+          "drugs": {
+            "Remicade": {
+              "step_therapy_required": true,
+              "auth_period_months": 6
+            },
+            "Keytruda": {
+              "auth_period_months": 3,
+              "notes": "PD-L1 testing required"
+            },
+            "Rituxan": {
+              "auth_period_months": 6,
+              "notes": "CD20+ documentation"
+            },
+            "Entyvio": {
+              "step_therapy_required": true,
+              "auth_period_months": 6
+            }
+          }
+        }
+      },
+      {
+        "source_id": "AET-SRC-004",
+        "source_type": "denial_letter",
+        "source_name": "Denial for case PA-1847, March 10 2026",
+        "source_date": "2026-03-10",
+        "retrieved_date": "2026-03-10",
+        "data": {
+          "fax_number_old": "(888) 267-3277",
+          "fax_old_status": "No longer active for infusion medication PAs as of Feb 2026",
+          "fax_number": "(888) 267-3300",
+          "portal_url": "www.availity.com",
+          "chart_note_window_days": 90,
+          "chart_note_policy_update": "February 1, 2026",
+          "appeal_fax": "(888) 267-3350",
+          "appeal_deadline_days": 60
+        }
+      }
+    ]
+  },
+  "unitedhealthcare": {
+    "payer": "UnitedHealthcare",
+    "sources": [
+      {
+        "source_id": "UHC-SRC-001",
+        "source_type": "provider_manual",
+        "source_name": "UHC Provider Manual 2025, Section 8",
+        "source_date": "2024-12-01",
+        "retrieved_date": "2025-02-01",
+        "data": {
+          "submission_methods": [
+            "portal",
+            "fax",
+            "phone_urgent_only"
+          ],
+          "fax_number": "(800) 699-4711",
+          "portal_url": "www.uhcprovider.com",
+          "phone_urgent": "(800) 331-6689",
+          "phone_hours": "M-F 8am-6pm EST",
+          "pa_form": "UHC-PA-100",
+          "chart_note_window_days": 60,
+          "turnaround_standard_days": 5,
+          "turnaround_urgent_hours": 24,
+          "pend_period_days": 14,
+          "drugs": {
+            "Remicade": {
+              "step_therapy_required": true,
+              "biosimilar_preferred": true,
+              "auth_period_months": 6,
+              "notes": "Weight-based dosing docs required"
+            },
+            "Keytruda": {
+              "auth_period_months": 3,
+              "notes": "Biomarker testing required"
+            },
+            "Ocrevus": {
+              "auth_period_months": 12,
+              "notes": "Neurologist must submit, MRI within 12 months"
+            }
+          }
+        }
+      },
+      {
+        "source_id": "UHC-SRC-002",
+        "source_type": "phone_transcript",
+        "source_name": "Call to (800) 331-6689, Rep Michael #UHC-7831",
+        "source_date": "2026-03-18",
+        "retrieved_date": "2026-03-18",
+        "data": {
+          "submission_methods": [
+            "portal",
+            "fax"
+          ],
+          "fax_number": "(800) 699-4702",
+          "fax_number_general": "(800) 699-4711",
+          "fax_note": "4702 is specialty team, faster for infusion drugs. 4711 is general medical PA.",
+          "portal_url": "www.uhcprovider.com",
+          "pa_form": "UHC-PA-200",
+          "pa_form_old": "UHC-PA-100",
+          "pa_form_note": "Old form still accepted but gets pended for missing biosimilar fields",
+          "chart_note_window_days": 60,
+          "turnaround_standard_days": 5,
+          "turnaround_urgent_hours": 24,
+          "drugs": {
+            "Remicade": {
+              "biosimilar_required": true,
+              "notes": "#1 denial reason is missing biosimilar trial/justification"
+            }
+          }
+        }
+      },
+      {
+        "source_id": "UHC-SRC-003",
+        "source_type": "web_page",
+        "source_name": "uhcprovider.com/en/prior-auth/infusion-drugs.html",
+        "source_date": "2026-03-01",
+        "retrieved_date": "2026-03-20",
+        "data": {
+          "submission_methods": [
+            "portal",
+            "fax",
+            "phone_urgent_only"
+          ],
+          "fax_number_specialty": "(800) 699-4702",
+          "fax_number_general": "(800) 699-4711",
+          "portal_url": "www.uhcprovider.com",
+          "phone_urgent": "(800) 331-6689",
+          "pa_form": "UHC-PA-200",
+          "chart_note_window_days": 90,
+          "chart_note_policy_update": "March 2026",
+          "turnaround_standard_days": "3-5",
+          "turnaround_fax_days": "5-7",
+          "turnaround_urgent_hours": 24,
+          "drugs": {
+            "Remicade": {
+              "biosimilar_required": true,
+              "auth_period_months": 6
+            },
+            "Keytruda": {
+              "auth_period_months": 3,
+              "notes": "Biomarker testing"
+            },
+            "Rituxan": {
+              "biosimilar_required": true,
+              "auth_period_months": 6
+            },
+            "Ocrevus": {
+              "auth_period_months": 12
+            },
+            "Herceptin": {
+              "biosimilar_required": true,
+              "auth_period_months": 6
+            }
+          }
+        }
+      },
+      {
+        "source_id": "UHC-SRC-004",
+        "source_type": "denial_letter",
+        "source_name": "Denial for case PA-2103, March 5 2026",
+        "source_date": "2026-03-05",
+        "retrieved_date": "2026-03-05",
+        "data": {
+          "fax_number_recommended": "(800) 699-4702",
+          "portal_url": "www.uhcprovider.com",
+          "pa_form": "UHC-PA-200",
+          "chart_note_window_days": 90,
+          "denial_reason": "Missing biosimilar trial documentation",
+          "appeal_fax": "(800) 699-4800",
+          "appeal_phone": "(800) 331-6689",
+          "appeal_deadline_days": 60
+        }
+      }
+    ]
+  },
+  "cigna": {
+    "payer": "Cigna",
+    "sources": [
+      {
+        "source_id": "CGN-SRC-001",
+        "source_type": "provider_manual",
+        "source_name": "Cigna Medical Coverage Policy, Infusion Therapy Section",
+        "source_date": "2024-06-01",
+        "retrieved_date": "2024-11-01",
+        "data": {
+          "submission_methods": [
+            "portal",
+            "fax",
+            "phone_urgent_only"
+          ],
+          "fax_number": "(800) 768-4695",
+          "portal_url": "www.cignaforhcp.com",
+          "phone": "(800) 768-4688",
+          "phone_hours": "M-F 8am-8pm EST, Sat 9am-1pm EST",
+          "pa_form": "CG-PA-001",
+          "chart_note_window_days": 60,
+          "turnaround_standard_days": 7,
+          "turnaround_urgent_hours": 24,
+          "drugs": {
+            "Remicade": {
+              "step_therapy_required": true,
+              "auth_period_months": 6,
+              "notes": "Biosimilar preferred for new starts (2025)"
+            },
+            "Entyvio": {
+              "auth_period_months": 6,
+              "notes": "Anti-TNF failure or contraindication required"
+            },
+            "Keytruda": {
+              "auth_period_months": 3,
+              "turnaround_standard_days": 5
+            },
+            "Tysabri": {
+              "auth_period_months": 12,
+              "notes": "JCV antibody testing + TOUCH enrollment required"
+            }
+          }
+        }
+      },
+      {
+        "source_id": "CGN-SRC-002",
+        "source_type": "phone_transcript",
+        "source_name": "Call to (800) 768-4688, Rep Denise #CG-3390",
+        "source_date": "2026-03-24",
+        "retrieved_date": "2026-03-24",
+        "data": {
+          "submission_methods": [
+            "portal",
+            "fax"
+          ],
+          "fax_number": "(800) 768-4700",
+          "fax_number_old": "(800) 768-4695",
+          "fax_note": "4700 is new dedicated infusion line since Jan 2026. 4695 still works but goes to general queue (slower).",
+          "portal_url": "www.cignaforhcp.com",
+          "portal_note": "Portal is glitchy during system migration \u2014 fax as backup",
+          "pa_form": "CG-PA-002",
+          "pa_form_old": "CG-PA-001",
+          "chart_note_window_days": 90,
+          "turnaround_standard_days": "10-12 (system migration delays)",
+          "turnaround_urgent_hours": 24,
+          "system_migration_in_progress": true
+        }
+      },
+      {
+        "source_id": "CGN-SRC-003",
+        "source_type": "web_page",
+        "source_name": "cignaforhcp.com/prior-authorization/infusion-therapy",
+        "source_date": "2025-08-01",
+        "retrieved_date": "2026-03-26",
+        "data": {
+          "submission_methods": [
+            "portal",
+            "fax",
+            "phone"
+          ],
+          "fax_number": "(800) 768-4695",
+          "portal_url": "www.cignaforhcp.com",
+          "portal_note": "System migration notice on page",
+          "phone": "(800) 768-4688",
+          "pa_form": "CG-PA-001",
+          "chart_note_window_days": 60,
+          "turnaround_standard_days": 7,
+          "turnaround_urgent_hours": 24
+        }
+      },
+      {
+        "source_id": "CGN-SRC-004",
+        "source_type": "denial_letter",
+        "source_name": "Denial for case PA-1955, March 15 2026",
+        "source_date": "2026-03-15",
+        "retrieved_date": "2026-03-15",
+        "data": {
+          "fax_number_old": "(800) 768-4695",
+          "fax_number": "(800) 768-4700",
+          "pa_form": "CG-PA-002",
+          "pa_form_note": "CG-PA-001 no longer accepted for infusion drugs as of Jan 2026",
+          "chart_note_window_days": 90,
+          "chart_note_policy_update": "January 2026",
+          "appeal_fax": "(800) 768-4699",
+          "appeal_phone": "(800) 768-4688, Option 4"
+        }
+      }
+    ]
+  },
+  "blue_cross_blue_shield": {
+    "payer": "Anthem Blue Cross Blue Shield",
+    "sources": [
+      {
+        "source_id": "BCB-SRC-001",
+        "source_type": "provider_manual",
+        "source_name": "Anthem BCBS Provider Reference Guide 2025",
+        "source_date": "2025-01-01",
+        "retrieved_date": "2025-01-15",
+        "data": {
+          "submission_methods": [
+            "portal",
+            "fax",
+            "phone_urgent_only"
+          ],
+          "fax_number": "(844) 405-0296",
+          "portal_url": "www.anthem.com/providers",
+          "phone_urgent": "(800) 274-7767",
+          "pa_form": "ANT-MED-PA-25",
+          "chart_note_window_days": 60,
+          "turnaround_standard_days": 5,
+          "turnaround_urgent_hours": 24,
+          "coverage_states": [
+            "CA",
+            "NY",
+            "OH",
+            "GA",
+            "IN",
+            "VA"
+          ],
+          "note": "Non-Anthem Blue plans must contact home plan directly",
+          "drugs": {
+            "Remicade": {
+              "biosimilar_preferred": true,
+              "step_therapy_required": true
+            },
+            "Keytruda": {
+              "notes": "Biomarker documentation, oncology treatment plan"
+            },
+            "Ocrevus": {
+              "notes": "Neurologist must submit, MRI within 12 months"
+            },
+            "Herceptin": {
+              "biosimilar_preferred": true,
+              "notes": "HER2 testing required"
+            }
+          }
+        }
+      },
+      {
+        "source_id": "BCB-SRC-002",
+        "source_type": "phone_transcript",
+        "source_name": "Call to (800) 274-7767, Rep Terrence #ANT-5567",
+        "source_date": "2026-03-20",
+        "retrieved_date": "2026-03-20",
+        "data": {
+          "fax_number": "(844) 405-0296",
+          "pa_form": "ANT-MED-PA-25",
+          "chart_note_window_days": 60,
+          "turnaround_standard_days": 5,
+          "note": "Same process across Anthem commercial states. Non-Anthem Blue plans are separate.",
+          "drugs": {
+            "Herceptin": {
+              "biosimilar_preferred": true,
+              "preferred_biosimilars": [
+                "Ogivri",
+                "Herzuma"
+              ],
+              "notes": "High denial rate for missing biosimilar justification"
+            }
+          }
+        }
+      },
+      {
+        "source_id": "BCB-SRC-003",
+        "source_type": "web_page",
+        "source_name": "anthem.com/providers/prior-authorization/medical-drugs",
+        "source_date": "2025-11-01",
+        "retrieved_date": "2026-03-22",
+        "data": {
+          "submission_methods": [
+            "portal",
+            "fax",
+            "phone_urgent_only"
+          ],
+          "fax_number": "(844) 405-0296",
+          "portal_url": "www.anthem.com/providers",
+          "phone_urgent": "(800) 274-7767, Option 1, Option 1",
+          "pa_form": "ANT-MED-PA-25",
+          "chart_note_window_days": 90,
+          "chart_note_policy_update": "November 2025",
+          "turnaround_standard_days": 5,
+          "turnaround_urgent_hours": 24,
+          "common_denial_reasons": {
+            "missing_biosimilar_justification": "38%",
+            "outdated_chart_notes": "22%",
+            "incomplete_form": "18%",
+            "missing_labs": "12%"
+          }
+        }
+      },
+      {
+        "source_id": "BCB-SRC-004",
+        "source_type": "denial_letter",
+        "source_name": "Denial for case PA-2201, March 18 2026",
+        "source_date": "2026-03-18",
+        "retrieved_date": "2026-03-18",
+        "data": {
+          "fax_number": "(844) 405-0296",
+          "portal_url": "www.anthem.com/providers",
+          "pa_form": "ANT-MED-PA-25",
+          "chart_note_window_days": 90,
+          "denial_reason": "Missing biosimilar trial/justification + outdated chart notes",
+          "appeal_fax": "(844) 405-0299",
+          "appeal_phone": "(800) 274-7767, Option 5",
+          "appeal_deadline_days": 180
+        }
+      }
+    ]
+  },
+  "humana": {
+    "payer": "Humana",
+    "sources": [
+      {
+        "source_id": "HUM-SRC-001",
+        "source_type": "provider_manual",
+        "source_name": "Humana Provider Manual, PA Guidelines for Injectable & Infusible Drugs 2024",
+        "source_date": "2024-01-01",
+        "retrieved_date": "2024-08-01",
+        "data": {
+          "submission_methods": [
+            "portal",
+            "fax",
+            "phone_urgent_only"
+          ],
+          "fax_number": "(800) 523-0023",
+          "portal_url": "www.availity.com",
+          "phone_urgent": "(800) 555-2546",
+          "phone_hours": "M-F 8am-5pm CST",
+          "phone_status": "(800) 555-2546, Option 2",
+          "pa_form": "HUM-AUTH-2024",
+          "chart_note_window_days": 60,
+          "turnaround_standard_days": 7,
+          "turnaround_urgent_hours": 48,
+          "drugs": {
+            "Remicade": {
+              "step_therapy_required": true,
+              "biosimilar_attestation": true,
+              "auth_period_months": 6
+            },
+            "Rituxan": {
+              "auth_period_months": 6,
+              "notes": "CD20+ docs, step therapy for RA only"
+            },
+            "Entyvio": {
+              "auth_period_months": 6,
+              "notes": "Anti-TNF failure/contraindication"
+            },
+            "Ocrevus": {
+              "auth_period_months": 12,
+              "notes": "MS specialist must submit"
+            }
+          }
+        }
+      },
+      {
+        "source_id": "HUM-SRC-002",
+        "source_type": "phone_transcript",
+        "source_name": "Call to (800) 555-2546, Rep Tanya #HUM-2290 (after 2 misdirected transfers)",
+        "source_date": "2026-03-19",
+        "retrieved_date": "2026-03-19",
+        "data": {
+          "submission_methods": [
+            "fax",
+            "portal"
+          ],
+          "fax_number": "(800) 523-0023",
+          "portal_url": "www.availity.com",
+          "portal_note": "Availity integration having issues \u2014 rep recommends faxing instead",
+          "pa_form": "HUM-AUTH-2026",
+          "pa_form_old": "HUM-AUTH-2024",
+          "pa_form_note": "Old form may get kicked back \u2014 missing biosimilar attestation section",
+          "chart_note_window_days": 90,
+          "turnaround_standard_days": "10-14 (system migration delays)",
+          "turnaround_stated_days": 7,
+          "turnaround_urgent_hours": 48,
+          "turnaround_emergency_note": "Can sometimes get same-day for true emergencies \u2014 call and ask for expedited review",
+          "phone_experience_note": "3 transfers, 1hr 12min total call time",
+          "drugs": {
+            "Rituxan": {
+              "notes": "Biosimilar trial required for RA, not required for lymphoma/CLL"
+            }
+          }
+        }
+      },
+      {
+        "source_id": "HUM-SRC-003",
+        "source_type": "web_page",
+        "source_name": "humana.com/provider/prior-authorization/medical-drugs",
+        "source_date": "2025-04-01",
+        "retrieved_date": "2026-03-21",
+        "data": {
+          "submission_methods": [
+            "portal",
+            "fax",
+            "phone_urgent_only"
+          ],
+          "fax_number": "(800) 523-0023",
+          "portal_url": "www.availity.com",
+          "phone_urgent": "(800) 555-2546",
+          "pa_form": "HUM-AUTH-2024",
+          "chart_note_window_days": 60,
+          "turnaround_standard_days": 7,
+          "turnaround_fax_days": "7-10",
+          "turnaround_urgent_hours": 48,
+          "appeal_fax": "(800) 523-0028"
+        }
+      },
+      {
+        "source_id": "HUM-SRC-004",
+        "source_type": "denial_letter",
+        "source_name": "Denial for case PA-1888, March 8 2026",
+        "source_date": "2026-03-08",
+        "retrieved_date": "2026-03-08",
+        "data": {
+          "fax_number": "(800) 523-0023",
+          "portal_url": "www.availity.com",
+          "pa_form": "HUM-AUTH-2026",
+          "pa_form_note": "HUM-AUTH-2024 no longer accepted \u2014 missing biosimilar attestation",
+          "chart_note_window_days": 90,
+          "chart_note_policy_update": "January 2026",
+          "denial_reasons": [
+            "Missing biosimilar trial for RA indication",
+            "Outdated chart notes",
+            "Wrong form version"
+          ],
+          "appeal_fax": "(800) 523-0028",
+          "appeal_phone": "(800) 555-2546, Option 4",
+          "appeal_mail": "Humana Appeals, PO Box 14165, Lexington KY 40512",
+          "appeal_deadline_days": 60
+        }
+      }
+    ]
+  }
+}
