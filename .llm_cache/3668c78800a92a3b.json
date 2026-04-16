@@ -1,5 +1,0 @@
-{
-  "response": "{\n  \"specialist_required\": true,\n  \"specialist_required_source\": \"MS specialist must submit\",\n  \"specific_testing\": [\n    \"JCV\"\n  ],\n  \"specific_testing_source\": \"JCV testing recommended\",\n  \"auth_period_months_source\": \"Auth: 12 months\"\n}",
-  "model": "claude-3-haiku-20240307",
-  "prompt_preview": "Analyze the source text for Ocrevus from Humana and extract structured requirements.\n\n=== SOURCE TEXT (THIS IS YOUR ONLY ALLOWED SOURCE) ===\n\nNOTES:\n- MS specialist must submit\n\nRAW MANUAL SECTION:\nOC..."
-}

@@ -1,5 +1,0 @@
-{
-  "response": "{\n  \"prior_treatment_failure_required\": true,\n  \"prior_treatment_failure_required_source\": \"Requires documentation of conventional therapy failure\",\n  \"auth_period_initial_months\": 6,\n  \"auth_period_renewal_months\": 12,\n  \"auth_period_source\": \"Auth period: 6 months (initial), 12 months (renewal)\",\n  \"biosimilar_preferred\": true,\n  \"biosimilar_preferred_source\": \"Effective 2025, biosimilar preferred for new starts\"\n}",
-  "model": "claude-3-haiku-20240307",
-  "prompt_preview": "Analyze the source text for Remicade from Cigna and extract structured requirements.\n\n=== SOURCE TEXT (THIS IS YOUR ONLY ALLOWED SOURCE) ===\n\nNOTES:\n- Biosimilar preferred for new starts (2025)\n\nRAW M..."
-}

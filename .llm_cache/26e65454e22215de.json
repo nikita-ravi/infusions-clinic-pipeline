@@ -1,5 +1,0 @@
-{
-  "response": "{\n  \"step_therapy_required\": true,\n  \"step_therapy_required_source\": \"Step therapy required for RA indication only\",\n  \"biosimilar_required\": true,\n  \"biosimilar_required_source\": \"Biosimilar trial required for RA, not required for lymphoma/CLL\",\n  \"specific_testing\": [\n    \"CD20+\"\n  ],\n  \"specific_testing_source\": \"CD20+ docs\",\n  \"auth_period_months\": 6,\n  \"auth_period_months_source\": \"Auth: 6 months\"\n}",
-  "model": "claude-3-haiku-20240307",
-  "prompt_preview": "Analyze the source text for Rituxan from Humana and extract structured requirements.\n\n=== SOURCE TEXT (THIS IS YOUR ONLY ALLOWED SOURCE) ===\n\nNOTES:\n- Biosimilar trial required for RA, not required fo..."
-}

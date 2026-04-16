@@ -1,718 +1,1704 @@
 {
-  "extraction_date": "2026-04-16T00:31:01.175266",
-  "extraction_method": "agentic",
+  "extraction_date": "2026-04-16T13:20:01.768682",
+  "extraction_method": "agentic_v2",
   "payers": {
     "Aetna": {
       "sources": [
         {
-          "source_id": "AET-SRC-001",
-          "source_type": "provider_manual",
-          "source_date": "2024-01-01",
-          "payer": "Aetna",
           "fax_number": "(888) 267-3277",
+          "fax_number_old": null,
           "phone": "(800) 624-0756",
-          "phone_hours": "Option 3, then Option 1",
+          "phone_hours": null,
           "portal_url": "www.availity.com",
           "turnaround_standard_days": "5",
-          "turnaround_urgent_hours": "24",
+          "turnaround_urgent_hours": 24,
+          "turnaround_portal_days": null,
+          "turnaround_fax_days": null,
           "chart_note_window_days": 60,
           "pa_form": "AET-PA-2025",
+          "pa_form_old": null,
           "appeal_fax": null,
-          "appeal_phone": null,
+          "appeal_phone": "(800) 624-0756, Option 3, then Option 1",
+          "appeal_mail": null,
           "appeal_deadline_days": null,
           "drugs": {
-            "REMICADE (infliximab)": {
+            "Remicade": {
               "auth_period_months": {
-                "initial": 6,
-                "renewal": 12
+                "value": 6,
+                "source_phrase": "Initial auth: 6 months. Renewal: 12 months."
               },
-              "step_therapy_required": true,
-              "biosimilar_required": false,
-              "biosimilar_preferred": false,
-              "specialist_required": true,
-              "specific_testing": null,
-              "notes": "Diagnosis must be confirmed by specialist. Documentation of failure on conventional therapy required."
+              "auth_period_initial_months": {
+                "value": 6,
+                "source_phrase": "Initial auth: 6 months. Renewal: 12 months."
+              },
+              "auth_period_renewal_months": {
+                "value": 12,
+                "source_phrase": "Initial auth: 6 months. Renewal: 12 months."
+              },
+              "step_therapy_required": {
+                "value": true,
+                "source_phrase": "For Remicade and Entyvio: member must have documented trial and failure of at least one conventional therapy before biologic will be authorized."
+              },
+              "prior_treatment_failure_required": {
+                "value": true,
+                "source_phrase": "Documentation of failure on conventional therapy required"
+              },
+              "biosimilar_requirement": {
+                "value": "none",
+                "source_phrase": "No mention of biosimilar requirements"
+              },
+              "specialist_required": {
+                "value": true,
+                "source_phrase": "Diagnosis must be confirmed by specialist"
+              },
+              "specific_testing": [],
+              "diagnosis_restrictions": [],
+              "notes": null
             },
-            "KEYTRUDA (pembrolizumab)": {
+            "Keytruda": {
               "auth_period_months": {
-                "initial": 3,
-                "renewal": 6
+                "value": 3,
+                "source_phrase": "Initial auth: 3 months. Renewal: 6 months."
               },
-              "step_therapy_required": false,
-              "biosimilar_required": false,
-              "biosimilar_preferred": false,
-              "specialist_required": false,
+              "auth_period_initial_months": {
+                "value": 3,
+                "source_phrase": "Initial auth: 3 months. Renewal: 6 months."
+              },
+              "auth_period_renewal_months": {
+                "value": 6,
+                "source_phrase": "Initial auth: 3 months. Renewal: 6 months."
+              },
+              "step_therapy_required": {
+                "value": false,
+                "source_phrase": "No mention of step therapy"
+              },
+              "prior_treatment_failure_required": {
+                "value": false,
+                "source_phrase": "No mention of prior treatment failure"
+              },
+              "biosimilar_requirement": {
+                "value": "not_stated",
+                "source_phrase": "No mention of biosimilar requirements"
+              },
+              "specialist_required": {
+                "value": true,
+                "source_phrase": "Oncologist letter of medical necessity required"
+              },
               "specific_testing": [
-                "PD-L1 testing"
+                {
+                  "value": "PD-L1 testing results",
+                  "source_phrase": "PD-L1 testing results required"
+                }
               ],
-              "notes": "Oncologist letter of medical necessity required."
+              "diagnosis_restrictions": [],
+              "notes": null
             },
-            "RITUXAN (rituximab)": {
+            "Rituxan": {
               "auth_period_months": {
-                "initial": 6,
-                "renewal": 12
+                "value": 6,
+                "source_phrase": "Initial auth: 6 months. Renewal: 12 months."
               },
-              "step_therapy_required": false,
-              "biosimilar_required": false,
-              "biosimilar_preferred": false,
-              "specialist_required": false,
+              "auth_period_initial_months": {
+                "value": 6,
+                "source_phrase": "Initial auth: 6 months. Renewal: 12 months."
+              },
+              "auth_period_renewal_months": {
+                "value": 12,
+                "source_phrase": "Initial auth: 6 months. Renewal: 12 months."
+              },
+              "step_therapy_required": {
+                "value": false,
+                "source_phrase": "No mention of step therapy"
+              },
+              "prior_treatment_failure_required": {
+                "value": false,
+                "source_phrase": "No mention of prior treatment failure"
+              },
+              "biosimilar_requirement": {
+                "value": "not_stated",
+                "source_phrase": "No mention of biosimilar requirements"
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": "No mention of specialist requirement"
+              },
               "specific_testing": [
-                "CD20 positive status"
+                {
+                  "value": "CD20 positive status",
+                  "source_phrase": "CD20 positive status documentation required"
+                }
               ],
+              "diagnosis_restrictions": [],
               "notes": null
             }
           },
           "system_migration_in_progress": false,
-          "phone_experience_note": null
+          "phone_experience_note": null,
+          "source_id": "AET-SRC-001",
+          "source_type": "provider_manual",
+          "source_date": "2025-01-15",
+          "payer": "Aetna"
         },
         {
-          "source_id": "AET-SRC-002",
-          "source_type": "phone_transcript",
-          "source_date": "2026-03-20",
-          "payer": "Aetna",
           "fax_number": "(888) 267-3300",
           "fax_number_old": "(888) 267-3277",
           "phone": "(800) 624-0756",
-          "phone_hours": "M-F 8am-5pm EST",
+          "phone_hours": null,
           "portal_url": "Availity",
           "turnaround_standard_days": "5",
           "turnaround_urgent_hours": 24,
+          "turnaround_portal_days": {
+            "value": "5",
+            "source_phrase": "5 business days"
+          },
+          "turnaround_fax_days": {
+            "value": "7-10",
+            "source_phrase": "7-10 business days"
+          },
           "chart_note_window_days": 90,
-          "pa_form": "PA request form",
+          "pa_form": null,
           "pa_form_old": null,
           "appeal_fax": null,
           "appeal_phone": null,
+          "appeal_mail": {
+            "value": null,
+            "source_phrase": null
+          },
           "appeal_deadline_days": null,
           "drugs": {
             "Remicade": {
-              "auth_period_months": null,
-              "step_therapy_required": true,
-              "biosimilar_required": null,
-              "biosimilar_preferred": null,
-              "specialist_required": null,
-              "specific_testing": null,
-              "notes": "Chart notes within 90 days, labs, letter of medical necessity, and step therapy documentation showing the patient tried and failed conventional therapy first."
+              "auth_period_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_initial_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_renewal_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "step_therapy_required": {
+                "value": true,
+                "source_phrase": "must try and fail conventional therapy first"
+              },
+              "prior_treatment_failure_required": {
+                "value": true,
+                "source_phrase": "must try and fail conventional therapy first"
+              },
+              "biosimilar_requirement": {
+                "value": "not_stated",
+                "source_phrase": null
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "specific_testing": [],
+              "diagnosis_restrictions": [],
+              "notes": null
             }
           },
-          "system_migration_in_progress": true,
-          "phone_experience_note": null
+          "system_migration_in_progress": false,
+          "phone_experience_note": null,
+          "_validation_notes": [
+            "portal_url 'Availity' kept (no full URL found, but name is useful)",
+            "system_migration_in_progress CORRECTED to false (no 'migration'/'migrating' keyword - 'transition' alone is not sufficient)"
+          ],
+          "source_id": "AET-SRC-002",
+          "source_type": "phone_transcript",
+          "source_date": "2026-03-22",
+          "payer": "Aetna"
         },
         {
-          "source_id": "AET-SRC-003",
-          "source_type": "web_page",
-          "source_date": "2025-06-01",
-          "payer": "Aetna",
           "fax_number": "(888) 267-3277",
           "phone": "(800) 624-0756",
-          "phone_hours": "Option 3",
+          "phone_hours": null,
           "portal_url": "www.availity.com",
-          "turnaround_standard_days": "3-5 business days",
-          "turnaround_urgent_hours": null,
+          "turnaround_standard_days": "5-7",
+          "turnaround_urgent_hours": 24,
+          "turnaround_portal_days": {
+            "value": "3-5",
+            "source_phrase": "Average turnaround: 3-5 business days"
+          },
+          "turnaround_fax_days": {
+            "value": "5-7",
+            "source_phrase": "Average turnaround: 5-7 business days"
+          },
           "chart_note_window_days": 60,
           "pa_form": "AET-PA-2024",
-          "appeal_fax": null,
-          "appeal_phone": null,
+          "appeal_fax": "(888) 267-3277",
+          "appeal_phone": "(800) 624-0756, Option 3",
+          "appeal_mail": {
+            "value": null,
+            "source_phrase": null
+          },
           "appeal_deadline_days": null,
           "drugs": {
             "Remicade": {
-              "auth_period_months": 6,
-              "step_therapy_required": true,
-              "biosimilar_required": false,
-              "biosimilar_preferred": false,
-              "specialist_required": false,
-              "specific_testing": [],
-              "notes": null
+              "auth_period_months": {
+                "value": 6,
+                "source_phrase": "Initial auth period: 6 months."
+              },
+              "step_therapy_required": {
+                "value": true,
+                "source_phrase": "Requires step therapy documentation."
+              }
             },
             "Keytruda": {
-              "auth_period_months": 3,
-              "step_therapy_required": false,
-              "biosimilar_required": false,
-              "biosimilar_preferred": false,
-              "specialist_required": false,
+              "auth_period_months": {
+                "value": 3,
+                "source_phrase": "Initial auth period: 3 months."
+              },
               "specific_testing": [
-                "PD-L1 testing"
-              ],
-              "notes": null
+                {
+                  "value": "PD-L1",
+                  "source_phrase": "PD-L1 testing required."
+                }
+              ]
             },
             "Rituxan": {
-              "auth_period_months": 6,
-              "step_therapy_required": false,
-              "biosimilar_required": false,
-              "biosimilar_preferred": false,
-              "specialist_required": false,
+              "auth_period_months": {
+                "value": 6,
+                "source_phrase": "Initial auth period: 6 months."
+              },
               "specific_testing": [
-                "CD20+ documentation"
+                {
+                  "value": "CD20+",
+                  "source_phrase": "CD20+ documentation required."
+                }
               ],
-              "notes": null
+              "step_therapy_required": true
             },
             "Entyvio": {
-              "auth_period_months": 6,
-              "step_therapy_required": true,
-              "biosimilar_required": false,
-              "biosimilar_preferred": false,
-              "specialist_required": false,
-              "specific_testing": [],
-              "notes": null
+              "auth_period_months": {
+                "value": 6,
+                "source_phrase": "Initial auth period: 6 months."
+              },
+              "step_therapy_required": {
+                "value": true,
+                "source_phrase": "Requires step therapy documentation."
+              }
             }
           },
-          "system_migration_in_progress": null,
-          "phone_experience_note": null
+          "system_migration_in_progress": false,
+          "phone_experience_note": null,
+          "_validation_notes": [
+            "drugs.Rituxan.step_therapy_required RECOVERED: True"
+          ],
+          "source_id": "AET-SRC-003",
+          "source_type": "web_page",
+          "source_date": "2024-10-01",
+          "payer": "Aetna"
         },
         {
-          "source_id": "AET-SRC-004",
-          "source_type": "denial_letter",
-          "source_date": "2026-03-15",
-          "payer": "Aetna",
           "fax_number": "(888) 267-3300",
           "fax_number_old": "(888) 267-3277",
           "phone": "(800) 624-0756",
           "phone_hours": null,
           "portal_url": "www.availity.com",
-          "turnaround_standard_days": null,
-          "turnaround_urgent_hours": null,
+          "turnaround_standard_days": "7-10",
+          "turnaround_urgent_hours": 24,
+          "turnaround_portal_days": {
+            "value": null,
+            "source_phrase": null
+          },
+          "turnaround_fax_days": {
+            "value": null,
+            "source_phrase": null
+          },
           "chart_note_window_days": 90,
           "pa_form": null,
           "pa_form_old": null,
           "appeal_fax": "(888) 267-3350",
-          "appeal_phone": null,
+          "appeal_phone": "(800) 624-0756, Option 3, Option 1",
+          "appeal_mail": {
+            "value": null,
+            "source_phrase": null
+          },
           "appeal_deadline_days": 60,
           "drugs": {
-            "Remicade (infliximab)": {
-              "auth_period_months": null,
-              "step_therapy_required": null,
-              "biosimilar_required": null,
-              "biosimilar_preferred": null,
-              "specialist_required": null,
-              "specific_testing": null,
-              "notes": "300mg IV"
+            "Remicade": {
+              "auth_period_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_initial_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_renewal_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "step_therapy_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "prior_treatment_failure_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "biosimilar_requirement": {
+                "value": "not_stated",
+                "source_phrase": null
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "specific_testing": [],
+              "diagnosis_restrictions": [],
+              "notes": null
             }
           },
-          "system_migration_in_progress": true,
-          "phone_experience_note": null
+          "system_migration_in_progress": false,
+          "phone_experience_note": null,
+          "_validation_notes": [
+            "pa_form 'AET-PA-2026' CORRECTED to null (not in raw text)",
+            "system_migration_in_progress CORRECTED to false (no 'migration'/'migrating' keyword - 'transition' alone is not sufficient)"
+          ],
+          "source_id": "AET-SRC-004",
+          "source_type": "denial_letter",
+          "source_date": "2026-03-10",
+          "payer": "Aetna"
         }
       ]
     },
     "Anthem Blue Cross Blue Shield": {
       "sources": [
         {
-          "source_id": "ANT-SRC-001",
-          "source_type": "provider_manual",
-          "source_date": "2024-01-01",
-          "payer": "Anthem Blue Cross Blue Shield",
           "fax_number": "(844) 405-0296",
           "fax_number_old": null,
           "phone": "(800) 274-7767",
           "phone_hours": "M-F 8am-6pm local time",
           "portal_url": "www.anthem.com/providers",
-          "turnaround_standard_days": "3-5 business days",
+          "turnaround_standard_days": "5",
           "turnaround_urgent_hours": 24,
+          "turnaround_portal_days": {
+            "value": "3-5",
+            "source_phrase": "3-5 business days"
+          },
+          "turnaround_fax_days": {
+            "value": "5-7",
+            "source_phrase": "5-7 business days"
+          },
           "chart_note_window_days": 60,
           "pa_form": "ANT-MED-PA-25",
           "pa_form_old": null,
           "appeal_fax": "(844) 405-0299",
           "appeal_phone": "(800) 274-7767, Option 5",
+          "appeal_mail": {
+            "value": null,
+            "source_phrase": null
+          },
           "appeal_deadline_days": null,
           "drugs": {
-            "REMICADE": {
-              "auth_period_months": null,
-              "step_therapy_required": true,
-              "biosimilar_required": false,
-              "biosimilar_preferred": null,
-              "specialist_required": false,
-              "specific_testing": null,
-              "notes": "Prior DMARD trial required for RA indication."
+            "Remicade": {
+              "auth_period_months": {
+                "value": 6,
+                "source_phrase": "6 months authorization"
+              },
+              "auth_period_initial_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_renewal_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "step_therapy_required": {
+                "value": true,
+                "source_phrase": "Step therapy required (biosimilar first for new starts)"
+              },
+              "prior_treatment_failure_required": {
+                "value": true,
+                "source_phrase": "Prior DMARD trial required for RA indication"
+              },
+              "biosimilar_requirement": {
+                "value": "required",
+                "source_phrase": "biosimilar first for new starts"
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "specific_testing": [],
+              "diagnosis_restrictions": [],
+              "notes": null
             },
-            "KEYTRUDA": {
-              "auth_period_months": null,
-              "step_therapy_required": null,
-              "biosimilar_required": null,
-              "biosimilar_preferred": null,
-              "specialist_required": false,
+            "Keytruda": {
+              "auth_period_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_initial_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_renewal_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "step_therapy_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "prior_treatment_failure_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "biosimilar_requirement": {
+                "value": "not_stated",
+                "source_phrase": null
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
               "specific_testing": [
-                "Biomarker documentation"
+                {
+                  "value": "Biomarker documentation",
+                  "source_phrase": "Biomarker documentation"
+                }
               ],
-              "notes": "Oncology treatment plan required."
-            },
-            "OCREVUS": {
-              "auth_period_months": null,
-              "step_therapy_required": null,
-              "biosimilar_required": null,
-              "biosimilar_preferred": null,
-              "specialist_required": true,
-              "specific_testing": [
-                "MRI within 12 months"
+              "diagnosis_restrictions": [
+                {
+                  "value": "Oncology treatment plan required",
+                  "source_phrase": "Oncology treatment plan required"
+                }
               ],
               "notes": null
             },
-            "HERCEPTIN": {
-              "auth_period_months": null,
-              "step_therapy_required": null,
-              "biosimilar_required": false,
-              "biosimilar_preferred": true,
-              "specialist_required": null,
+            "Ocrevus": {
+              "auth_period_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_initial_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_renewal_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "step_therapy_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "prior_treatment_failure_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "biosimilar_requirement": {
+                "value": "not_stated",
+                "source_phrase": null
+              },
+              "specialist_required": {
+                "value": true,
+                "source_phrase": "Neurologist must submit"
+              },
               "specific_testing": [
-                "HER2 testing results"
+                {
+                  "value": "MRI within 12 months",
+                  "source_phrase": "MRI within 12 months"
+                }
               ],
+              "diagnosis_restrictions": [],
+              "notes": null
+            },
+            "Herceptin": {
+              "auth_period_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_initial_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_renewal_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "step_therapy_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "prior_treatment_failure_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "biosimilar_requirement": {
+                "value": "preferred",
+                "source_phrase": "Biosimilar preferred for new starts"
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "specific_testing": [
+                {
+                  "value": "HER2 testing results",
+                  "source_phrase": "HER2 testing results"
+                }
+              ],
+              "diagnosis_restrictions": [],
               "notes": null
             }
           },
           "system_migration_in_progress": false,
-          "phone_experience_note": null
+          "phone_experience_note": null,
+          "source_id": "ANT-SRC-001",
+          "source_type": "provider_manual",
+          "source_date": "2024-01-01",
+          "payer": "Anthem Blue Cross Blue Shield"
         },
         {
-          "source_id": "ANT-SRC-002",
-          "source_type": "phone_transcript",
-          "source_date": "2026-03-20",
-          "payer": "Anthem Blue Cross Blue Shield",
           "fax_number": "(844) 405-0296",
+          "fax_number_old": null,
           "phone": "(800) 274-7767",
-          "phone_hours": "M-F 8am-5pm EST",
-          "turnaround_standard_days": "5 business days",
+          "phone_hours": null,
+          "portal_url": null,
+          "turnaround_standard_days": "5",
           "turnaround_urgent_hours": null,
+          "turnaround_portal_days": {
+            "value": null,
+            "source_phrase": null
+          },
+          "turnaround_fax_days": {
+            "value": null,
+            "source_phrase": null
+          },
           "chart_note_window_days": 60,
           "pa_form": "ANT-MED-PA-25",
           "pa_form_old": null,
           "appeal_fax": null,
           "appeal_phone": null,
+          "appeal_mail": {
+            "value": null,
+            "source_phrase": null
+          },
           "appeal_deadline_days": null,
           "drugs": {
             "Herceptin": {
-              "auth_period_months": null,
-              "step_therapy_required": false,
-              "biosimilar_required": true,
-              "biosimilar_preferred": true,
-              "specialist_required": null,
+              "auth_period_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_initial_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_renewal_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "step_therapy_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "prior_treatment_failure_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "biosimilar_requirement": {
+                "value": "preferred",
+                "source_phrase": "the formulary prefers Ogivri or Herzuma. If the oncologist has a clinical reason for brand, just document it clearly and we'll review it."
+              },
+              "specialist_required": {
+                "value": true,
+                "source_phrase": "oncology treatment plan"
+              },
               "specific_testing": [
-                "HER2 testing showing positive status"
+                {
+                  "value": "HER2",
+                  "source_phrase": "HER2 testing showing positive status"
+                }
               ],
-              "notes": "If the patient hasn't tried a biosimilar first, you need to include a medical justification for brand Herceptin. We've been denying a lot of brand Herceptin requests that don't address the biosimilar question."
+              "diagnosis_restrictions": [],
+              "notes": null
             }
           },
           "system_migration_in_progress": false,
-          "phone_experience_note": null
+          "phone_experience_note": null,
+          "source_id": "ANT-SRC-002",
+          "source_type": "phone_transcript",
+          "source_date": "2026-03-20",
+          "payer": "Anthem Blue Cross Blue Shield"
         },
         {
-          "source_id": "ANT-SRC-003",
-          "source_type": "web_page",
-          "source_date": "2025-06-01",
-          "payer": "Anthem Blue Cross Blue Shield",
-          "fax_number": "(844) 405-0296",
-          "phone": "(800) 274-7767",
-          "phone_hours": "Option 1 \u2192 Option 1",
-          "portal_url": "anthem.com/providers > Medical Drug Auth",
-          "turnaround_standard_days": "5",
-          "turnaround_urgent_hours": "24",
-          "chart_note_window_days": 90,
-          "pa_form": "ANT-MED-PA-25",
-          "pa_form_old": null,
-          "appeal_fax": null,
-          "appeal_phone": null,
-          "appeal_deadline_days": null,
-          "drugs": {
-            "Remicade": {
-              "auth_period_months": null,
-              "step_therapy_required": true,
-              "biosimilar_required": true,
-              "biosimilar_preferred": null,
-              "specialist_required": null,
-              "specific_testing": null,
-              "notes": "Biosimilar step therapy attestation required"
-            },
-            "Herceptin": {
-              "auth_period_months": null,
-              "step_therapy_required": true,
-              "biosimilar_required": true,
-              "biosimilar_preferred": null,
-              "specialist_required": null,
-              "specific_testing": null,
-              "notes": "Biosimilar step therapy attestation required"
-            },
-            "Rituxan": {
-              "auth_period_months": null,
-              "step_therapy_required": true,
-              "biosimilar_required": true,
-              "biosimilar_preferred": null,
-              "specialist_required": null,
-              "specific_testing": null,
-              "notes": "Biosimilar step therapy attestation required"
-            }
-          },
-          "system_migration_in_progress": false,
-          "phone_experience_note": null
-        },
-        {
-          "source_id": "ANT-SRC-004",
-          "source_type": "denial_letter",
-          "source_date": "2026-03-15",
-          "payer": "Anthem Blue Cross Blue Shield",
           "fax_number": "(844) 405-0296",
           "fax_number_old": null,
           "phone": "(800) 274-7767",
           "phone_hours": null,
           "portal_url": "anthem.com/providers",
-          "turnaround_standard_days": null,
-          "turnaround_urgent_hours": null,
+          "turnaround_standard_days": "5",
+          "turnaround_urgent_hours": 24,
+          "turnaround_portal_days": {
+            "value": "3-5",
+            "source_phrase": "3-5 business days"
+          },
+          "turnaround_fax_days": {
+            "value": "5-7",
+            "source_phrase": "5-7 business days"
+          },
           "chart_note_window_days": 90,
           "pa_form": "ANT-MED-PA-25",
           "pa_form_old": null,
-          "appeal_fax": "(844) 405-0299",
-          "appeal_phone": "(800) 274-7767, Option 5",
-          "appeal_deadline_days": 180,
+          "appeal_fax": null,
+          "appeal_phone": "(800) 274-7767 \u2192 Option 1 \u2192 Option 1",
+          "appeal_mail": {
+            "value": null,
+            "source_phrase": null
+          },
+          "appeal_deadline_days": null,
           "drugs": {
-            "Herceptin (trastuzumab) 440mg IV": {
-              "auth_period_months": null,
-              "step_therapy_required": false,
-              "biosimilar_required": true,
-              "biosimilar_preferred": true,
-              "specialist_required": null,
-              "specific_testing": null,
-              "notes": "Per Anthem policy effective July 2025, biosimilar trastuzumab (Ogivri, Herzuma, Kanjinti, or Trazimera) is preferred for new patient starts. The submission did not include documentation of biosimilar trial and clinical failure, or medical justification for brand-name Herceptin."
+            "Remicade": {
+              "auth_period_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_initial_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_renewal_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "step_therapy_required": {
+                "value": true,
+                "source_phrase": "Biosimilar step therapy attestation"
+              },
+              "prior_treatment_failure_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "biosimilar_requirement": {
+                "value": "required",
+                "source_phrase": "Biosimilar step therapy attestation"
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "specific_testing": [],
+              "diagnosis_restrictions": [],
+              "notes": null
+            },
+            "Herceptin": {
+              "auth_period_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_initial_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_renewal_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "step_therapy_required": {
+                "value": true,
+                "source_phrase": "Biosimilar step therapy attestation"
+              },
+              "prior_treatment_failure_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "biosimilar_requirement": {
+                "value": "required",
+                "source_phrase": "Biosimilar step therapy attestation"
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "specific_testing": [],
+              "diagnosis_restrictions": [],
+              "notes": null
+            },
+            "Rituxan": {
+              "auth_period_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_initial_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_renewal_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "step_therapy_required": {
+                "value": true,
+                "source_phrase": "Biosimilar step therapy attestation"
+              },
+              "prior_treatment_failure_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "biosimilar_requirement": {
+                "value": "required",
+                "source_phrase": "Biosimilar step therapy attestation"
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "specific_testing": [],
+              "diagnosis_restrictions": [],
+              "notes": null
             }
           },
           "system_migration_in_progress": false,
-          "phone_experience_note": null
+          "phone_experience_note": null,
+          "source_id": "ANT-SRC-003",
+          "source_type": "web_page",
+          "source_date": "2025-11-01",
+          "payer": "Anthem Blue Cross Blue Shield"
+        },
+        {
+          "fax_number": "(844) 405-0296",
+          "phone": "(800) 274-7767",
+          "phone_hours": null,
+          "portal_url": "anthem.com/providers",
+          "turnaround_standard_days": null,
+          "turnaround_urgent_hours": null,
+          "turnaround_portal_days": {
+            "value": null,
+            "source_phrase": null
+          },
+          "turnaround_fax_days": {
+            "value": null,
+            "source_phrase": null
+          },
+          "chart_note_window_days": 90,
+          "pa_form": "ANT-MED-PA-25",
+          "appeal_fax": "(844) 405-0299",
+          "appeal_phone": "(800) 274-7767, Option 5",
+          "appeal_mail": {
+            "value": null,
+            "source_phrase": null
+          },
+          "appeal_deadline_days": 180,
+          "drugs": {
+            "Herceptin": {
+              "auth_period_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_initial_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_renewal_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "step_therapy_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "prior_treatment_failure_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "biosimilar_requirement": {
+                "value": "required",
+                "source_phrase": "biosimilar trastuzumab (Ogivri, Herzuma, Kanjinti, or Trazimera) is preferred for new patient starts"
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "specific_testing": [],
+              "diagnosis_restrictions": [],
+              "notes": null
+            }
+          },
+          "system_migration_in_progress": false,
+          "phone_experience_note": null,
+          "_validation_notes": [
+            "turnaround_standard_days '90-day' CORRECTED to null (value >= 30 is likely chart_note_window_days confusion)"
+          ],
+          "source_id": "ANT-SRC-004",
+          "source_type": "denial_letter",
+          "source_date": "2026-03-18",
+          "payer": "Anthem Blue Cross Blue Shield"
         }
       ]
     },
     "Cigna": {
       "sources": [
         {
-          "source_id": "CIG-SRC-001",
-          "source_type": "provider_manual",
-          "source_date": "2024-01-01",
-          "payer": "Cigna",
           "fax_number": "(800) 768-4695",
+          "fax_number_old": null,
           "phone": "(800) 768-4688",
           "phone_hours": "M-F 8am-8pm EST, Sat 9am-1pm EST",
           "portal_url": "www.cignaforhcp.com",
           "turnaround_standard_days": "7",
-          "turnaround_urgent_hours": 24,
-          "chart_note_window_days": 60,
+          "turnaround_urgent_hours": "24",
+          "turnaround_portal_days": null,
+          "turnaround_fax_days": null,
+          "chart_note_window_days": "60",
           "pa_form": "CG-PA-001",
+          "pa_form_old": null,
           "appeal_fax": "(800) 768-4699",
           "appeal_phone": "(800) 768-4688, Option 4",
+          "appeal_mail": null,
           "appeal_deadline_days": null,
           "drugs": {
-            "REMICADE (infliximab)": {
+            "Remicade": {
               "auth_period_months": {
-                "initial": 6,
-                "renewal": 12
+                "value": 6,
+                "source_phrase": "Auth period: 6 months (initial), 12 months (renewal)"
               },
-              "step_therapy_required": true,
-              "biosimilar_required": false,
-              "biosimilar_preferred": true,
-              "specialist_required": null,
-              "specific_testing": null,
-              "notes": "Requires documentation of conventional therapy failure"
+              "auth_period_initial_months": {
+                "value": 6,
+                "source_phrase": "Auth period: 6 months (initial), 12 months (renewal)"
+              },
+              "auth_period_renewal_months": {
+                "value": 12,
+                "source_phrase": "Auth period: 6 months (initial), 12 months (renewal)"
+              },
+              "step_therapy_required": {
+                "value": true,
+                "source_phrase": "Requires documentation of conventional therapy failure"
+              },
+              "prior_treatment_failure_required": {
+                "value": true,
+                "source_phrase": "Requires documentation of conventional therapy failure"
+              },
+              "biosimilar_requirement": {
+                "value": "preferred",
+                "source_phrase": "NOTE: Effective 2025, biosimilar preferred for new starts"
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "specific_testing": [],
+              "diagnosis_restrictions": [],
+              "notes": null
             },
-            "ENTYVIO (vedolizumab)": {
-              "auth_period_months": 6,
-              "step_therapy_required": true,
-              "biosimilar_required": null,
-              "biosimilar_preferred": null,
-              "specialist_required": null,
-              "specific_testing": null,
-              "notes": "For Crohn's or UC only \u2014 diagnosis must be confirmed. Requires failure of anti-TNF therapy OR documented contraindication."
-            },
-            "KEYTRUDA (pembrolizumab)": {
-              "auth_period_months": 3,
-              "step_therapy_required": null,
-              "biosimilar_required": null,
-              "biosimilar_preferred": null,
-              "specialist_required": null,
-              "specific_testing": [
-                "FDA-approved indication documentation",
-                "Biomarker testing per NCCN guidelines"
+            "Entyvio": {
+              "auth_period_months": {
+                "value": 6,
+                "source_phrase": "Auth period: 6 months"
+              },
+              "auth_period_initial_months": {
+                "value": 6,
+                "source_phrase": "Auth period: 6 months"
+              },
+              "auth_period_renewal_months": null,
+              "step_therapy_required": {
+                "value": true,
+                "source_phrase": "Requires failure of anti-TNF therapy OR documented contraindication"
+              },
+              "prior_treatment_failure_required": {
+                "value": true,
+                "source_phrase": "Requires failure of anti-TNF therapy OR documented contraindication"
+              },
+              "biosimilar_requirement": {
+                "value": "not_stated",
+                "source_phrase": null
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "specific_testing": [],
+              "diagnosis_restrictions": [
+                {
+                  "value": "Crohn's or UC only \u2014 diagnosis must be confirmed",
+                  "source_phrase": "For Crohn's or UC only \u2014 diagnosis must be confirmed"
+                }
               ],
               "notes": null
             },
-            "TYSABRI (natalizumab)": {
-              "auth_period_months": 12,
-              "step_therapy_required": null,
-              "biosimilar_required": null,
-              "biosimilar_preferred": null,
-              "specialist_required": null,
+            "Keytruda": {
+              "auth_period_months": {
+                "value": 3,
+                "source_phrase": "Auth period: 3 months"
+              },
+              "auth_period_initial_months": {
+                "value": 3,
+                "source_phrase": "Auth period: 3 months"
+              },
+              "auth_period_renewal_months": null,
+              "step_therapy_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "prior_treatment_failure_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "biosimilar_requirement": {
+                "value": "not_stated",
+                "source_phrase": null
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
               "specific_testing": [
-                "JCV antibody testing",
-                "TOUCH Prescribing Program enrollment verification"
+                {
+                  "value": "FDA-approved indication documentation required",
+                  "source_phrase": "FDA-approved indication documentation required"
+                },
+                {
+                  "value": "Biomarker testing per NCCN guidelines",
+                  "source_phrase": "Biomarker testing per NCCN guidelines"
+                }
               ],
+              "diagnosis_restrictions": [],
+              "notes": null
+            },
+            "Tysabri": {
+              "auth_period_months": {
+                "value": 12,
+                "source_phrase": "Auth period: 12 months"
+              },
+              "auth_period_initial_months": {
+                "value": 12,
+                "source_phrase": "Auth period: 12 months"
+              },
+              "auth_period_renewal_months": null,
+              "step_therapy_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "prior_treatment_failure_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "biosimilar_requirement": {
+                "value": "not_stated",
+                "source_phrase": null
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "specific_testing": [
+                {
+                  "value": "JCV antibody testing REQUIRED before authorization",
+                  "source_phrase": "JCV antibody testing REQUIRED before authorization"
+                },
+                {
+                  "value": "TOUCH Prescribing Program enrollment verification required",
+                  "source_phrase": "TOUCH Prescribing Program enrollment verification required"
+                }
+              ],
+              "diagnosis_restrictions": [],
               "notes": null
             }
           },
-          "system_migration_in_progress": null,
-          "phone_experience_note": null
+          "system_migration_in_progress": false,
+          "phone_experience_note": null,
+          "source_id": "CIG-SRC-001",
+          "source_type": "provider_manual",
+          "source_date": "2024-06-01",
+          "payer": "Cigna"
         },
         {
-          "source_id": "CIG-SRC-002",
-          "source_type": "phone_transcript",
-          "source_date": "2026-03-20",
-          "payer": "Cigna",
           "fax_number": "(800) 768-4700",
           "fax_number_old": "(800) 768-4695",
           "phone": "(800) 768-4688",
           "phone_hours": null,
-          "portal_url": "CignaforHCP",
-          "turnaround_standard_days": "10-12 (system migration)",
+          "portal_url": "www.cignaforhcp.com",
+          "turnaround_standard_days": "10-12",
           "turnaround_urgent_hours": 24,
+          "turnaround_portal_days": {
+            "value": null,
+            "source_phrase": null
+          },
+          "turnaround_fax_days": {
+            "value": null,
+            "source_phrase": null
+          },
           "chart_note_window_days": 90,
           "pa_form": "CG-PA-002",
           "pa_form_old": "CG-PA-001",
           "appeal_fax": null,
           "appeal_phone": null,
+          "appeal_mail": {
+            "value": null,
+            "source_phrase": null
+          },
           "appeal_deadline_days": null,
           "drugs": {
             "Entyvio": {
-              "auth_period_months": null,
-              "step_therapy_required": null,
-              "biosimilar_required": null,
-              "biosimilar_preferred": null,
-              "specialist_required": null,
-              "specific_testing": null,
-              "notes": "Diagnosis confirmation for Crohn's or UC, documentation showing the patient failed anti-TNF therapy, and a treatment plan with dosing."
+              "auth_period_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_initial_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_renewal_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "step_therapy_required": {
+                "value": true,
+                "source_phrase": "documentation showing the patient failed anti-TNF therapy"
+              },
+              "prior_treatment_failure_required": {
+                "value": true,
+                "source_phrase": "documentation showing the patient failed anti-TNF therapy"
+              },
+              "biosimilar_requirement": {
+                "value": "not_stated",
+                "source_phrase": null
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "specific_testing": [],
+              "diagnosis_restrictions": [
+                {
+                  "value": "Crohn's disease",
+                  "source_phrase": "Crohn's or UC"
+                },
+                {
+                  "value": "Ulcerative Colitis",
+                  "source_phrase": "Crohn's or UC"
+                }
+              ],
+              "notes": null
             }
           },
           "system_migration_in_progress": true,
-          "phone_experience_note": "If you get an error, try again or fax it."
+          "phone_experience_note": "The old portal still works but it's been glitchy. If you get an error, try again or fax it.",
+          "source_id": "CIG-SRC-002",
+          "source_type": "phone_transcript",
+          "source_date": "2026-03-24",
+          "payer": "Cigna"
         },
         {
-          "source_id": "CIG-SRC-003",
-          "source_type": "web_page",
-          "source_date": "2025-06-01",
-          "payer": "Cigna",
           "fax_number": "(800) 768-4695",
+          "fax_number_old": null,
           "phone": "(800) 768-4688",
           "phone_hours": "M-F 8am-8pm EST, Sat 9am-1pm EST",
           "portal_url": "www.cignaforhcp.com",
           "turnaround_standard_days": "7",
           "turnaround_urgent_hours": 24,
+          "turnaround_portal_days": null,
+          "turnaround_fax_days": {
+            "value": "7-10",
+            "source_phrase": "Processing time: 7-10 business days"
+          },
           "chart_note_window_days": 60,
           "pa_form": "CG-PA-001",
+          "pa_form_old": null,
+          "appeal_fax": "(800) 768-4695",
+          "appeal_phone": "(800) 768-4688",
+          "appeal_mail": null,
+          "appeal_deadline_days": null,
           "drugs": {
             "Remicade": {
-              "biosimilar_preferred": true,
-              "biosimilar_required": true
+              "auth_period_months": {
+                "value": 6,
+                "source_phrase": "Remicade: Biosimilar preferred for new starts effective July 2025"
+              },
+              "auth_period_initial_months": null,
+              "auth_period_renewal_months": null,
+              "step_therapy_required": false,
+              "prior_treatment_failure_required": false,
+              "biosimilar_requirement": "preferred",
+              "specialist_required": false,
+              "specific_testing": [],
+              "diagnosis_restrictions": [],
+              "notes": null
             },
             "Tysabri": {
+              "auth_period_months": {
+                "value": null,
+                "source_phrase": "Tysabri: JCV antibody testing now required every 6 months (previously annual)"
+              },
+              "auth_period_initial_months": null,
+              "auth_period_renewal_months": null,
+              "step_therapy_required": false,
+              "prior_treatment_failure_required": false,
+              "biosimilar_requirement": "not_stated",
+              "specialist_required": false,
               "specific_testing": [
-                "JCV antibody testing every 6 months"
-              ]
+                {
+                  "value": "JCV antibody",
+                  "source_phrase": "JCV antibody testing now required every 6 months (previously annual)"
+                }
+              ],
+              "diagnosis_restrictions": [],
+              "notes": null
             },
             "Entyvio": {
-              "step_therapy_required": true,
-              "notes": "Anti-TNF failure documentation now requires specific drug names and durations"
+              "auth_period_months": {
+                "value": null,
+                "source_phrase": "Entyvio: Anti-TNF failure documentation now requires specific drug names and durations"
+              },
+              "auth_period_initial_months": null,
+              "auth_period_renewal_months": null,
+              "step_therapy_required": false,
+              "prior_treatment_failure_required": true,
+              "biosimilar_requirement": "not_stated",
+              "specialist_required": false,
+              "specific_testing": [],
+              "diagnosis_restrictions": [],
+              "notes": null
             }
           },
           "system_migration_in_progress": true,
-          "phone_experience_note": "We are currently migrating our prior authorization system. Some features may be temporarily unavailable."
+          "phone_experience_note": null,
+          "source_id": "CIG-SRC-003",
+          "source_type": "web_page",
+          "source_date": "2025-08-01",
+          "payer": "Cigna"
         },
         {
-          "source_id": "CIG-SRC-004",
-          "source_type": "denial_letter",
-          "source_date": "2026-03-15",
-          "payer": "Cigna",
-          "fax_number": "(800) 768-4700",
-          "fax_number_old": "(800) 768-4695",
+          "fax_number": "(800) 768-4695",
+          "fax_number_old": null,
           "phone": "(800) 768-4688",
           "phone_hours": null,
           "portal_url": "CignaforHCP",
           "turnaround_standard_days": null,
           "turnaround_urgent_hours": null,
+          "turnaround_portal_days": {
+            "value": null,
+            "source_phrase": null
+          },
+          "turnaround_fax_days": {
+            "value": null,
+            "source_phrase": null
+          },
           "chart_note_window_days": 90,
           "pa_form": "CG-PA-002",
           "pa_form_old": "CG-PA-001",
           "appeal_fax": "(800) 768-4699",
-          "appeal_phone": "(800) 768-4688",
+          "appeal_phone": "(800) 768-4688, Option 4",
+          "appeal_mail": {
+            "value": null,
+            "source_phrase": null
+          },
           "appeal_deadline_days": 60,
           "drugs": {
-            "Entyvio (vedolizumab) 300mg IV": {
-              "auth_period_months": null,
-              "step_therapy_required": null,
-              "biosimilar_required": true,
-              "biosimilar_preferred": null,
-              "specialist_required": null,
-              "specific_testing": null,
+            "Entyvio": {
+              "auth_period_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_initial_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_renewal_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "step_therapy_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "prior_treatment_failure_required": {
+                "value": true,
+                "source_phrase": "anti-TNF failure documentation"
+              },
+              "biosimilar_requirement": {
+                "value": "required",
+                "source_phrase": "updated form CG-PA-002 includes required biosimilar attestation fields"
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "specific_testing": [],
+              "diagnosis_restrictions": [],
               "notes": null
             }
           },
-          "system_migration_in_progress": true,
-          "phone_experience_note": null
+          "system_migration_in_progress": false,
+          "phone_experience_note": null,
+          "_validation_notes": [
+            "portal_url 'CignaforHCP' kept (no full URL found, but name is useful)",
+            "system_migration_in_progress CORRECTED to false (no 'migration'/'migrating' keyword - 'transition' alone is not sufficient)"
+          ],
+          "source_id": "CIG-SRC-004",
+          "source_type": "denial_letter",
+          "source_date": "2026-03-15",
+          "payer": "Cigna"
         }
       ]
     },
     "Humana": {
       "sources": [
         {
-          "source_id": "HUM-SRC-001",
-          "source_type": "provider_manual",
-          "source_date": "2024-01-01",
-          "payer": "Humana",
           "fax_number": "(800) 523-0023",
+          "fax_number_old": null,
           "phone": "(800) 555-2546",
           "phone_hours": "M-F 8am-5pm CST",
           "portal_url": "www.availity.com",
-          "turnaround_standard_days": "7",
+          "turnaround_standard_days": "7-10",
           "turnaround_urgent_hours": 48,
+          "turnaround_portal_days": {
+            "value": "5-7",
+            "source_phrase": "Turnaround: 5-7 business days"
+          },
+          "turnaround_fax_days": {
+            "value": "7-10",
+            "source_phrase": "Turnaround: 7-10 business days"
+          },
           "chart_note_window_days": 60,
           "pa_form": "HUM-AUTH-2024",
+          "pa_form_old": null,
           "appeal_fax": "(800) 523-0028",
           "appeal_phone": "(800) 555-2546, Option 4",
+          "appeal_mail": {
+            "value": "Humana Appeals Department, PO Box 14165, Lexington KY 40512",
+            "source_phrase": "Humana Appeals Department, PO Box 14165, Lexington KY 40512"
+          },
           "appeal_deadline_days": null,
           "drugs": {
-            "REMICADE": {
-              "auth_period_months": 6,
-              "step_therapy_required": true,
-              "biosimilar_required": true,
-              "biosimilar_preferred": null,
-              "specialist_required": null,
-              "specific_testing": null,
-              "notes": "Step therapy required \u2014 must trial conventional DMARD first. Biosimilar attestation required for new starts."
+            "Remicade": {
+              "auth_period_months": {
+                "value": 6,
+                "source_phrase": "Auth: 6 months"
+              },
+              "auth_period_initial_months": null,
+              "auth_period_renewal_months": null,
+              "step_therapy_required": {
+                "value": true,
+                "source_phrase": "Step therapy required \u2014 must trial conventional DMARD first"
+              },
+              "prior_treatment_failure_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "biosimilar_requirement": {
+                "value": "required",
+                "source_phrase": "Biosimilar attestation required for new starts"
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "specific_testing": [],
+              "diagnosis_restrictions": [],
+              "notes": null
             },
-            "RITUXAN": {
-              "auth_period_months": 6,
-              "step_therapy_required": true,
-              "biosimilar_required": null,
-              "biosimilar_preferred": null,
-              "specialist_required": null,
+            "Rituxan": {
+              "auth_period_months": {
+                "value": 6,
+                "source_phrase": "Auth: 6 months"
+              },
+              "auth_period_initial_months": null,
+              "auth_period_renewal_months": null,
+              "step_therapy_required": {
+                "value": true,
+                "source_phrase": "Step therapy required for RA indication only"
+              },
+              "prior_treatment_failure_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "biosimilar_requirement": {
+                "value": "none",
+                "source_phrase": null
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
               "specific_testing": [
-                "CD20+"
+                {
+                  "value": "CD20+",
+                  "source_phrase": "CD20+ documentation"
+                }
               ],
-              "notes": "Step therapy required for RA indication only."
+              "diagnosis_restrictions": [
+                {
+                  "value": "RA",
+                  "source_phrase": "Step therapy required for RA indication only"
+                }
+              ],
+              "notes": null
             },
-            "ENTYVIO": {
-              "auth_period_months": 6,
-              "step_therapy_required": null,
-              "biosimilar_required": null,
-              "biosimilar_preferred": null,
-              "specialist_required": null,
-              "specific_testing": null,
-              "notes": "Anti-TNF failure or contraindication documentation."
+            "Entyvio": {
+              "auth_period_months": {
+                "value": 6,
+                "source_phrase": "Auth: 6 months"
+              },
+              "auth_period_initial_months": null,
+              "auth_period_renewal_months": null,
+              "step_therapy_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "prior_treatment_failure_required": {
+                "value": true,
+                "source_phrase": "Anti-TNF failure or contraindication documentation"
+              },
+              "biosimilar_requirement": {
+                "value": "not_stated",
+                "source_phrase": null
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "specific_testing": [],
+              "diagnosis_restrictions": [],
+              "notes": null
             },
-            "OCREVUS": {
-              "auth_period_months": 12,
-              "step_therapy_required": null,
-              "biosimilar_required": null,
-              "biosimilar_preferred": null,
-              "specialist_required": true,
+            "Ocrevus": {
+              "auth_period_months": {
+                "value": 12,
+                "source_phrase": "Auth: 12 months"
+              },
+              "auth_period_initial_months": null,
+              "auth_period_renewal_months": null,
+              "step_therapy_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "prior_treatment_failure_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "biosimilar_requirement": {
+                "value": "not_stated",
+                "source_phrase": null
+              },
+              "specialist_required": {
+                "value": true,
+                "source_phrase": "MS specialist must submit"
+              },
               "specific_testing": [
-                "JCV"
+                {
+                  "value": "JCV testing",
+                  "source_phrase": "JCV testing recommended"
+                }
               ],
-              "notes": "MS specialist must submit. JCV testing recommended."
+              "diagnosis_restrictions": [],
+              "notes": null
             }
           },
-          "system_migration_in_progress": true,
-          "phone_experience_note": null
+          "system_migration_in_progress": false,
+          "phone_experience_note": null,
+          "source_id": "HUM-SRC-001",
+          "source_type": "provider_manual",
+          "source_date": "2024-01-01",
+          "payer": "Humana"
         },
         {
-          "source_id": "HUM-SRC-002",
-          "source_type": "phone_transcript",
-          "source_date": "2026-03-20",
-          "payer": "Humana",
           "fax_number": "(800) 523-0023",
+          "fax_number_old": null,
           "phone": "(800) 555-2546",
           "phone_hours": null,
-          "portal_url": null,
-          "turnaround_standard_days": "10-14 days (system migration)",
+          "portal_url": "humana.com/providers",
+          "turnaround_standard_days": "10-14",
           "turnaround_urgent_hours": 48,
+          "turnaround_portal_days": {
+            "value": null,
+            "source_phrase": null
+          },
+          "turnaround_fax_days": {
+            "value": null,
+            "source_phrase": null
+          },
           "chart_note_window_days": 90,
           "pa_form": "HUM-AUTH-2026",
           "pa_form_old": "HUM-AUTH-2024",
           "appeal_fax": null,
           "appeal_phone": null,
+          "appeal_mail": {
+            "value": null,
+            "source_phrase": null
+          },
           "appeal_deadline_days": null,
           "drugs": {
             "Rituxan": {
-              "auth_period_months": null,
-              "step_therapy_required": true,
-              "biosimilar_required": true,
-              "biosimilar_preferred": null,
-              "specialist_required": null,
+              "auth_period_months": {
+                "value": 6,
+                "source_phrase": "6 month authorization"
+              },
+              "auth_period_initial_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_renewal_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "step_therapy_required": {
+                "value": true,
+                "source_phrase": "step therapy documentation"
+              },
+              "prior_treatment_failure_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "biosimilar_requirement": {
+                "value": "not_stated",
+                "source_phrase": null
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
               "specific_testing": [
-                "Labs showing CD20 positive"
+                {
+                  "value": "CD20 positive",
+                  "source_phrase": "labs showing CD20 positive"
+                }
               ],
-              "notes": "Need PA form, chart notes within 90 days, LMN, step therapy documentation for RA"
+              "diagnosis_restrictions": [
+                {
+                  "value": "lymphoma or CLL",
+                  "source_phrase": "lymphoma or CLL indications"
+                },
+                {
+                  "value": "RA",
+                  "source_phrase": "for RA"
+                }
+              ],
+              "notes": null
             }
           },
           "system_migration_in_progress": true,
-          "phone_experience_note": "Multiple transfer attempts"
+          "phone_experience_note": "Sorry about the runaround",
+          "source_id": "HUM-SRC-002",
+          "source_type": "phone_transcript",
+          "source_date": "2026-03-19",
+          "payer": "Humana"
         },
         {
-          "source_id": "HUM-SRC-003",
-          "source_type": "web_page",
-          "source_date": "2025-06-01",
-          "payer": "Humana",
           "fax_number": "(800) 523-0023",
+          "fax_number_old": null,
           "phone": "(800) 555-2546",
           "phone_hours": "M-F 8am-5pm CST",
           "portal_url": "www.availity.com",
           "turnaround_standard_days": "7",
-          "turnaround_urgent_hours": "48",
-          "chart_note_window_days": "60",
+          "turnaround_urgent_hours": 48,
+          "turnaround_portal_days": {
+            "value": "5-7",
+            "source_phrase": "5-7 business days"
+          },
+          "turnaround_fax_days": {
+            "value": "7-10",
+            "source_phrase": "7-10 business days"
+          },
+          "chart_note_window_days": 60,
           "pa_form": "HUM-AUTH-2024",
+          "pa_form_old": null,
           "appeal_fax": "(800) 523-0028",
           "appeal_phone": "(800) 555-2546, Option 4",
+          "appeal_mail": {
+            "value": null,
+            "source_phrase": null
+          },
           "appeal_deadline_days": null,
           "drugs": {
             "Remicade": {
-              "auth_period_months": null,
-              "step_therapy_required": false,
-              "biosimilar_required": true,
-              "biosimilar_preferred": null,
-              "specialist_required": null,
+              "auth_period_months": {
+                "value": null,
+                "source_phrase": "Conventional therapy failure + biosimilar attestation"
+              },
+              "auth_period_initial_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_renewal_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "step_therapy_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "prior_treatment_failure_required": {
+                "value": true,
+                "source_phrase": "Conventional therapy failure"
+              },
+              "biosimilar_requirement": {
+                "value": "required",
+                "source_phrase": "biosimilar attestation"
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
               "specific_testing": [],
-              "notes": "Conventional therapy failure + biosimilar attestation"
+              "diagnosis_restrictions": [],
+              "notes": null
             },
             "Rituxan": {
-              "auth_period_months": null,
-              "step_therapy_required": true,
-              "biosimilar_required": false,
-              "biosimilar_preferred": null,
-              "specialist_required": false,
+              "auth_period_months": {
+                "value": null,
+                "source_phrase": "CD20+ status; step therapy for RA only"
+              },
+              "auth_period_initial_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_renewal_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "step_therapy_required": {
+                "value": true,
+                "source_phrase": "step therapy for RA only"
+              },
+              "prior_treatment_failure_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "biosimilar_requirement": {
+                "value": "not_stated",
+                "source_phrase": null
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
               "specific_testing": [
-                "CD20+ status"
+                {
+                  "value": "CD20+",
+                  "source_phrase": "CD20+ status"
+                }
+              ],
+              "diagnosis_restrictions": [
+                {
+                  "value": "RA only",
+                  "source_phrase": "RA only"
+                }
               ],
               "notes": null
             },
             "Entyvio": {
-              "auth_period_months": null,
-              "step_therapy_required": false,
-              "biosimilar_required": false,
-              "biosimilar_preferred": null,
-              "specialist_required": false,
-              "specific_testing": [
-                "Anti-TNF failure documentation"
-              ],
+              "auth_period_months": {
+                "value": null,
+                "source_phrase": "Anti-TNF failure documentation"
+              },
+              "auth_period_initial_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_renewal_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "step_therapy_required": {
+                "value": true,
+                "source_phrase": "Anti-TNF failure documentation"
+              },
+              "prior_treatment_failure_required": {
+                "value": true,
+                "source_phrase": "Anti-TNF failure documentation"
+              },
+              "biosimilar_requirement": {
+                "value": "not_stated",
+                "source_phrase": null
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "specific_testing": [],
+              "diagnosis_restrictions": [],
               "notes": null
             },
             "Ocrevus": {
-              "auth_period_months": null,
-              "step_therapy_required": false,
-              "biosimilar_required": false,
-              "biosimilar_preferred": null,
-              "specialist_required": true,
+              "auth_period_months": {
+                "value": null,
+                "source_phrase": "MS specialist submission required"
+              },
+              "auth_period_initial_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_renewal_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "step_therapy_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "prior_treatment_failure_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "biosimilar_requirement": {
+                "value": "not_stated",
+                "source_phrase": null
+              },
+              "specialist_required": {
+                "value": true,
+                "source_phrase": "MS specialist submission required"
+              },
               "specific_testing": [],
-              "notes": "MS specialist submission required"
+              "diagnosis_restrictions": [],
+              "notes": null
             },
             "Tysabri": {
-              "auth_period_months": null,
-              "step_therapy_required": false,
-              "biosimilar_required": false,
-              "biosimilar_preferred": null,
-              "specialist_required": false,
+              "auth_period_months": {
+                "value": null,
+                "source_phrase": "JCV testing + TOUCH enrollment"
+              },
+              "auth_period_initial_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_renewal_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "step_therapy_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "prior_treatment_failure_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "biosimilar_requirement": {
+                "value": "not_stated",
+                "source_phrase": null
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
               "specific_testing": [
-                "JCV testing",
-                "TOUCH enrollment"
+                {
+                  "value": "JCV testing",
+                  "source_phrase": "JCV testing"
+                },
+                {
+                  "value": "TOUCH enrollment",
+                  "source_phrase": "TOUCH enrollment"
+                }
               ],
+              "diagnosis_restrictions": [],
               "notes": null
             }
           },
-          "system_migration_in_progress": true,
-          "phone_experience_note": null
+          "system_migration_in_progress": false,
+          "phone_experience_note": null,
+          "source_id": "HUM-SRC-003",
+          "source_type": "web_page",
+          "source_date": "2025-04-01",
+          "payer": "Humana"
         },
         {
-          "source_id": "HUM-SRC-004",
-          "source_type": "denial_letter",
-          "source_date": "2026-03-15",
-          "payer": "Humana",
           "fax_number": "(800) 523-0023",
           "fax_number_old": null,
           "phone": "(800) 555-2546",
@@ -720,205 +1706,594 @@
           "portal_url": "Availity",
           "turnaround_standard_days": null,
           "turnaround_urgent_hours": null,
+          "turnaround_portal_days": {
+            "value": null,
+            "source_phrase": null
+          },
+          "turnaround_fax_days": {
+            "value": null,
+            "source_phrase": null
+          },
           "chart_note_window_days": 90,
           "pa_form": "HUM-AUTH-2026",
           "pa_form_old": "HUM-AUTH-2024",
           "appeal_fax": "(800) 523-0028",
           "appeal_phone": "(800) 555-2546, Option 4",
+          "appeal_mail": {
+            "value": "Humana Appeals, PO Box 14165, Lexington KY 40512",
+            "source_phrase": "Humana Appeals, PO Box 14165, Lexington KY 40512"
+          },
           "appeal_deadline_days": 60,
           "drugs": {
-            "Rituxan (rituximab) 500mg IV": {
-              "auth_period_months": null,
-              "step_therapy_required": true,
-              "biosimilar_required": true,
-              "biosimilar_preferred": null,
-              "specialist_required": null,
-              "specific_testing": null,
-              "notes": "For the RA indication, Humana requires documentation of trial and failure of at least one conventional DMARD (e.g., methotrexate) AND one biosimilar rituximab product before brand Rituxan will be authorized."
+            "Rituxan": {
+              "auth_period_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_initial_months": null,
+              "auth_period_renewal_months": null,
+              "step_therapy_required": {
+                "value": true,
+                "source_phrase": "STEP THERAPY NOT MET: For the RA indication, Humana requires documentation of trial and failure of at least one conventional DMARD (e.g., methotrexate) AND one biosimilar rituximab product before brand Rituxan will be authorized"
+              },
+              "prior_treatment_failure_required": {
+                "value": true,
+                "source_phrase": "STEP THERAPY NOT MET: For the RA indication, Humana requires documentation of trial and failure of at least one conventional DMARD (e.g., methotrexate) AND one biosimilar rituximab product before brand Rituxan will be authorized"
+              },
+              "biosimilar_requirement": {
+                "value": "required",
+                "source_phrase": "STEP THERAPY NOT MET: For the RA indication, Humana requires documentation of trial and failure of at least one conventional DMARD (e.g., methotrexate) AND one biosimilar rituximab product before brand Rituxan will be authorized"
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "specific_testing": [],
+              "diagnosis_restrictions": [
+                {
+                  "value": "Rheumatoid Arthritis",
+                  "source_phrase": "Indication: Rheumatoid Arthritis"
+                }
+              ],
+              "notes": null
             }
           },
-          "system_migration_in_progress": true,
-          "phone_experience_note": null
+          "system_migration_in_progress": false,
+          "phone_experience_note": null,
+          "_validation_notes": [
+            "portal_url 'Availity' kept (no full URL found, but name is useful)"
+          ],
+          "source_id": "HUM-SRC-004",
+          "source_type": "denial_letter",
+          "source_date": "2026-03-08",
+          "payer": "Humana"
         }
       ]
     },
     "Unitedhealthcare": {
       "sources": [
         {
-          "source_id": "UNI-SRC-001",
-          "source_type": "provider_manual",
-          "source_date": "2024-01-01",
-          "payer": "Unitedhealthcare",
           "fax_number": "(800) 699-4711",
+          "fax_number_old": null,
           "phone": "(800) 331-6689",
           "phone_hours": "M-F, 8am-6pm EST",
           "portal_url": "www.uhcprovider.com",
-          "turnaround_standard_days": "3-5 business days",
+          "turnaround_standard_days": "5-7 business days",
           "turnaround_urgent_hours": 24,
+          "turnaround_portal_days": {
+            "value": "3-5 business days",
+            "source_phrase": "Fastest turnaround: 3-5 business days"
+          },
+          "turnaround_fax_days": {
+            "value": "5-7 business days",
+            "source_phrase": "Turnaround: 5-7 business days"
+          },
           "chart_note_window_days": 60,
           "pa_form": "UHC-PA-100",
+          "pa_form_old": null,
           "appeal_fax": null,
           "appeal_phone": null,
+          "appeal_mail": {
+            "value": null,
+            "source_phrase": null
+          },
           "appeal_deadline_days": null,
           "drugs": {
-            "REMICADE (infliximab)": {
+            "Remicade": {
               "auth_period_months": {
-                "initial": 6,
-                "renewal": 12
+                "value": 6,
+                "source_phrase": "Auth period: 6 months initial"
               },
-              "step_therapy_required": true,
-              "biosimilar_required": true,
-              "biosimilar_preferred": true,
-              "specialist_required": null,
+              "auth_period_initial_months": {
+                "value": 6,
+                "source_phrase": "Auth period: 6 months initial"
+              },
+              "auth_period_renewal_months": {
+                "value": 12,
+                "source_phrase": "12 months renewal"
+              },
+              "step_therapy_required": {
+                "value": true,
+                "source_phrase": "Must document failure of methotrexate or other conventional DMARD"
+              },
+              "prior_treatment_failure_required": {
+                "value": true,
+                "source_phrase": "Must document failure of methotrexate or other conventional DMARD"
+              },
+              "biosimilar_requirement": {
+                "value": "preferred",
+                "source_phrase": "Biosimilar preferred \u2014 must document medical rationale if requesting brand"
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "specific_testing": [],
+              "diagnosis_restrictions": [
+                {
+                  "value": "RA",
+                  "source_phrase": "RA indication"
+                }
+              ],
+              "notes": "Weight-based dosing documentation required"
+            },
+            "Keytruda": {
+              "auth_period_months": {
+                "value": 3,
+                "source_phrase": "Auth period: 3 months"
+              },
+              "auth_period_initial_months": {
+                "value": 3,
+                "source_phrase": "Auth period: 3 months"
+              },
+              "auth_period_renewal_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "step_therapy_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "prior_treatment_failure_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "biosimilar_requirement": {
+                "value": "not_stated",
+                "source_phrase": null
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
               "specific_testing": [
-                "Documentation of failure of methotrexate or other conventional DMARD (RA indication)",
-                "Weight-based dosing documentation"
+                {
+                  "value": "PD-L1",
+                  "source_phrase": "Biomarker testing results (PD-L1, MSI-H, TMB) as applicable"
+                },
+                {
+                  "value": "MSI-H",
+                  "source_phrase": "Biomarker testing results (PD-L1, MSI-H, TMB) as applicable"
+                },
+                {
+                  "value": "TMB",
+                  "source_phrase": "Biomarker testing results (PD-L1, MSI-H, TMB) as applicable"
+                }
+              ],
+              "diagnosis_restrictions": [
+                {
+                  "value": "Staging documentation",
+                  "source_phrase": "Staging documentation"
+                }
               ],
               "notes": null
             },
-            "KEYTRUDA (pembrolizumab)": {
-              "auth_period_months": 3,
-              "step_therapy_required": null,
-              "biosimilar_required": null,
-              "biosimilar_preferred": null,
-              "specialist_required": null,
+            "Ocrevus": {
+              "auth_period_months": {
+                "value": 12,
+                "source_phrase": "Auth period: 12 months"
+              },
+              "auth_period_initial_months": {
+                "value": 12,
+                "source_phrase": "Auth period: 12 months"
+              },
+              "auth_period_renewal_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "step_therapy_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "prior_treatment_failure_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "biosimilar_requirement": {
+                "value": "not_stated",
+                "source_phrase": null
+              },
+              "specialist_required": {
+                "value": true,
+                "source_phrase": "MS diagnosis confirmed by neurologist"
+              },
               "specific_testing": [
-                "Biomarker testing results (PD-L1, MSI-H, TMB) as applicable",
-                "Staging documentation"
+                {
+                  "value": "MRI results within 12 months",
+                  "source_phrase": "MRI results within 12 months"
+                }
               ],
-              "notes": "Renewable"
-            },
-            "OCREVUS (ocrelizumab)": {
-              "auth_period_months": 12,
-              "step_therapy_required": null,
-              "biosimilar_required": null,
-              "biosimilar_preferred": null,
-              "specialist_required": true,
-              "specific_testing": [
-                "MS diagnosis confirmed by neurologist",
-                "MRI results within 12 months"
+              "diagnosis_restrictions": [
+                {
+                  "value": "MS",
+                  "source_phrase": "MS diagnosis confirmed by neurologist"
+                }
               ],
               "notes": null
             }
           },
-          "system_migration_in_progress": null,
-          "phone_experience_note": null
+          "system_migration_in_progress": false,
+          "phone_experience_note": null,
+          "source_id": "UNI-SRC-001",
+          "source_type": "provider_manual",
+          "source_date": "2024-01-01",
+          "payer": "Unitedhealthcare"
         },
         {
-          "source_id": "UNI-SRC-002",
-          "source_type": "phone_transcript",
-          "source_date": "2026-03-20",
-          "payer": "Unitedhealthcare",
           "fax_number": "(800) 699-4702",
           "fax_number_old": "(800) 699-4711",
           "phone": "(800) 331-6689",
           "phone_hours": null,
           "portal_url": "uhcprovider.com",
-          "turnaround_standard_days": "5",
+          "turnaround_standard_days": "5 business days",
           "turnaround_urgent_hours": 24,
+          "turnaround_portal_days": {
+            "value": null,
+            "source_phrase": null
+          },
+          "turnaround_fax_days": {
+            "value": null,
+            "source_phrase": null
+          },
           "chart_note_window_days": 60,
           "pa_form": "UHC-PA-200",
           "pa_form_old": "UHC-PA-100",
           "appeal_fax": null,
           "appeal_phone": null,
+          "appeal_mail": {
+            "value": null,
+            "source_phrase": null
+          },
           "appeal_deadline_days": null,
           "drugs": {
             "Remicade": {
-              "auth_period_months": null,
-              "step_therapy_required": true,
-              "biosimilar_required": true,
-              "biosimilar_preferred": true,
-              "specialist_required": null,
-              "specific_testing": null,
-              "notes": "Chart notes within 60 days, labs, LMN, and step therapy documentation showing they tried a biosimilar first, or a clear medical justification for why brand Remicade is needed"
+              "auth_period_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_initial_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_renewal_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "step_therapy_required": {
+                "value": true,
+                "source_phrase": "tried a biosimilar first"
+              },
+              "prior_treatment_failure_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "biosimilar_requirement": {
+                "value": "required",
+                "source_phrase": "tried a biosimilar first"
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "specific_testing": [],
+              "diagnosis_restrictions": [],
+              "notes": null
             }
           },
-          "system_migration_in_progress": true,
-          "phone_experience_note": null
+          "system_migration_in_progress": false,
+          "phone_experience_note": null,
+          "source_id": "UNI-SRC-002",
+          "source_type": "phone_transcript",
+          "source_date": "2026-03-18",
+          "payer": "Unitedhealthcare"
         },
         {
-          "source_id": "UNI-SRC-003",
-          "source_type": "web_page",
-          "source_date": "2025-06-01",
-          "payer": "Unitedhealthcare",
           "fax_number": "(800) 699-4702",
           "fax_number_old": "(800) 699-4711",
           "phone": "(800) 331-6689",
           "phone_hours": "M-F, 8am-6pm EST",
           "portal_url": "www.uhcprovider.com",
-          "turnaround_standard_days": "3-5 business days",
+          "turnaround_standard_days": "5-7 business days",
           "turnaround_urgent_hours": 48,
+          "turnaround_portal_days": {
+            "value": "3-5 business days",
+            "source_phrase": "Turnaround: 3-5 business days"
+          },
+          "turnaround_fax_days": {
+            "value": "5-7 business days",
+            "source_phrase": "Turnaround: 5-7 business days"
+          },
           "chart_note_window_days": 90,
           "pa_form": "UHC-PA-200",
           "pa_form_old": "UHC-PA-100",
+          "appeal_fax": null,
+          "appeal_phone": null,
+          "appeal_mail": {
+            "value": null,
+            "source_phrase": null
+          },
+          "appeal_deadline_days": null,
           "drugs": {
             "Remicade": {
-              "auth_period_months": 6,
-              "step_therapy_required": true,
-              "biosimilar_required": true,
-              "biosimilar_preferred": true,
-              "notes": "Weight-based dosing docs"
+              "auth_period_months": {
+                "value": 6,
+                "source_phrase": "| Remicade | Yes - biosimilar first | 6 months | Weight-based dosing docs |"
+              },
+              "auth_period_initial_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_renewal_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "step_therapy_required": {
+                "value": true,
+                "source_phrase": "Yes - biosimilar first"
+              },
+              "prior_treatment_failure_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "biosimilar_requirement": {
+                "value": "required",
+                "source_phrase": "Yes - biosimilar first"
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "specific_testing": [
+                {
+                  "value": "Weight-based dosing docs",
+                  "source_phrase": "Weight-based dosing docs"
+                }
+              ],
+              "diagnosis_restrictions": [],
+              "notes": null
             },
             "Keytruda": {
-              "auth_period_months": 3,
+              "auth_period_months": {
+                "value": 3,
+                "source_phrase": "| Keytruda | No | 3 months | Biomarker testing |"
+              },
+              "auth_period_initial_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_renewal_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "step_therapy_required": {
+                "value": false,
+                "source_phrase": "No"
+              },
+              "prior_treatment_failure_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "biosimilar_requirement": {
+                "value": "not_stated",
+                "source_phrase": null
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
               "specific_testing": [
-                "Biomarker testing"
-              ]
+                {
+                  "value": "Biomarker testing",
+                  "source_phrase": "Biomarker testing"
+                }
+              ],
+              "diagnosis_restrictions": [],
+              "notes": null
             },
             "Rituxan": {
-              "auth_period_months": 6,
-              "step_therapy_required": true,
-              "biosimilar_required": true,
-              "biosimilar_preferred": true,
+              "auth_period_months": {
+                "value": 6,
+                "source_phrase": "| Rituxan | Yes - biosimilar first | 6 months | CD20+ documentation |"
+              },
+              "auth_period_initial_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_renewal_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "step_therapy_required": {
+                "value": true,
+                "source_phrase": "Yes - biosimilar first"
+              },
+              "prior_treatment_failure_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "biosimilar_requirement": {
+                "value": "required",
+                "source_phrase": "Yes - biosimilar first"
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
               "specific_testing": [
-                "CD20+ documentation"
-              ]
+                {
+                  "value": "CD20+ documentation",
+                  "source_phrase": "CD20+ documentation"
+                }
+              ],
+              "diagnosis_restrictions": [],
+              "notes": null
             },
             "Ocrevus": {
-              "auth_period_months": 12,
-              "specialist_required": true
+              "auth_period_months": {
+                "value": 12,
+                "source_phrase": "| Ocrevus | No | 12 months | Neurologist confirmation |"
+              },
+              "auth_period_initial_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_renewal_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "step_therapy_required": {
+                "value": false,
+                "source_phrase": "No"
+              },
+              "prior_treatment_failure_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "biosimilar_requirement": {
+                "value": "not_stated",
+                "source_phrase": null
+              },
+              "specialist_required": {
+                "value": true,
+                "source_phrase": "Neurologist confirmation"
+              },
+              "specific_testing": [],
+              "diagnosis_restrictions": [],
+              "notes": null
             },
             "Herceptin": {
-              "auth_period_months": 6,
-              "step_therapy_required": true,
-              "biosimilar_required": true,
-              "biosimilar_preferred": true,
+              "auth_period_months": {
+                "value": 6,
+                "source_phrase": "| Herceptin | Yes - biosimilar first | 6 months | HER2 testing |"
+              },
+              "auth_period_initial_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_renewal_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "step_therapy_required": {
+                "value": true,
+                "source_phrase": "Yes - biosimilar first"
+              },
+              "prior_treatment_failure_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "biosimilar_requirement": {
+                "value": "required",
+                "source_phrase": "Yes - biosimilar first"
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
               "specific_testing": [
-                "HER2 testing"
-              ]
+                {
+                  "value": "HER2 testing",
+                  "source_phrase": "HER2 testing"
+                }
+              ],
+              "diagnosis_restrictions": [],
+              "notes": null
             }
           },
-          "system_migration_in_progress": true
+          "system_migration_in_progress": false,
+          "phone_experience_note": null,
+          "source_id": "UNI-SRC-003",
+          "source_type": "web_page",
+          "source_date": "2026-03-01",
+          "payer": "Unitedhealthcare"
         },
         {
-          "source_id": "UNI-SRC-004",
-          "source_type": "denial_letter",
-          "source_date": "2026-03-15",
-          "payer": "Unitedhealthcare",
           "fax_number": "(800) 699-4711",
-          "fax_number_old": "(800) 699-4702",
-          "phone": "(800) 331-6689",
+          "fax_number_old": null,
+          "phone": "(800) 699-4702",
+          "phone_hours": null,
           "portal_url": "uhcprovider.com",
           "turnaround_standard_days": null,
           "turnaround_urgent_hours": null,
+          "turnaround_portal_days": {
+            "value": null,
+            "source_phrase": null
+          },
+          "turnaround_fax_days": {
+            "value": null,
+            "source_phrase": null
+          },
           "chart_note_window_days": 90,
           "pa_form": "UHC-PA-200",
+          "pa_form_old": null,
           "appeal_fax": "(800) 699-4800",
           "appeal_phone": "(800) 331-6689",
+          "appeal_mail": {
+            "value": null,
+            "source_phrase": null
+          },
           "appeal_deadline_days": 60,
           "drugs": {
-            "Remicade (infliximab)": {
-              "auth_period_months": null,
-              "step_therapy_required": true,
-              "biosimilar_required": true,
-              "biosimilar_preferred": true,
-              "specialist_required": null,
+            "Remicade": {
+              "auth_period_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_initial_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "auth_period_renewal_months": {
+                "value": null,
+                "source_phrase": null
+              },
+              "step_therapy_required": {
+                "value": true,
+                "source_phrase": "biosimilar infliximab products must be trialed before brand Remicade"
+              },
+              "prior_treatment_failure_required": {
+                "value": false,
+                "source_phrase": null
+              },
+              "biosimilar_requirement": {
+                "value": "required",
+                "source_phrase": "biosimilar infliximab products must be trialed before brand Remicade"
+              },
+              "specialist_required": {
+                "value": false,
+                "source_phrase": null
+              },
               "specific_testing": [],
-              "notes": "Per UnitedHealthcare policy effective January 1, 2026, biosimilar infliximab products must be trialed before brand Remicade will be authorized."
+              "diagnosis_restrictions": [],
+              "notes": null
             }
           },
-          "system_migration_in_progress": true,
-          "phone_experience_note": null
+          "system_migration_in_progress": false,
+          "phone_experience_note": null,
+          "source_id": "UNI-SRC-004",
+          "source_type": "denial_letter",
+          "source_date": "2026-03-05",
+          "payer": "Unitedhealthcare"
         }
       ]
     }

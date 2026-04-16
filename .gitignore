@@ -24,7 +24,11 @@ Thumbs.db
 # Cache
 .cache/
 .pytest_cache/
+.llm_cache/
+.agent_cache/
 
 # Auto-generated
 uv.lock
 .claude/
+output_agentic/
+validate_agentic.py
