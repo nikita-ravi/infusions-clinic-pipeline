@@ -1,0 +1,205 @@
+{
+  "payer": "Cigna",
+  "summary": {
+    "payer": "Cigna",
+    "focus_drug": "Remicade",
+    "total_sources": 4,
+    "sources_by_type": {
+      "provider_manual": 1,
+      "phone_transcript": 1,
+      "web_page": 1,
+      "denial_letter": 1
+    },
+    "fields_reconciled": 9,
+    "conflicts_detected": 5,
+    "high_confidence_fields": 6,
+    "low_confidence_fields": 1
+  },
+  "fields": {
+    "submission_methods": {
+      "value": [
+        "fax",
+        "portal"
+      ],
+      "confidence": 0.7,
+      "decision_path": [
+        "collect_values: Collected 3 values from sources \u2192 Sources: ['CGN-SRC-001', 'CGN-SRC-002', 'CGN-SRC-003']",
+        "recency_boost: Source is 21 days old \u2192 Boost: +0.30",
+        "authority_boost: Source type: phone_transcript \u2192 Boost: +0.20",
+        "warning_penalty: Operational warnings detected \u2192 Penalty: -0.30",
+        "final_confidence: Final confidence calculation \u2192 Score: 0.70"
+      ],
+      "contributing_sources": [
+        "CGN-SRC-002"
+      ],
+      "superseded_sources": [],
+      "conflicts_detected": true,
+      "reasoning": null,
+      "raw_values": {
+        "CGN-SRC-001": [
+          "portal",
+          "fax",
+          "phone_urgent_only"
+        ],
+        "CGN-SRC-002": [
+          "portal",
+          "fax"
+        ],
+        "CGN-SRC-003": [
+          "portal",
+          "fax",
+          "phone"
+        ]
+      }
+    },
+    "fax_number": {
+      "value": "(800) 768-4700",
+      "confidence": 0.95,
+      "decision_path": [
+        "collect_values: Collected 4 values from sources \u2192 Sources: ['CGN-SRC-001', 'CGN-SRC-002', 'CGN-SRC-003', 'CGN-SRC-004']",
+        "explicit_deprecation: Found fax_number_old \u2192 fax_number pair in CGN-SRC-002 \u2192 Deprecated: (800) 768-4695, Superseding: (800) 768-4700",
+        "explicit_deprecation: Found fax_number_old \u2192 fax_number pair in CGN-SRC-004 \u2192 Deprecated: (800) 768-4695, Superseding: (800) 768-4700",
+        "prefer_specialty_fax: Specialty fax preferred over general (specialty_note) \u2192 Selected: (800) 768-4700"
+      ],
+      "contributing_sources": [
+        "CGN-SRC-002"
+      ],
+      "superseded_sources": [],
+      "conflicts_detected": true,
+      "reasoning": null,
+      "raw_values": {
+        "CGN-SRC-001": "(800) 768-4695",
+        "CGN-SRC-002": "(800) 768-4700",
+        "CGN-SRC-003": "(800) 768-4695",
+        "CGN-SRC-004": "(800) 768-4700"
+      }
+    },
+    "portal_url": {
+      "value": "cignaforhcp.com",
+      "confidence": 0.9,
+      "decision_path": [
+        "collect_values: Collected 3 values from sources \u2192 Sources: ['CGN-SRC-001', 'CGN-SRC-002', 'CGN-SRC-003']",
+        "recency_boost: Source is 21 days old \u2192 Boost: +0.30",
+        "authority_boost: Source type: phone_transcript \u2192 Boost: +0.20",
+        "agreement_bonus: Multiple sources agree on this value \u2192 Bonus: +0.20",
+        "warning_penalty: Operational warnings detected \u2192 Penalty: -0.30",
+        "final_confidence: Final confidence calculation \u2192 Score: 0.90"
+      ],
+      "contributing_sources": [
+        "CGN-SRC-002"
+      ],
+      "superseded_sources": [],
+      "conflicts_detected": false,
+      "reasoning": null
+    },
+    "phone_urgent": {
+      "value": null,
+      "confidence": 0.0,
+      "decision_path": [
+        "no_data: No sources contain this field"
+      ],
+      "contributing_sources": [],
+      "superseded_sources": [],
+      "conflicts_detected": false,
+      "reasoning": null
+    },
+    "pa_form": {
+      "value": "CG-PA-002",
+      "confidence": 0.95,
+      "decision_path": [
+        "collect_values: Collected 4 values from sources \u2192 Sources: ['CGN-SRC-001', 'CGN-SRC-002', 'CGN-SRC-003', 'CGN-SRC-004']",
+        "explicit_deprecation: Found pa_form_old \u2192 pa_form pair in CGN-SRC-002 \u2192 Deprecated: CG-PA-001, Superseding: CG-PA-002",
+        "prefer_latest_form_version: Selected form with highest version number \u2192 Selected: CG-PA-002 (version 2)"
+      ],
+      "contributing_sources": [
+        "CGN-SRC-002"
+      ],
+      "superseded_sources": [],
+      "conflicts_detected": true,
+      "reasoning": null,
+      "raw_values": {
+        "CGN-SRC-001": "CG-PA-001",
+        "CGN-SRC-002": "CG-PA-002",
+        "CGN-SRC-003": "CG-PA-001",
+        "CGN-SRC-004": "CG-PA-002"
+      }
+    },
+    "chart_note_window_days": {
+      "value": 90,
+      "confidence": 0.95,
+      "decision_path": [
+        "collect_values: Collected 4 values from sources \u2192 Sources: ['CGN-SRC-001', 'CGN-SRC-002', 'CGN-SRC-003', 'CGN-SRC-004']",
+        "chart_note_policy_update: Recent policy update detected, taking maximum window \u2192 Selected: 90 days"
+      ],
+      "contributing_sources": [
+        "CGN-SRC-002"
+      ],
+      "superseded_sources": [],
+      "conflicts_detected": true,
+      "reasoning": null,
+      "raw_values": {
+        "CGN-SRC-001": 60,
+        "CGN-SRC-002": 90,
+        "CGN-SRC-003": 60,
+        "CGN-SRC-004": 90
+      }
+    },
+    "turnaround_standard_days": {
+      "value": 7,
+      "confidence": 0.7,
+      "decision_path": [
+        "collect_values: Collected 3 values from sources \u2192 Sources: ['CGN-SRC-001', 'CGN-SRC-002', 'CGN-SRC-003']",
+        "recency_boost: Source is 682 days old \u2192 Boost: +0.00",
+        "authority_boost: Source type: provider_manual \u2192 Boost: +0.10",
+        "agreement_bonus: Multiple sources agree on this value \u2192 Bonus: +0.10",
+        "final_confidence: Final confidence calculation \u2192 Score: 0.70"
+      ],
+      "contributing_sources": [
+        "CGN-SRC-001"
+      ],
+      "superseded_sources": [],
+      "conflicts_detected": true,
+      "reasoning": null,
+      "raw_values": {
+        "CGN-SRC-001": 7,
+        "CGN-SRC-002": "10-12 (system migration delays)",
+        "CGN-SRC-003": 7
+      }
+    },
+    "turnaround_urgent_hours": {
+      "value": 24,
+      "confidence": 0.9,
+      "decision_path": [
+        "collect_values: Collected 3 values from sources \u2192 Sources: ['CGN-SRC-001', 'CGN-SRC-002', 'CGN-SRC-003']",
+        "recency_boost: Source is 21 days old \u2192 Boost: +0.30",
+        "authority_boost: Source type: phone_transcript \u2192 Boost: +0.20",
+        "agreement_bonus: Multiple sources agree on this value \u2192 Bonus: +0.20",
+        "warning_penalty: Operational warnings detected \u2192 Penalty: -0.30",
+        "final_confidence: Final confidence calculation \u2192 Score: 0.90"
+      ],
+      "contributing_sources": [
+        "CGN-SRC-002"
+      ],
+      "superseded_sources": [],
+      "conflicts_detected": false,
+      "reasoning": null
+    },
+    "remicade_requirements": {
+      "value": {
+        "step_therapy_required": true,
+        "auth_period_months": 6,
+        "notes": "Biosimilar preferred for new starts (2025)"
+      },
+      "confidence": 0.85,
+      "decision_path": [
+        "drug_requirements_merged: Merged Remicade requirements from 1 sources \u2192 Used most recent source: CGN-SRC-001"
+      ],
+      "contributing_sources": [
+        "CGN-SRC-001"
+      ],
+      "superseded_sources": [],
+      "conflicts_detected": false,
+      "reasoning": null
+    }
+  }
+}

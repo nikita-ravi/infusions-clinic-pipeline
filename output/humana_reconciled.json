@@ -1,0 +1,206 @@
+{
+  "payer": "Humana",
+  "summary": {
+    "payer": "Humana",
+    "focus_drug": "Remicade",
+    "total_sources": 4,
+    "sources_by_type": {
+      "provider_manual": 1,
+      "phone_transcript": 1,
+      "web_page": 1,
+      "denial_letter": 1
+    },
+    "fields_reconciled": 9,
+    "conflicts_detected": 4,
+    "high_confidence_fields": 6,
+    "low_confidence_fields": 0
+  },
+  "fields": {
+    "submission_methods": {
+      "value": [
+        "fax",
+        "phone_urgent_only",
+        "portal"
+      ],
+      "confidence": 0.75,
+      "decision_path": [
+        "collect_values: Collected 3 values from sources \u2192 Sources: ['HUM-SRC-001', 'HUM-SRC-002', 'HUM-SRC-003']",
+        "recency_boost: Source is 378 days old \u2192 Boost: +0.00",
+        "authority_boost: Source type: web_page \u2192 Boost: +0.15",
+        "agreement_bonus: Multiple sources agree on this value \u2192 Bonus: +0.10",
+        "final_confidence: Final confidence calculation \u2192 Score: 0.75"
+      ],
+      "contributing_sources": [
+        "HUM-SRC-003"
+      ],
+      "superseded_sources": [],
+      "conflicts_detected": true,
+      "reasoning": null,
+      "raw_values": {
+        "HUM-SRC-001": [
+          "portal",
+          "fax",
+          "phone_urgent_only"
+        ],
+        "HUM-SRC-002": [
+          "fax",
+          "portal"
+        ],
+        "HUM-SRC-003": [
+          "portal",
+          "fax",
+          "phone_urgent_only"
+        ]
+      }
+    },
+    "fax_number": {
+      "value": "8005230023",
+      "confidence": 1.0,
+      "decision_path": [
+        "collect_values: Collected 4 values from sources \u2192 Sources: ['HUM-SRC-001', 'HUM-SRC-002', 'HUM-SRC-003', 'HUM-SRC-004']",
+        "recency_boost: Source is 37 days old \u2192 Boost: +0.20",
+        "authority_boost: Source type: denial_letter \u2192 Boost: +0.25",
+        "agreement_bonus: Multiple sources agree on this value \u2192 Bonus: +0.20",
+        "final_confidence: Final confidence calculation \u2192 Score: 1.00"
+      ],
+      "contributing_sources": [
+        "HUM-SRC-004"
+      ],
+      "superseded_sources": [],
+      "conflicts_detected": false,
+      "reasoning": null
+    },
+    "portal_url": {
+      "value": "availity.com",
+      "confidence": 1.0,
+      "decision_path": [
+        "collect_values: Collected 4 values from sources \u2192 Sources: ['HUM-SRC-001', 'HUM-SRC-002', 'HUM-SRC-003', 'HUM-SRC-004']",
+        "recency_boost: Source is 37 days old \u2192 Boost: +0.20",
+        "authority_boost: Source type: denial_letter \u2192 Boost: +0.25",
+        "agreement_bonus: Multiple sources agree on this value \u2192 Bonus: +0.20",
+        "final_confidence: Final confidence calculation \u2192 Score: 1.00"
+      ],
+      "contributing_sources": [
+        "HUM-SRC-004"
+      ],
+      "superseded_sources": [],
+      "conflicts_detected": false,
+      "reasoning": null
+    },
+    "phone_urgent": {
+      "value": "8005552546",
+      "confidence": 0.75,
+      "decision_path": [
+        "collect_values: Collected 2 values from sources \u2192 Sources: ['HUM-SRC-001', 'HUM-SRC-003']",
+        "recency_boost: Source is 378 days old \u2192 Boost: +0.00",
+        "authority_boost: Source type: web_page \u2192 Boost: +0.15",
+        "agreement_bonus: Multiple sources agree on this value \u2192 Bonus: +0.10",
+        "final_confidence: Final confidence calculation \u2192 Score: 0.75"
+      ],
+      "contributing_sources": [
+        "HUM-SRC-003"
+      ],
+      "superseded_sources": [],
+      "conflicts_detected": false,
+      "reasoning": null
+    },
+    "pa_form": {
+      "value": "HUM-AUTH-2026",
+      "confidence": 0.95,
+      "decision_path": [
+        "collect_values: Collected 4 values from sources \u2192 Sources: ['HUM-SRC-001', 'HUM-SRC-002', 'HUM-SRC-003', 'HUM-SRC-004']",
+        "explicit_deprecation: Found pa_form_old \u2192 pa_form pair in HUM-SRC-002 \u2192 Deprecated: HUM-AUTH-2024, Superseding: HUM-AUTH-2026",
+        "prefer_latest_form_version: Selected form with highest version number \u2192 Selected: HUM-AUTH-2026 (version 2026)"
+      ],
+      "contributing_sources": [
+        "HUM-SRC-002"
+      ],
+      "superseded_sources": [],
+      "conflicts_detected": true,
+      "reasoning": null,
+      "raw_values": {
+        "HUM-SRC-001": "HUM-AUTH-2024",
+        "HUM-SRC-002": "HUM-AUTH-2026",
+        "HUM-SRC-003": "HUM-AUTH-2024",
+        "HUM-SRC-004": "HUM-AUTH-2026"
+      }
+    },
+    "chart_note_window_days": {
+      "value": 90,
+      "confidence": 0.95,
+      "decision_path": [
+        "collect_values: Collected 4 values from sources \u2192 Sources: ['HUM-SRC-001', 'HUM-SRC-002', 'HUM-SRC-003', 'HUM-SRC-004']",
+        "chart_note_policy_update: Recent policy update detected, taking maximum window \u2192 Selected: 90 days"
+      ],
+      "contributing_sources": [
+        "HUM-SRC-002"
+      ],
+      "superseded_sources": [],
+      "conflicts_detected": true,
+      "reasoning": null,
+      "raw_values": {
+        "HUM-SRC-001": 60,
+        "HUM-SRC-002": 90,
+        "HUM-SRC-003": 60,
+        "HUM-SRC-004": 90
+      }
+    },
+    "turnaround_standard_days": {
+      "value": 7,
+      "confidence": 0.75,
+      "decision_path": [
+        "collect_values: Collected 3 values from sources \u2192 Sources: ['HUM-SRC-001', 'HUM-SRC-002', 'HUM-SRC-003']",
+        "recency_boost: Source is 378 days old \u2192 Boost: +0.00",
+        "authority_boost: Source type: web_page \u2192 Boost: +0.15",
+        "agreement_bonus: Multiple sources agree on this value \u2192 Bonus: +0.10",
+        "final_confidence: Final confidence calculation \u2192 Score: 0.75"
+      ],
+      "contributing_sources": [
+        "HUM-SRC-003"
+      ],
+      "superseded_sources": [],
+      "conflicts_detected": true,
+      "reasoning": null,
+      "raw_values": {
+        "HUM-SRC-001": 7,
+        "HUM-SRC-002": "10-14 (system migration delays)",
+        "HUM-SRC-003": 7
+      }
+    },
+    "turnaround_urgent_hours": {
+      "value": 48,
+      "confidence": 0.9,
+      "decision_path": [
+        "collect_values: Collected 3 values from sources \u2192 Sources: ['HUM-SRC-001', 'HUM-SRC-002', 'HUM-SRC-003']",
+        "recency_boost: Source is 26 days old \u2192 Boost: +0.30",
+        "authority_boost: Source type: phone_transcript \u2192 Boost: +0.20",
+        "agreement_bonus: Multiple sources agree on this value \u2192 Bonus: +0.20",
+        "warning_penalty: Operational warnings detected \u2192 Penalty: -0.30",
+        "final_confidence: Final confidence calculation \u2192 Score: 0.90"
+      ],
+      "contributing_sources": [
+        "HUM-SRC-002"
+      ],
+      "superseded_sources": [],
+      "conflicts_detected": false,
+      "reasoning": null
+    },
+    "remicade_requirements": {
+      "value": {
+        "step_therapy_required": true,
+        "biosimilar_attestation": true,
+        "auth_period_months": 6
+      },
+      "confidence": 0.85,
+      "decision_path": [
+        "drug_requirements_merged: Merged Remicade requirements from 1 sources \u2192 Used most recent source: HUM-SRC-001"
+      ],
+      "contributing_sources": [
+        "HUM-SRC-001"
+      ],
+      "superseded_sources": [],
+      "conflicts_detected": false,
+      "reasoning": null
+    }
+  }
+}
