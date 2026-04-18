@@ -1,1 +1,0 @@
-# Agentic extraction prototype

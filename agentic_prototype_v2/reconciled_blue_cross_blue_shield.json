@@ -1,0 +1,1283 @@
+{
+  "payer": "Anthem Blue Cross Blue Shield",
+  "reconciliation_date": "2026-04-23",
+  "fields": {
+    "submission_methods": {
+      "selected_value": [
+        "portal",
+        "fax",
+        "phone"
+      ],
+      "confidence": 0.95,
+      "reasoning": "All sources consistently show portal as fastest (3-5 days), fax as standard (5-7 days), and phone for urgent only. Provider manual states 'For urgent authorization requests only' for phone, web page shows 'PORTAL (FASTEST)' and 'PHONE (URGENT)', indicating clear preference order.",
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2025-01-01",
+          "value": [
+            "portal",
+            "fax",
+            "phone"
+          ],
+          "weight": "high"
+        },
+        {
+          "source": "phone_transcript",
+          "date": "2026-03-20",
+          "value": [
+            "portal",
+            "fax",
+            "phone"
+          ],
+          "weight": "high"
+        },
+        {
+          "source": "web_page",
+          "date": "2025-11-01",
+          "value": [
+            "portal",
+            "fax",
+            "phone"
+          ],
+          "weight": "high"
+        },
+        {
+          "source": "denial_letter",
+          "date": "2026-03-18",
+          "value": [
+            "portal",
+            "fax"
+          ],
+          "weight": "medium"
+        }
+      ]
+    },
+    "fax_number": {
+      "selected_value": "(844) 405-0296",
+      "confidence": 0.98,
+      "reasoning": "All four sources agree on (844) 405-0296. Phone rep on March 20, 2026 explicitly confirmed 'For medical drug PAs, the fax is (844) 405-0296. That hasn't changed.' Denial letter from March 18, 2026 also references this number for resubmission.",
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2025-01-01",
+          "value": "(844) 405-0296",
+          "weight": "high"
+        },
+        {
+          "source": "phone_transcript",
+          "date": "2026-03-20",
+          "value": "(844) 405-0296",
+          "weight": "high"
+        },
+        {
+          "source": "web_page",
+          "date": "2025-11-01",
+          "value": "(844) 405-0296",
+          "weight": "high"
+        },
+        {
+          "source": "denial_letter",
+          "date": "2026-03-18",
+          "value": "(844) 405-0296",
+          "weight": "high"
+        }
+      ]
+    },
+    "portal_url": {
+      "selected_value": "www.anthem.com/providers",
+      "confidence": 0.85,
+      "reasoning": "Provider manual shows full URL 'www.anthem.com/providers' while web page and denial letter show shortened 'anthem.com/providers'. The provider manual's full URL format is more complete and appropriate for official documentation. All point to the same destination.",
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2025-01-01",
+          "value": "www.anthem.com/providers",
+          "weight": "high"
+        },
+        {
+          "source": "web_page",
+          "date": "2025-11-01",
+          "value": "anthem.com/providers",
+          "weight": "medium"
+        },
+        {
+          "source": "denial_letter",
+          "date": "2026-03-18",
+          "value": "anthem.com/providers",
+          "weight": "medium"
+        }
+      ]
+    },
+    "phone_status_only": {
+      "selected_value": "(800) 274-7767, Option 2, Option 1, Option 1",
+      "confidence": 0.9,
+      "reasoning": "Phone transcript shows IVR path: 'For providers, press 2' then 'For prior authorization, press 1' then 'For medical drug and infusion authorizations, press 1'. This is the path to check authorization status and submit new requests.",
+      "sources_considered": [
+        {
+          "source": "phone_transcript",
+          "date": "2026-03-20",
+          "value": "(800) 274-7767, Option 2, Option 1, Option 1",
+          "weight": "high"
+        }
+      ]
+    },
+    "phone_urgent": {
+      "selected_value": "(800) 274-7767",
+      "confidence": 0.95,
+      "reasoning": "All sources consistently reference (800) 274-7767 for urgent requests. Provider manual specifies 'For urgent authorization requests only' and web page shows 'PHONE (URGENT): (800) 274-7767'.",
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2025-01-01",
+          "value": "(800) 274-7767",
+          "weight": "high"
+        },
+        {
+          "source": "web_page",
+          "date": "2025-11-01",
+          "value": "(800) 274-7767",
+          "weight": "high"
+        }
+      ]
+    },
+    "phone_hours": {
+      "selected_value": "M-F 8am-6pm local time",
+      "confidence": 0.8,
+      "reasoning": "Only provider manual provides phone hours: 'M-F 8am-6pm local time'. No other sources contradict this information.",
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2025-01-01",
+          "value": "M-F 8am-6pm local time",
+          "weight": "medium"
+        }
+      ]
+    },
+    "required_documents": {
+      "selected_value": [
+        "PA form (ANT-MED-PA-25)",
+        "Office visit notes",
+        "Relevant labs/diagnostics",
+        "Letter of medical necessity",
+        "Current medication list"
+      ],
+      "confidence": 0.95,
+      "reasoning": "Provider manual provides comprehensive list: 'Completed PA form (ANT-MED-PA-25), Office visit notes (within 60 days), Relevant labs/diagnostics, Letter of medical necessity, Current medication list'. Web page checklist confirms these same requirements. Phone transcript emphasizes completeness to avoid pending status.",
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2025-01-01",
+          "value": [
+            "PA form",
+            "Office notes",
+            "Labs",
+            "Letter of necessity",
+            "Medication list"
+          ],
+          "weight": "high"
+        },
+        {
+          "source": "web_page",
+          "date": "2025-11-01",
+          "value": [
+            "PA form",
+            "Office notes",
+            "Labs",
+            "Letter of necessity",
+            "Medication list"
+          ],
+          "weight": "high"
+        }
+      ]
+    },
+    "chart_note_window_days": {
+      "selected_value": 90,
+      "confidence": 0.95,
+      "reasoning": "Policy updated from 60 to 90 days in November 2025. Web page explicitly states 'Office notes from most recent visit (within 90 days \u2014 updated Nov 2025)'. Denial letter confirms '90-day documentation window per our November 2025 policy update'. Provider manual (60 days) and phone transcript (60 days) are outdated, predating the November 2025 policy change.",
+      "superseded_values": [
+        {
+          "value": 60,
+          "reason": "Policy updated to 90 days in November 2025 per web page and denial letter confirmation"
+        }
+      ],
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2025-01-01",
+          "value": 60,
+          "weight": "superseded"
+        },
+        {
+          "source": "phone_transcript",
+          "date": "2026-03-20",
+          "value": 60,
+          "weight": "superseded"
+        },
+        {
+          "source": "web_page",
+          "date": "2025-11-01",
+          "value": 90,
+          "weight": "high"
+        },
+        {
+          "source": "denial_letter",
+          "date": "2026-03-18",
+          "value": 90,
+          "weight": "high"
+        }
+      ]
+    },
+    "lab_window_days": {
+      "selected_value": null,
+      "confidence": 0.0,
+      "reasoning": "No sources specify a time window for lab results. All sources mention 'relevant labs/diagnostics' as required but do not specify age restrictions.",
+      "sources_considered": []
+    },
+    "turnaround_standard_days": {
+      "selected_value": 5,
+      "confidence": 0.98,
+      "reasoning": "All three sources that specify standard turnaround agree on 5 business days. Provider manual: 'Standard: 5 business days', phone transcript: 'Standard 5 business days from complete submission', web page: 'Standard: 5 business days'.",
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2025-01-01",
+          "value": 5,
+          "weight": "high"
+        },
+        {
+          "source": "phone_transcript",
+          "date": "2026-03-20",
+          "value": 5,
+          "weight": "high"
+        },
+        {
+          "source": "web_page",
+          "date": "2025-11-01",
+          "value": 5,
+          "weight": "high"
+        }
+      ]
+    },
+    "turnaround_portal_days": {
+      "selected_value": "3-5",
+      "confidence": 0.9,
+      "reasoning": "Both provider manual and web page specify '3-5 business days' for portal submissions. Provider manual states 'Turnaround: 3-5 business days' under portal section, web page shows 'Average turnaround: 3-5 business days' under portal.",
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2025-01-01",
+          "value": "3-5",
+          "weight": "high"
+        },
+        {
+          "source": "web_page",
+          "date": "2025-11-01",
+          "value": "3-5",
+          "weight": "high"
+        }
+      ]
+    },
+    "turnaround_fax_days": {
+      "selected_value": "5-7",
+      "confidence": 0.9,
+      "reasoning": "Both provider manual and web page specify '5-7 business days' for fax submissions. Provider manual states 'Turnaround: 5-7 business days' under fax section, web page shows 'Average turnaround: 5-7 business days' under fax.",
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2025-01-01",
+          "value": "5-7",
+          "weight": "high"
+        },
+        {
+          "source": "web_page",
+          "date": "2025-11-01",
+          "value": "5-7",
+          "weight": "high"
+        }
+      ]
+    },
+    "turnaround_urgent_hours": {
+      "selected_value": 24,
+      "confidence": 0.95,
+      "reasoning": "Both provider manual and web page specify 24 hours for urgent requests. Provider manual: 'Urgent: 24 hours', web page: 'Urgent/Expedited: 24 hours'.",
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2025-01-01",
+          "value": 24,
+          "weight": "high"
+        },
+        {
+          "source": "web_page",
+          "date": "2025-11-01",
+          "value": 24,
+          "weight": "high"
+        }
+      ]
+    },
+    "pend_period_days": {
+      "selected_value": null,
+      "confidence": 0.0,
+      "reasoning": "No sources specify an auto-denial deadline for incomplete submissions. Phone transcript mentions pending but doesn't specify timeframe.",
+      "sources_considered": []
+    },
+    "appeal_fax": {
+      "selected_value": "(844) 405-0299",
+      "confidence": 0.95,
+      "reasoning": "Both provider manual and denial letter specify (844) 405-0299 for appeals. Provider manual: 'Fax: (844) 405-0299', denial letter: 'Fax appeals to: (844) 405-0299'.",
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2025-01-01",
+          "value": "(844) 405-0299",
+          "weight": "high"
+        },
+        {
+          "source": "denial_letter",
+          "date": "2026-03-18",
+          "value": "(844) 405-0299",
+          "weight": "high"
+        }
+      ]
+    },
+    "appeal_phone": {
+      "selected_value": "(800) 274-7767, Option 5",
+      "confidence": 0.9,
+      "reasoning": "Provider manual and denial letter both specify '(800) 274-7767, Option 5' for appeals. Web page shows different path '(800) 274-7767 \u2192 Option 1 \u2192 Option 1' but this appears to be for general PA inquiries, not appeals specifically.",
+      "superseded_values": [
+        {
+          "value": "(800) 274-7767 \u2192 Option 1 \u2192 Option 1",
+          "reason": "Web page path is for general PA inquiries, not appeals"
+        }
+      ],
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2025-01-01",
+          "value": "(800) 274-7767, Option 5",
+          "weight": "high"
+        },
+        {
+          "source": "web_page",
+          "date": "2025-11-01",
+          "value": "(800) 274-7767 \u2192 Option 1 \u2192 Option 1",
+          "weight": "low"
+        },
+        {
+          "source": "denial_letter",
+          "date": "2026-03-18",
+          "value": "(800) 274-7767, Option 5",
+          "weight": "high"
+        }
+      ]
+    },
+    "appeal_deadline_days": {
+      "selected_value": 180,
+      "confidence": 0.95,
+      "reasoning": "Denial letter specifies 'Deadline: 180 days from this notice' for appeals. This is the most authoritative source for appeal deadline information.",
+      "sources_considered": [
+        {
+          "source": "denial_letter",
+          "date": "2026-03-18",
+          "value": 180,
+          "weight": "high"
+        }
+      ]
+    },
+    "appeal_mail": {
+      "selected_value": null,
+      "confidence": 0.0,
+      "reasoning": "No sources provide a mailing address for written appeals.",
+      "sources_considered": []
+    },
+    "system_migration_in_progress": {
+      "selected_value": false,
+      "confidence": 0.95,
+      "reasoning": "No sources mention any system migration or transition period. All systems appear to be operating normally.",
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2025-01-01",
+          "value": false,
+          "weight": "high"
+        },
+        {
+          "source": "phone_transcript",
+          "date": "2026-03-20",
+          "value": false,
+          "weight": "high"
+        },
+        {
+          "source": "web_page",
+          "date": "2025-11-01",
+          "value": false,
+          "weight": "high"
+        },
+        {
+          "source": "denial_letter",
+          "date": "2026-03-18",
+          "value": false,
+          "weight": "high"
+        }
+      ]
+    },
+    "common_denial_reasons": {
+      "selected_value": [
+        {
+          "reason": "Missing biosimilar justification",
+          "percentage": "38%"
+        },
+        {
+          "reason": "Outdated chart notes",
+          "percentage": "22%"
+        },
+        {
+          "reason": "Incomplete PA form",
+          "percentage": "18%"
+        },
+        {
+          "reason": "Missing lab results",
+          "percentage": "12%"
+        }
+      ],
+      "confidence": 0.9,
+      "reasoning": "Web page provides specific denial statistics. Phone transcript corroborates this, noting 'we're seeing a lot of submissions come in missing the HER2 results or without the biosimilar justification, and then it gets pended'.",
+      "sources_considered": [
+        {
+          "source": "web_page",
+          "date": "2025-11-01",
+          "value": "denial statistics",
+          "weight": "high"
+        },
+        {
+          "source": "phone_transcript",
+          "date": "2026-03-20",
+          "value": "corroboration",
+          "weight": "medium"
+        }
+      ]
+    },
+    "coverage_states": {
+      "selected_value": [
+        "CA",
+        "NY",
+        "OH",
+        "GA",
+        "IN",
+        "VA"
+      ],
+      "confidence": 0.95,
+      "reasoning": "Provider manual explicitly states 'This guide covers Anthem BCBS commercial plans in CA, NY, OH, GA, IN, and VA. For other Blue plans, contact the local plan directly.'",
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2025-01-01",
+          "value": [
+            "CA",
+            "NY",
+            "OH",
+            "GA",
+            "IN",
+            "VA"
+          ],
+          "weight": "high"
+        }
+      ]
+    },
+    "pa_form": {
+      "selected_value": "ANT-MED-PA-25",
+      "confidence": 0.98,
+      "reasoning": "All four sources consistently specify form ANT-MED-PA-25. No version conflicts or supersession detected.",
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2025-01-01",
+          "value": "ANT-MED-PA-25",
+          "weight": "high"
+        },
+        {
+          "source": "phone_transcript",
+          "date": "2026-03-20",
+          "value": "ANT-MED-PA-25",
+          "weight": "high"
+        },
+        {
+          "source": "web_page",
+          "date": "2025-11-01",
+          "value": "ANT-MED-PA-25",
+          "weight": "high"
+        },
+        {
+          "source": "denial_letter",
+          "date": "2026-03-18",
+          "value": "ANT-MED-PA-25",
+          "weight": "high"
+        }
+      ]
+    }
+  },
+  "drugs": {
+    "Remicade": {
+      "step_therapy_required": {
+        "selected_value": true,
+        "confidence": 0.95,
+        "reasoning": "Provider manual explicitly states 'Step therapy required (biosimilar first for new starts)' and web page requires 'Biosimilar step therapy attestation'. Both sources confirm step therapy requirement.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2025-01-01",
+            "value": true,
+            "weight": "high"
+          },
+          {
+            "source": "web_page",
+            "date": "2025-11-01",
+            "value": true,
+            "weight": "high"
+          }
+        ]
+      },
+      "prior_treatment_failure_required": {
+        "selected_value": true,
+        "confidence": 0.8,
+        "reasoning": "Provider manual specifies 'Prior DMARD trial required for RA indication'. This is indication-specific requirement for rheumatoid arthritis.",
+        "indication_specific_requirements": {
+          "rheumatoid_arthritis": {
+            "prior_treatment_failure_required": true
+          }
+        },
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2025-01-01",
+            "value": true,
+            "weight": "high"
+          }
+        ]
+      },
+      "biosimilar_requirement": {
+        "selected_value": "required",
+        "confidence": 0.95,
+        "reasoning": "Both provider manual and web page specify biosimilar requirement. Provider manual: 'biosimilar first for new starts', web page: 'Biosimilar step therapy attestation'.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2025-01-01",
+            "value": "required",
+            "weight": "high"
+          },
+          {
+            "source": "web_page",
+            "date": "2025-11-01",
+            "value": "required",
+            "weight": "high"
+          }
+        ]
+      },
+      "preferred_biosimilars": {
+        "selected_value": null,
+        "confidence": 0.0,
+        "reasoning": "No sources specify preferred biosimilars for Remicade.",
+        "sources_considered": []
+      },
+      "auth_period_months": {
+        "selected_value": 6,
+        "confidence": 0.8,
+        "reasoning": "Provider manual indicates '6 months authorization' for Remicade. No other sources provide conflicting information.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2025-01-01",
+            "value": 6,
+            "weight": "high"
+          }
+        ]
+      },
+      "auth_period_initial_months": {
+        "selected_value": null,
+        "confidence": 0.0,
+        "reasoning": "No sources specify separate initial authorization period.",
+        "sources_considered": []
+      },
+      "auth_period_renewal_months": {
+        "selected_value": null,
+        "confidence": 0.0,
+        "reasoning": "No sources specify separate renewal authorization period.",
+        "sources_considered": []
+      },
+      "specialist_required": {
+        "selected_value": false,
+        "confidence": 0.7,
+        "reasoning": "No sources explicitly require a specialist for Remicade submissions.",
+        "sources_considered": []
+      },
+      "specific_testing": {
+        "selected_value": [],
+        "confidence": 0.7,
+        "reasoning": "No sources specify required testing for Remicade.",
+        "sources_considered": []
+      },
+      "indication_specific_requirements": {
+        "selected_value": {
+          "rheumatoid_arthritis": {
+            "prior_treatment_failure_required": true
+          }
+        },
+        "confidence": 0.8,
+        "reasoning": "Provider manual specifies 'Prior DMARD trial required for RA indication', indicating requirement is specific to rheumatoid arthritis.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2025-01-01",
+            "value": "RA-specific requirement",
+            "weight": "high"
+          }
+        ]
+      },
+      "diagnosis_restrictions": {
+        "selected_value": [],
+        "confidence": 0.7,
+        "reasoning": "No sources specify diagnosis restrictions for Remicade.",
+        "sources_considered": []
+      },
+      "notes": {
+        "selected_value": "Prior DMARD trial required for RA indication",
+        "confidence": 0.8,
+        "reasoning": "Provider manual provides this specific clinical requirement.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2025-01-01",
+            "value": "Prior DMARD trial required for RA indication",
+            "weight": "high"
+          }
+        ]
+      },
+      "drug_specific_turnaround": {
+        "selected_value": null,
+        "confidence": 0.0,
+        "reasoning": "No sources specify different turnaround time for Remicade.",
+        "sources_considered": []
+      }
+    },
+    "Keytruda": {
+      "step_therapy_required": {
+        "selected_value": false,
+        "confidence": 0.8,
+        "reasoning": "Provider manual lists requirements for Keytruda but does not mention step therapy requirement.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2025-01-01",
+            "value": false,
+            "weight": "medium"
+          }
+        ]
+      },
+      "prior_treatment_failure_required": {
+        "selected_value": false,
+        "confidence": 0.8,
+        "reasoning": "Provider manual does not specify prior treatment failure requirement for Keytruda.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2025-01-01",
+            "value": false,
+            "weight": "medium"
+          }
+        ]
+      },
+      "biosimilar_requirement": {
+        "selected_value": "not_stated",
+        "confidence": 0.8,
+        "reasoning": "Provider manual does not mention biosimilar requirements for Keytruda.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2025-01-01",
+            "value": "not_stated",
+            "weight": "medium"
+          }
+        ]
+      },
+      "preferred_biosimilars": {
+        "selected_value": null,
+        "confidence": 0.0,
+        "reasoning": "No sources specify preferred biosimilars for Keytruda.",
+        "sources_considered": []
+      },
+      "auth_period_months": {
+        "selected_value": null,
+        "confidence": 0.0,
+        "reasoning": "No sources specify authorization period for Keytruda.",
+        "sources_considered": []
+      },
+      "auth_period_initial_months": {
+        "selected_value": null,
+        "confidence": 0.0,
+        "reasoning": "No sources specify initial authorization period for Keytruda.",
+        "sources_considered": []
+      },
+      "auth_period_renewal_months": {
+        "selected_value": null,
+        "confidence": 0.0,
+        "reasoning": "No sources specify renewal authorization period for Keytruda.",
+        "sources_considered": []
+      },
+      "specialist_required": {
+        "selected_value": true,
+        "confidence": 0.85,
+        "reasoning": "Provider manual specifies 'Oncology treatment plan required' which implies oncologist involvement.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2025-01-01",
+            "value": true,
+            "weight": "high"
+          }
+        ]
+      },
+      "specific_testing": {
+        "selected_value": [
+          "Biomarker"
+        ],
+        "confidence": 0.9,
+        "reasoning": "Provider manual explicitly states 'Biomarker documentation' required for Keytruda.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2025-01-01",
+            "value": [
+              "Biomarker"
+            ],
+            "weight": "high"
+          }
+        ]
+      },
+      "indication_specific_requirements": {
+        "selected_value": {},
+        "confidence": 0.7,
+        "reasoning": "No indication-specific requirements mentioned in sources.",
+        "sources_considered": []
+      },
+      "diagnosis_restrictions": {
+        "selected_value": [
+          "Oncology"
+        ],
+        "confidence": 0.85,
+        "reasoning": "Provider manual specifies 'Oncology treatment plan required', indicating oncology indication restriction.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2025-01-01",
+            "value": [
+              "Oncology"
+            ],
+            "weight": "high"
+          }
+        ]
+      },
+      "notes": {
+        "selected_value": "Biomarker documentation. Oncology treatment plan required.",
+        "confidence": 0.9,
+        "reasoning": "Direct quote from provider manual requirements for Keytruda.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2025-01-01",
+            "value": "Biomarker documentation. Oncology treatment plan required.",
+            "weight": "high"
+          }
+        ]
+      },
+      "drug_specific_turnaround": {
+        "selected_value": null,
+        "confidence": 0.0,
+        "reasoning": "No sources specify different turnaround time for Keytruda.",
+        "sources_considered": []
+      }
+    },
+    "Ocrevus": {
+      "step_therapy_required": {
+        "selected_value": false,
+        "confidence": 0.8,
+        "reasoning": "Provider manual lists requirements for Ocrevus but does not mention step therapy requirement.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2025-01-01",
+            "value": false,
+            "weight": "medium"
+          }
+        ]
+      },
+      "prior_treatment_failure_required": {
+        "selected_value": false,
+        "confidence": 0.8,
+        "reasoning": "Provider manual does not specify prior treatment failure requirement for Ocrevus.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2025-01-01",
+            "value": false,
+            "weight": "medium"
+          }
+        ]
+      },
+      "biosimilar_requirement": {
+        "selected_value": "not_stated",
+        "confidence": 0.8,
+        "reasoning": "Provider manual does not mention biosimilar requirements for Ocrevus.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2025-01-01",
+            "value": "not_stated",
+            "weight": "medium"
+          }
+        ]
+      },
+      "preferred_biosimilars": {
+        "selected_value": null,
+        "confidence": 0.0,
+        "reasoning": "No sources specify preferred biosimilars for Ocrevus.",
+        "sources_considered": []
+      },
+      "auth_period_months": {
+        "selected_value": null,
+        "confidence": 0.0,
+        "reasoning": "No sources specify authorization period for Ocrevus.",
+        "sources_considered": []
+      },
+      "auth_period_initial_months": {
+        "selected_value": null,
+        "confidence": 0.0,
+        "reasoning": "No sources specify initial authorization period for Ocrevus.",
+        "sources_considered": []
+      },
+      "auth_period_renewal_months": {
+        "selected_value": null,
+        "confidence": 0.0,
+        "reasoning": "No sources specify renewal authorization period for Ocrevus.",
+        "sources_considered": []
+      },
+      "specialist_required": {
+        "selected_value": true,
+        "confidence": 0.95,
+        "reasoning": "Provider manual explicitly states 'Neurologist must submit' for Ocrevus.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2025-01-01",
+            "value": true,
+            "weight": "high"
+          }
+        ]
+      },
+      "specific_testing": {
+        "selected_value": [
+          "MRI"
+        ],
+        "confidence": 0.95,
+        "reasoning": "Provider manual specifies 'MRI within 12 months' for Ocrevus.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2025-01-01",
+            "value": [
+              "MRI"
+            ],
+            "weight": "high"
+          }
+        ]
+      },
+      "indication_specific_requirements": {
+        "selected_value": {},
+        "confidence": 0.7,
+        "reasoning": "No indication-specific requirements mentioned in sources.",
+        "sources_considered": []
+      },
+      "diagnosis_restrictions": {
+        "selected_value": [],
+        "confidence": 0.7,
+        "reasoning": "No specific diagnosis restrictions mentioned, though neurologist requirement implies neurological conditions.",
+        "sources_considered": []
+      },
+      "notes": {
+        "selected_value": "Neurologist must submit. MRI within 12 months.",
+        "confidence": 0.95,
+        "reasoning": "Direct quote from provider manual requirements for Ocrevus.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2025-01-01",
+            "value": "Neurologist must submit. MRI within 12 months.",
+            "weight": "high"
+          }
+        ]
+      },
+      "drug_specific_turnaround": {
+        "selected_value": null,
+        "confidence": 0.0,
+        "reasoning": "No sources specify different turnaround time for Ocrevus.",
+        "sources_considered": []
+      }
+    },
+    "Herceptin": {
+      "step_therapy_required": {
+        "selected_value": false,
+        "confidence": 0.85,
+        "reasoning": "While biosimilar is required/preferred, the sources don't describe this as traditional 'step therapy' but rather as biosimilar-first policy. Phone transcript clarifies this as biosimilar preference rather than step therapy failure requirement.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2025-01-01",
+            "value": false,
+            "weight": "high"
+          },
+          {
+            "source": "phone_transcript",
+            "date": "2026-03-20",
+            "value": false,
+            "weight": "high"
+          },
+          {
+            "source": "web_page",
+            "date": "2025-11-01",
+            "value": true,
+            "weight": "low"
+          },
+          {
+            "source": "denial_letter",
+            "date": "2026-03-18",
+            "value": false,
+            "weight": "high"
+          }
+        ]
+      },
+      "prior_treatment_failure_required": {
+        "selected_value": false,
+        "confidence": 0.9,
+        "reasoning": "No sources specify prior treatment failure requirement for Herceptin.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2025-01-01",
+            "value": false,
+            "weight": "high"
+          },
+          {
+            "source": "phone_transcript",
+            "date": "2026-03-20",
+            "value": false,
+            "weight": "high"
+          },
+          {
+            "source": "denial_letter",
+            "date": "2026-03-18",
+            "value": false,
+            "weight": "high"
+          }
+        ]
+      },
+      "biosimilar_requirement": {
+        "selected_value": "required",
+        "confidence": 0.95,
+        "reasoning": "Policy evolved from 'preferred' to 'required'. Denial letter from March 2026 states 'biosimilar trastuzumab (Ogivri, Herzuma, Kanjinti, or Trazimera) is preferred for new patient starts' and cites 'policy effective July 2025'. Phone transcript confirms current enforcement of biosimilar requirement.",
+        "superseded_values": [
+          {
+            "value": "preferred",
+            "reason": "Policy changed to required effective July 2025 per denial letter"
+          }
+        ],
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2025-01-01",
+            "value": "preferred",
+            "weight": "superseded"
+          },
+          {
+            "source": "phone_transcript",
+            "date": "2026-03-20",
+            "value": "preferred",
+            "weight": "medium"
+          },
+          {
+            "source": "web_page",
+            "date": "2025-11-01",
+            "value": "required",
+            "weight": "high"
+          },
+          {
+            "source": "denial_letter",
+            "date": "2026-03-18",
+            "value": "required",
+            "weight": "high"
+          }
+        ]
+      },
+      "preferred_biosimilars": {
+        "selected_value": [
+          "Ogivri",
+          "Herzuma",
+          "Kanjinti",
+          "Trazimera"
+        ],
+        "confidence": 0.95,
+        "reasoning": "Denial letter specifies 'biosimilar trastuzumab (Ogivri, Herzuma, Kanjinti, or Trazimera)'. Phone transcript mentions 'formulary prefers Ogivri or Herzuma' but denial letter provides complete list.",
+        "sources_considered": [
+          {
+            "source": "phone_transcript",
+            "date": "2026-03-20",
+            "value": [
+              "Ogivri",
+              "Herzuma"
+            ],
+            "weight": "medium"
+          },
+          {
+            "source": "denial_letter",
+            "date": "2026-03-18",
+            "value": [
+              "Ogivri",
+              "Herzuma",
+              "Kanjinti",
+              "Trazimera"
+            ],
+            "weight": "high"
+          }
+        ]
+      },
+      "auth_period_months": {
+        "selected_value": null,
+        "confidence": 0.0,
+        "reasoning": "No sources specify authorization period for Herceptin.",
+        "sources_considered": []
+      },
+      "auth_period_initial_months": {
+        "selected_value": null,
+        "confidence": 0.0,
+        "reasoning": "No sources specify initial authorization period for Herceptin.",
+        "sources_considered": []
+      },
+      "auth_period_renewal_months": {
+        "selected_value": null,
+        "confidence": 0.0,
+        "reasoning": "No sources specify renewal authorization period for Herceptin.",
+        "sources_considered": []
+      },
+      "specialist_required": {
+        "selected_value": true,
+        "confidence": 0.8,
+        "reasoning": "Phone transcript mentions 'oncology treatment plan' requirement, though provider manual doesn't explicitly state oncologist requirement. Given HER2 testing and oncology context, specialist involvement is implied.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2025-01-01",
+            "value": false,
+            "weight": "medium"
+          },
+          {
+            "source": "phone_transcript",
+            "date": "2026-03-20",
+            "value": true,
+            "weight": "high"
+          }
+        ]
+      },
+      "specific_testing": {
+        "selected_value": [
+          "HER2"
+        ],
+        "confidence": 0.95,
+        "reasoning": "All sources consistently require HER2 testing. Provider manual: 'HER2 testing results', phone transcript: 'HER2 testing showing positive status'.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2025-01-01",
+            "value": [
+              "HER2"
+            ],
+            "weight": "high"
+          },
+          {
+            "source": "phone_transcript",
+            "date": "2026-03-20",
+            "value": [
+              "HER2"
+            ],
+            "weight": "high"
+          }
+        ]
+      },
+      "indication_specific_requirements": {
+        "selected_value": {},
+        "confidence": 0.7,
+        "reasoning": "No indication-specific requirements mentioned in sources.",
+        "sources_considered": []
+      },
+      "diagnosis_restrictions": {
+        "selected_value": [],
+        "confidence": 0.7,
+        "reasoning": "No specific diagnosis restrictions mentioned, though HER2+ requirement implies oncology indication.",
+        "sources_considered": []
+      },
+      "notes": {
+        "selected_value": "HER2 testing showing positive status required. Biosimilar justification required if requesting brand Herceptin. Oncology treatment plan required.",
+        "confidence": 0.9,
+        "reasoning": "Compiled from phone transcript and provider manual requirements for Herceptin.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2025-01-01",
+            "value": "HER2 testing results",
+            "weight": "high"
+          },
+          {
+            "source": "phone_transcript",
+            "date": "2026-03-20",
+            "value": "HER2 testing showing positive status, biosimilar justification, oncology treatment plan",
+            "weight": "high"
+          }
+        ]
+      },
+      "drug_specific_turnaround": {
+        "selected_value": null,
+        "confidence": 0.0,
+        "reasoning": "No sources specify different turnaround time for Herceptin.",
+        "sources_considered": []
+      }
+    },
+    "Rituxan": {
+      "step_therapy_required": {
+        "selected_value": true,
+        "confidence": 0.8,
+        "reasoning": "Web page requires 'Biosimilar step therapy attestation' for Rituxan.",
+        "sources_considered": [
+          {
+            "source": "web_page",
+            "date": "2025-11-01",
+            "value": true,
+            "weight": "high"
+          }
+        ]
+      },
+      "prior_treatment_failure_required": {
+        "selected_value": false,
+        "confidence": 0.8,
+        "reasoning": "Web page does not specify prior treatment failure requirement for Rituxan.",
+        "sources_considered": [
+          {
+            "source": "web_page",
+            "date": "2025-11-01",
+            "value": false,
+            "weight": "medium"
+          }
+        ]
+      },
+      "biosimilar_requirement": {
+        "selected_value": "required",
+        "confidence": 0.9,
+        "reasoning": "Web page specifies 'Biosimilar step therapy attestation' for Rituxan, indicating biosimilar requirement.",
+        "sources_considered": [
+          {
+            "source": "web_page",
+            "date": "2025-11-01",
+            "value": "required",
+            "weight": "high"
+          }
+        ]
+      },
+      "preferred_biosimilars": {
+        "selected_value": null,
+        "confidence": 0.0,
+        "reasoning": "No sources specify preferred biosimilars for Rituxan.",
+        "sources_considered": []
+      },
+      "auth_period_months": {
+        "selected_value": null,
+        "confidence": 0.0,
+        "reasoning": "No sources specify authorization period for Rituxan.",
+        "sources_considered": []
+      },
+      "auth_period_initial_months": {
+        "selected_value": null,
+        "confidence": 0.0,
+        "reasoning": "No sources specify initial authorization period for Rituxan.",
+        "sources_considered": []
+      },
+      "auth_period_renewal_months": {
+        "selected_value": null,
+        "confidence": 0.0,
+        "reasoning": "No sources specify renewal authorization period for Rituxan.",
+        "sources_considered": []
+      },
+      "specialist_required": {
+        "selected_value": false,
+        "confidence": 0.7,
+        "reasoning": "Web page does not explicitly require specialist for Rituxan submissions.",
+        "sources_considered": [
+          {
+            "source": "web_page",
+            "date": "2025-11-01",
+            "value": false,
+            "weight": "medium"
+          }
+        ]
+      },
+      "specific_testing": {
+        "selected_value": [],
+        "confidence": 0.7,
+        "reasoning": "Web page does not specify required testing for Rituxan.",
+        "sources_considered": [
+          {
+            "source": "web_page",
+            "date": "2025-11-01",
+            "value": [],
+            "weight": "medium"
+          }
+        ]
+      },
+      "indication_specific_requirements": {
+        "selected_value": {},
+        "confidence": 0.7,
+        "reasoning": "No indication-specific requirements mentioned in sources.",
+        "sources_considered": []
+      },
+      "diagnosis_restrictions": {
+        "selected_value": [],
+        "confidence": 0.7,
+        "reasoning": "Web page does not specify diagnosis restrictions for Rituxan.",
+        "sources_considered": [
+          {
+            "source": "web_page",
+            "date": "2025-11-01",
+            "value": [],
+            "weight": "medium"
+          }
+        ]
+      },
+      "notes": {
+        "selected_value": "Biosimilar step therapy attestation required.",
+        "confidence": 0.8,
+        "reasoning": "Direct requirement from web page for Rituxan.",
+        "sources_considered": [
+          {
+            "source": "web_page",
+            "date": "2025-11-01",
+            "value": "Biosimilar step therapy attestation",
+            "weight": "high"
+          }
+        ]
+      },
+      "drug_specific_turnaround": {
+        "selected_value": null,
+        "confidence": 0.0,
+        "reasoning": "No sources specify different turnaround time for Rituxan.",
+        "sources_considered": []
+      }
+    }
+  },
+  "missing_fields": []
+}

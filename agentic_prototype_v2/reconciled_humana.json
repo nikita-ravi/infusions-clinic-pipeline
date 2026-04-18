@@ -1,0 +1,1393 @@
+{
+  "payer": "Humana",
+  "reconciliation_date": "2026-04-23",
+  "fields": {
+    "submission_methods": {
+      "selected_value": [
+        "portal",
+        "fax",
+        "phone"
+      ],
+      "confidence": 0.95,
+      "reasoning": "All sources consistently list portal (Availity) as preferred, fax as standard alternative, and phone for urgent only. Provider manual states 'PREFERRED \u2014 Availity', web page states 'AVAILITY (PREFERRED)', and phone rep confirms both methods work though mentions 'Availity integration has been having issues'.",
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2024-01-01",
+          "value": [
+            "portal",
+            "fax",
+            "phone"
+          ],
+          "weight": "high"
+        },
+        {
+          "source": "phone_transcript",
+          "date": "2026-03-19",
+          "value": [
+            "portal",
+            "fax",
+            "phone"
+          ],
+          "weight": "high"
+        },
+        {
+          "source": "web_page",
+          "date": "2025-04-01",
+          "value": [
+            "portal",
+            "fax",
+            "phone"
+          ],
+          "weight": "high"
+        },
+        {
+          "source": "denial_letter",
+          "date": "2026-03-08",
+          "value": [
+            "portal",
+            "fax"
+          ],
+          "weight": "medium"
+        }
+      ]
+    },
+    "fax_number": {
+      "selected_value": "(800) 523-0023",
+      "confidence": 0.98,
+      "reasoning": "Universal agreement across all four sources. Phone rep confirmed 'the fax number is (800) 523-0023. That's the same as it's always been.' No indication of recent changes or supersession.",
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2024-01-01",
+          "value": "(800) 523-0023",
+          "weight": "high"
+        },
+        {
+          "source": "phone_transcript",
+          "date": "2026-03-19",
+          "value": "(800) 523-0023",
+          "weight": "high"
+        },
+        {
+          "source": "web_page",
+          "date": "2025-04-01",
+          "value": "(800) 523-0023",
+          "weight": "high"
+        },
+        {
+          "source": "denial_letter",
+          "date": "2026-03-08",
+          "value": "(800) 523-0023",
+          "weight": "high"
+        }
+      ]
+    },
+    "portal_url": {
+      "selected_value": "www.availity.com",
+      "confidence": 0.85,
+      "reasoning": "Provider manual and web page both specify 'www.availity.com' as the portal URL. Phone transcript mentions 'humana.com/providers' but this was in context of finding the form, not the submission portal. Denial letter just says 'Availity' without URL. The specific Availity URL is the actual submission portal.",
+      "superseded_values": [
+        {
+          "value": "humana.com/providers",
+          "reason": "This was mentioned for form downloads, not PA submissions"
+        }
+      ],
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2024-01-01",
+          "value": "www.availity.com",
+          "weight": "high"
+        },
+        {
+          "source": "phone_transcript",
+          "date": "2026-03-19",
+          "value": "humana.com/providers",
+          "weight": "low"
+        },
+        {
+          "source": "web_page",
+          "date": "2025-04-01",
+          "value": "www.availity.com",
+          "weight": "high"
+        },
+        {
+          "source": "denial_letter",
+          "date": "2026-03-08",
+          "value": "Availity",
+          "weight": "medium"
+        }
+      ]
+    },
+    "phone_status_only": {
+      "selected_value": "(800) 555-2546, Option 2",
+      "confidence": 0.9,
+      "reasoning": "Provider manual explicitly states 'STATUS CHECKS \u2014 (800) 555-2546, Option 2'. This is the only source that provides the specific IVR path for status checks.",
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2024-01-01",
+          "value": "(800) 555-2546, Option 2",
+          "weight": "high"
+        }
+      ]
+    },
+    "phone_urgent": {
+      "selected_value": "(800) 555-2546",
+      "confidence": 0.95,
+      "reasoning": "All sources that mention urgent phone submissions consistently reference (800) 555-2546. Provider manual states 'PHONE \u2014 (800) 555-2546 (Provider PA Hotline) For urgent/expedited requests only'.",
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2024-01-01",
+          "value": "(800) 555-2546",
+          "weight": "high"
+        },
+        {
+          "source": "phone_transcript",
+          "date": "2026-03-19",
+          "value": "(800) 555-2546",
+          "weight": "high"
+        },
+        {
+          "source": "web_page",
+          "date": "2025-04-01",
+          "value": "(800) 555-2546",
+          "weight": "high"
+        }
+      ]
+    },
+    "phone_hours": {
+      "selected_value": "M-F 8am-5pm CST",
+      "confidence": 0.92,
+      "reasoning": "Provider manual and web page both specify 'M-F 8am-5pm CST'. No conflicting information from other sources.",
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2024-01-01",
+          "value": "M-F 8am-5pm CST",
+          "weight": "high"
+        },
+        {
+          "source": "web_page",
+          "date": "2025-04-01",
+          "value": "M-F 8am-5pm CST",
+          "weight": "high"
+        }
+      ]
+    },
+    "pa_form": {
+      "selected_value": "HUM-AUTH-2026",
+      "confidence": 0.95,
+      "reasoning": "Phone rep explicitly stated 'We actually released a new form \u2014 HUM-AUTH-2026. It went into effect January 1st. The old form will still get processed but it might get kicked back because it doesn't have the biosimilar attestation section.' Denial letter confirms this by referencing the old form as problematic: 'Submission used form HUM-AUTH-2024, which does not include the biosimilar attestation section. Please resubmit using HUM-AUTH-2026.'",
+      "superseded_values": [
+        {
+          "value": "HUM-AUTH-2024",
+          "reason": "Superseded January 1st, 2026 per phone rep and denial letter"
+        }
+      ],
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2024-01-01",
+          "value": "HUM-AUTH-2024",
+          "weight": "superseded"
+        },
+        {
+          "source": "phone_transcript",
+          "date": "2026-03-19",
+          "value": "HUM-AUTH-2026",
+          "weight": "high"
+        },
+        {
+          "source": "web_page",
+          "date": "2025-04-01",
+          "value": "HUM-AUTH-2024",
+          "weight": "superseded"
+        },
+        {
+          "source": "denial_letter",
+          "date": "2026-03-08",
+          "value": "HUM-AUTH-2026",
+          "weight": "high"
+        }
+      ]
+    },
+    "required_documents": {
+      "selected_value": [
+        "Humana PA Form",
+        "Physician notes",
+        "Lab results relevant to diagnosis",
+        "Letter of medical necessity",
+        "Treatment plan with dosing schedule",
+        "Insurance verification confirmation",
+        "Current medication list"
+      ],
+      "confidence": 0.88,
+      "reasoning": "Provider manual provides most comprehensive list. Web page has similar requirements with slight variations ('office visit notes' vs 'physician notes'). Combined both lists for completeness as these represent official documented requirements.",
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2024-01-01",
+          "value": [
+            "Humana PA Form",
+            "Physician notes (within 60 days)",
+            "Lab results relevant to diagnosis",
+            "Letter of medical necessity",
+            "Treatment plan with dosing schedule",
+            "Insurance verification confirmation"
+          ],
+          "weight": "high"
+        },
+        {
+          "source": "web_page",
+          "date": "2025-04-01",
+          "value": [
+            "Humana PA Form",
+            "Office visit notes (within 60 days)",
+            "Supporting lab results",
+            "Letter of medical necessity",
+            "Current medication list",
+            "Treatment plan with dosing"
+          ],
+          "weight": "high"
+        }
+      ]
+    },
+    "chart_note_window_days": {
+      "selected_value": 90,
+      "confidence": 0.95,
+      "reasoning": "Phone rep explicitly stated 'chart notes within 90 days \u2014 we changed that from 60, that's on the new form'. Denial letter confirms: 'Chart notes provided are dated September 2025 \u2014 outside the 90-day window per the January 2026 policy update.' This is clear supersession of the 60-day requirement.",
+      "superseded_values": [
+        {
+          "value": 60,
+          "reason": "Changed to 90 days per January 2026 policy update"
+        }
+      ],
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2024-01-01",
+          "value": 60,
+          "weight": "superseded"
+        },
+        {
+          "source": "phone_transcript",
+          "date": "2026-03-19",
+          "value": 90,
+          "weight": "high"
+        },
+        {
+          "source": "web_page",
+          "date": "2025-04-01",
+          "value": 60,
+          "weight": "superseded"
+        },
+        {
+          "source": "denial_letter",
+          "date": "2026-03-08",
+          "value": 90,
+          "weight": "high"
+        }
+      ]
+    },
+    "lab_window_days": {
+      "selected_value": "not_specified",
+      "confidence": 0.7,
+      "reasoning": "Sources mention 'lab results relevant to diagnosis' and 'supporting lab results' as required but do not specify an aging window for labs, unlike chart notes which have explicit timing requirements.",
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2024-01-01",
+          "value": "not_specified",
+          "weight": "medium"
+        },
+        {
+          "source": "web_page",
+          "date": "2025-04-01",
+          "value": "not_specified",
+          "weight": "medium"
+        }
+      ]
+    },
+    "turnaround_standard_days": {
+      "selected_value": "10-14",
+      "confidence": 0.85,
+      "reasoning": "Phone rep provided current operational reality: 'Standard is 7 business days but honestly we're running behind. The real turnaround is more like 10-14 days right now. We're dealing with a system migration.' This represents actual current performance vs. stated policy, which is more useful for provider planning.",
+      "superseded_values": [
+        {
+          "value": "7",
+          "reason": "Official policy but not current operational reality due to system migration"
+        }
+      ],
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2024-01-01",
+          "value": "7-10",
+          "weight": "medium"
+        },
+        {
+          "source": "phone_transcript",
+          "date": "2026-03-19",
+          "value": "10-14",
+          "weight": "high"
+        },
+        {
+          "source": "web_page",
+          "date": "2025-04-01",
+          "value": "7",
+          "weight": "low"
+        }
+      ]
+    },
+    "turnaround_portal_days": {
+      "selected_value": "5-7",
+      "confidence": 0.8,
+      "reasoning": "Provider manual and web page both specify 5-7 business days for Availity portal submissions. Phone rep didn't provide portal-specific timing but noted general delays due to system migration.",
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2024-01-01",
+          "value": "5-7",
+          "weight": "high"
+        },
+        {
+          "source": "web_page",
+          "date": "2025-04-01",
+          "value": "5-7",
+          "weight": "high"
+        }
+      ]
+    },
+    "turnaround_fax_days": {
+      "selected_value": "7-10",
+      "confidence": 0.85,
+      "reasoning": "Provider manual and web page both specify 7-10 business days for fax submissions. This appears to be the established policy for fax turnaround times.",
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2024-01-01",
+          "value": "7-10",
+          "weight": "high"
+        },
+        {
+          "source": "web_page",
+          "date": "2025-04-01",
+          "value": "7-10",
+          "weight": "high"
+        }
+      ]
+    },
+    "turnaround_urgent_hours": {
+      "selected_value": 48,
+      "confidence": 0.95,
+      "reasoning": "Universal agreement across all sources that mention urgent turnaround. Phone rep confirmed: 'our policy is 48 hours for urgent' and 'we're holding to that' despite other delays.",
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2024-01-01",
+          "value": 48,
+          "weight": "high"
+        },
+        {
+          "source": "phone_transcript",
+          "date": "2026-03-19",
+          "value": 48,
+          "weight": "high"
+        },
+        {
+          "source": "web_page",
+          "date": "2025-04-01",
+          "value": 48,
+          "weight": "high"
+        }
+      ]
+    },
+    "pend_period_days": {
+      "selected_value": "not_specified",
+      "confidence": 0.6,
+      "reasoning": "No sources mention a specific auto-denial deadline for incomplete submissions or pend periods.",
+      "sources_considered": []
+    },
+    "appeal_fax": {
+      "selected_value": "(800) 523-0028",
+      "confidence": 0.95,
+      "reasoning": "Universal agreement across all sources that mention appeals fax number. Different from the PA submission fax number.",
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2024-01-01",
+          "value": "(800) 523-0028",
+          "weight": "high"
+        },
+        {
+          "source": "web_page",
+          "date": "2025-04-01",
+          "value": "(800) 523-0028",
+          "weight": "high"
+        },
+        {
+          "source": "denial_letter",
+          "date": "2026-03-08",
+          "value": "(800) 523-0028",
+          "weight": "high"
+        }
+      ]
+    },
+    "appeal_phone": {
+      "selected_value": "(800) 555-2546, Option 4",
+      "confidence": 0.95,
+      "reasoning": "Universal agreement across all sources that mention appeals phone number with specific IVR path.",
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2024-01-01",
+          "value": "(800) 555-2546, Option 4",
+          "weight": "high"
+        },
+        {
+          "source": "web_page",
+          "date": "2025-04-01",
+          "value": "(800) 555-2546, Option 4",
+          "weight": "high"
+        },
+        {
+          "source": "denial_letter",
+          "date": "2026-03-08",
+          "value": "(800) 555-2546, Option 4",
+          "weight": "high"
+        }
+      ]
+    },
+    "appeal_deadline_days": {
+      "selected_value": 60,
+      "confidence": 0.92,
+      "reasoning": "Denial letter states 'File within 60 days of this notice.' This is the most authoritative source for appeal deadline as it's an official determination document.",
+      "sources_considered": [
+        {
+          "source": "denial_letter",
+          "date": "2026-03-08",
+          "value": 60,
+          "weight": "high"
+        }
+      ]
+    },
+    "appeal_mail": {
+      "selected_value": "Humana Appeals, PO Box 14165, Lexington KY 40512",
+      "confidence": 0.85,
+      "reasoning": "Both sources agree on the PO Box and city/state/zip. Denial letter uses slightly shorter format 'Humana Appeals' vs provider manual 'Humana Appeals Department' but both are the same address. Using the more recent denial letter format.",
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2024-01-01",
+          "value": "Humana Appeals Department, PO Box 14165, Lexington KY 40512",
+          "weight": "medium"
+        },
+        {
+          "source": "denial_letter",
+          "date": "2026-03-08",
+          "value": "Humana Appeals, PO Box 14165, Lexington KY 40512",
+          "weight": "high"
+        }
+      ]
+    },
+    "system_migration_in_progress": {
+      "selected_value": true,
+      "confidence": 0.9,
+      "reasoning": "Phone rep explicitly mentioned 'We're dealing with a system migration' when explaining delays. This explains current operational issues and longer turnaround times.",
+      "sources_considered": [
+        {
+          "source": "provider_manual",
+          "date": "2024-01-01",
+          "value": false,
+          "weight": "low"
+        },
+        {
+          "source": "phone_transcript",
+          "date": "2026-03-19",
+          "value": true,
+          "weight": "high"
+        },
+        {
+          "source": "web_page",
+          "date": "2025-04-01",
+          "value": false,
+          "weight": "low"
+        },
+        {
+          "source": "denial_letter",
+          "date": "2026-03-08",
+          "value": false,
+          "weight": "low"
+        }
+      ]
+    },
+    "common_denial_reasons": {
+      "selected_value": [
+        "Step therapy not met",
+        "Outdated documentation",
+        "Wrong form version",
+        "Missing biosimilar attestation"
+      ],
+      "confidence": 0.8,
+      "reasoning": "Denial letter provides real example of denial reasons: step therapy not met, outdated documentation (outside 90-day window), and wrong form version (missing biosimilar attestation section).",
+      "sources_considered": [
+        {
+          "source": "denial_letter",
+          "date": "2026-03-08",
+          "value": [
+            "Step therapy not met",
+            "Outdated documentation",
+            "Wrong form version"
+          ],
+          "weight": "high"
+        }
+      ]
+    },
+    "coverage_states": {
+      "selected_value": "not_specified",
+      "confidence": 0.7,
+      "reasoning": "No sources specify which states Humana covers for medical drug PAs. This appears to be national Humana policy documentation.",
+      "sources_considered": []
+    }
+  },
+  "drugs": {
+    "Remicade": {
+      "step_therapy_required": {
+        "selected_value": true,
+        "confidence": 0.85,
+        "reasoning": "Provider manual states 'Step therapy required \u2014 must trial conventional DMARD first'. Web page mentions 'Conventional therapy failure' which implies step therapy requirement.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2024-01-01",
+            "value": true,
+            "weight": "high"
+          },
+          {
+            "source": "web_page",
+            "date": "2025-04-01",
+            "value": true,
+            "weight": "medium"
+          }
+        ]
+      },
+      "prior_treatment_failure_required": {
+        "selected_value": true,
+        "confidence": 0.9,
+        "reasoning": "Web page explicitly states 'Conventional therapy failure' requirement. Provider manual mentions 'must trial conventional DMARD first' which implies failure documentation needed.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2024-01-01",
+            "value": true,
+            "weight": "medium"
+          },
+          {
+            "source": "web_page",
+            "date": "2025-04-01",
+            "value": true,
+            "weight": "high"
+          }
+        ]
+      },
+      "biosimilar_requirement": {
+        "selected_value": "required",
+        "confidence": 0.95,
+        "reasoning": "Both sources agree on biosimilar requirements. Provider manual: 'Biosimilar attestation required for new starts'. Web page: 'biosimilar attestation'.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2024-01-01",
+            "value": "required",
+            "weight": "high"
+          },
+          {
+            "source": "web_page",
+            "date": "2025-04-01",
+            "value": "required",
+            "weight": "high"
+          }
+        ]
+      },
+      "preferred_biosimilars": {
+        "selected_value": "not_specified",
+        "confidence": 0.7,
+        "reasoning": "Sources mention biosimilar attestation requirement but do not specify which biosimilar products are preferred.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2024-01-01",
+            "value": "not_specified",
+            "weight": "medium"
+          },
+          {
+            "source": "web_page",
+            "date": "2025-04-01",
+            "value": "not_specified",
+            "weight": "medium"
+          }
+        ]
+      },
+      "auth_period_months": {
+        "selected_value": 6,
+        "confidence": 0.85,
+        "reasoning": "Provider manual clearly states 'Auth: 6 months' for Remicade.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2024-01-01",
+            "value": 6,
+            "weight": "high"
+          }
+        ]
+      },
+      "auth_period_initial_months": {
+        "selected_value": "not_specified",
+        "confidence": 0.7,
+        "reasoning": "Sources only mention general authorization period, no distinction between initial and renewal periods.",
+        "sources_considered": []
+      },
+      "auth_period_renewal_months": {
+        "selected_value": "not_specified",
+        "confidence": 0.7,
+        "reasoning": "Sources only mention general authorization period, no distinction between initial and renewal periods.",
+        "sources_considered": []
+      },
+      "specialist_required": {
+        "selected_value": false,
+        "confidence": 0.75,
+        "reasoning": "No sources mention specialist requirement for Remicade submissions.",
+        "sources_considered": []
+      },
+      "specific_testing": {
+        "selected_value": [],
+        "confidence": 0.8,
+        "reasoning": "No sources mention specific laboratory tests required for Remicade authorization.",
+        "sources_considered": []
+      },
+      "indication_specific_requirements": {
+        "selected_value": "not_specified",
+        "confidence": 0.7,
+        "reasoning": "Sources mention step therapy and biosimilar requirements but do not specify if these vary by indication.",
+        "sources_considered": []
+      },
+      "diagnosis_restrictions": {
+        "selected_value": "not_specified",
+        "confidence": 0.7,
+        "reasoning": "Sources do not specify which diagnoses are covered for Remicade.",
+        "sources_considered": []
+      },
+      "notes": {
+        "selected_value": "Conventional DMARD trial required before approval. Biosimilar attestation required for new starts.",
+        "confidence": 0.85,
+        "reasoning": "Summary of key requirements from provider manual and web page.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2024-01-01",
+            "value": "Step therapy and biosimilar requirements",
+            "weight": "high"
+          },
+          {
+            "source": "web_page",
+            "date": "2025-04-01",
+            "value": "Conventional therapy failure and biosimilar attestation",
+            "weight": "high"
+          }
+        ]
+      },
+      "drug_specific_turnaround": {
+        "selected_value": "not_specified",
+        "confidence": 0.7,
+        "reasoning": "No sources mention drug-specific turnaround times different from standard PA processing.",
+        "sources_considered": []
+      }
+    },
+    "Rituxan": {
+      "step_therapy_required": {
+        "selected_value": "indication_dependent",
+        "confidence": 0.95,
+        "reasoning": "Multiple sources consistently state step therapy is required for RA indication only. Phone rep: 'if it's for RA you need step therapy documentation. For lymphoma or CLL indications, no step therapy needed.' Provider manual: 'Step therapy required for RA indication only.'",
+        "indication_specific_requirements": {
+          "rheumatoid_arthritis": {
+            "step_therapy_required": true
+          },
+          "lymphoma": {
+            "step_therapy_required": false
+          },
+          "CLL": {
+            "step_therapy_required": false
+          }
+        },
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2024-01-01",
+            "value": "indication_dependent",
+            "weight": "high"
+          },
+          {
+            "source": "phone_transcript",
+            "date": "2026-03-19",
+            "value": "indication_dependent",
+            "weight": "high"
+          },
+          {
+            "source": "web_page",
+            "date": "2025-04-01",
+            "value": "indication_dependent",
+            "weight": "high"
+          },
+          {
+            "source": "denial_letter",
+            "date": "2026-03-08",
+            "value": true,
+            "weight": "medium"
+          }
+        ]
+      },
+      "prior_treatment_failure_required": {
+        "selected_value": true,
+        "confidence": 0.9,
+        "reasoning": "Denial letter explicitly states 'For the RA indication, Humana requires documentation of trial and failure of at least one conventional DMARD (e.g., methotrexate) AND one biosimilar rituximab product'. This indicates prior treatment failure documentation is required.",
+        "sources_considered": [
+          {
+            "source": "denial_letter",
+            "date": "2026-03-08",
+            "value": true,
+            "weight": "high"
+          }
+        ]
+      },
+      "biosimilar_requirement": {
+        "selected_value": "required",
+        "confidence": 0.85,
+        "reasoning": "Denial letter states 'Humana requires documentation of trial and failure of at least one conventional DMARD (e.g., methotrexate) AND one biosimilar rituximab product before brand Rituxan will be authorized.' This indicates biosimilar trial is required before brand Rituxan.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2024-01-01",
+            "value": "none",
+            "weight": "low"
+          },
+          {
+            "source": "phone_transcript",
+            "date": "2026-03-19",
+            "value": "not_stated",
+            "weight": "low"
+          },
+          {
+            "source": "web_page",
+            "date": "2025-04-01",
+            "value": "not_stated",
+            "weight": "low"
+          },
+          {
+            "source": "denial_letter",
+            "date": "2026-03-08",
+            "value": "required",
+            "weight": "high"
+          }
+        ]
+      },
+      "preferred_biosimilars": {
+        "selected_value": "not_specified",
+        "confidence": 0.7,
+        "reasoning": "Denial letter mentions biosimilar rituximab requirement but does not specify which biosimilar products are preferred.",
+        "sources_considered": [
+          {
+            "source": "denial_letter",
+            "date": "2026-03-08",
+            "value": "not_specified",
+            "weight": "medium"
+          }
+        ]
+      },
+      "auth_period_months": {
+        "selected_value": 6,
+        "confidence": 0.85,
+        "reasoning": "Provider manual states 'Auth: 6 months' for Rituxan.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2024-01-01",
+            "value": 6,
+            "weight": "high"
+          }
+        ]
+      },
+      "auth_period_initial_months": {
+        "selected_value": "not_specified",
+        "confidence": 0.7,
+        "reasoning": "Sources only mention general authorization period, no distinction between initial and renewal periods.",
+        "sources_considered": []
+      },
+      "auth_period_renewal_months": {
+        "selected_value": "not_specified",
+        "confidence": 0.7,
+        "reasoning": "Sources only mention general authorization period, no distinction between initial and renewal periods.",
+        "sources_considered": []
+      },
+      "specialist_required": {
+        "selected_value": false,
+        "confidence": 0.8,
+        "reasoning": "No sources mention specialist requirement for Rituxan submissions, unlike Ocrevus which explicitly requires MS specialist.",
+        "sources_considered": []
+      },
+      "specific_testing": {
+        "selected_value": [
+          "CD20+"
+        ],
+        "confidence": 0.95,
+        "reasoning": "Multiple sources consistently require CD20+ documentation. Provider manual: 'CD20+ documentation'. Phone rep: 'labs showing CD20 positive'. Web page: 'CD20+ status'.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2024-01-01",
+            "value": [
+              "CD20+"
+            ],
+            "weight": "high"
+          },
+          {
+            "source": "phone_transcript",
+            "date": "2026-03-19",
+            "value": [
+              "CD20+"
+            ],
+            "weight": "high"
+          },
+          {
+            "source": "web_page",
+            "date": "2025-04-01",
+            "value": [
+              "CD20+"
+            ],
+            "weight": "high"
+          }
+        ]
+      },
+      "indication_specific_requirements": {
+        "selected_value": {
+          "rheumatoid_arthritis": {
+            "step_therapy_required": true,
+            "conventional_dmard_failure_required": true,
+            "biosimilar_trial_required": true
+          },
+          "lymphoma": {
+            "step_therapy_required": false
+          },
+          "CLL": {
+            "step_therapy_required": false
+          }
+        },
+        "confidence": 0.9,
+        "reasoning": "Clear indication-specific requirements. Phone rep: 'For RA you need step therapy documentation. For lymphoma or CLL indications, no step therapy needed.' Denial letter details RA-specific requirements including conventional DMARD and biosimilar trial.",
+        "sources_considered": [
+          {
+            "source": "phone_transcript",
+            "date": "2026-03-19",
+            "value": "indication_dependent",
+            "weight": "high"
+          },
+          {
+            "source": "denial_letter",
+            "date": "2026-03-08",
+            "value": "RA_specific",
+            "weight": "high"
+          }
+        ]
+      },
+      "diagnosis_restrictions": {
+        "selected_value": [
+          "rheumatoid_arthritis",
+          "lymphoma",
+          "CLL"
+        ],
+        "confidence": 0.8,
+        "reasoning": "Sources specifically mention RA, lymphoma, and CLL as covered indications with different requirements.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2024-01-01",
+            "value": [
+              "RA"
+            ],
+            "weight": "medium"
+          },
+          {
+            "source": "phone_transcript",
+            "date": "2026-03-19",
+            "value": [
+              "RA",
+              "lymphoma",
+              "CLL"
+            ],
+            "weight": "high"
+          },
+          {
+            "source": "denial_letter",
+            "date": "2026-03-08",
+            "value": [
+              "rheumatoid_arthritis"
+            ],
+            "weight": "medium"
+          }
+        ]
+      },
+      "notes": {
+        "selected_value": "CD20+ testing required. Step therapy and biosimilar requirements vary by indication - required for RA, not required for lymphoma/CLL.",
+        "confidence": 0.9,
+        "reasoning": "Summary of key indication-dependent requirements from multiple sources.",
+        "sources_considered": [
+          {
+            "source": "phone_transcript",
+            "date": "2026-03-19",
+            "value": "Indication-dependent requirements",
+            "weight": "high"
+          },
+          {
+            "source": "denial_letter",
+            "date": "2026-03-08",
+            "value": "RA-specific requirements",
+            "weight": "high"
+          }
+        ]
+      },
+      "drug_specific_turnaround": {
+        "selected_value": "not_specified",
+        "confidence": 0.7,
+        "reasoning": "No sources mention drug-specific turnaround times for Rituxan.",
+        "sources_considered": []
+      }
+    },
+    "Entyvio": {
+      "step_therapy_required": {
+        "selected_value": false,
+        "confidence": 0.75,
+        "reasoning": "Provider manual mentions 'Anti-TNF failure or contraindication documentation' which suggests step therapy with anti-TNF agents, but web page extraction shows conflicting information. Based on raw text, this appears to be prior treatment failure requirement rather than formal step therapy.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2024-01-01",
+            "value": false,
+            "weight": "medium"
+          },
+          {
+            "source": "web_page",
+            "date": "2025-04-01",
+            "value": "conflicting",
+            "weight": "low"
+          }
+        ]
+      },
+      "prior_treatment_failure_required": {
+        "selected_value": true,
+        "confidence": 0.9,
+        "reasoning": "Both sources agree on requirement for Anti-TNF failure documentation. Provider manual: 'Anti-TNF failure or contraindication documentation'. Web page: 'Anti-TNF failure documentation'.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2024-01-01",
+            "value": true,
+            "weight": "high"
+          },
+          {
+            "source": "web_page",
+            "date": "2025-04-01",
+            "value": true,
+            "weight": "high"
+          }
+        ]
+      },
+      "biosimilar_requirement": {
+        "selected_value": "not_stated",
+        "confidence": 0.8,
+        "reasoning": "No sources mention biosimilar requirements for Entyvio.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2024-01-01",
+            "value": "not_stated",
+            "weight": "medium"
+          },
+          {
+            "source": "web_page",
+            "date": "2025-04-01",
+            "value": "not_stated",
+            "weight": "medium"
+          }
+        ]
+      },
+      "preferred_biosimilars": {
+        "selected_value": "not_applicable",
+        "confidence": 0.85,
+        "reasoning": "Entyvio (vedolizumab) does not have biosimilar versions currently available.",
+        "sources_considered": []
+      },
+      "auth_period_months": {
+        "selected_value": 6,
+        "confidence": 0.85,
+        "reasoning": "Provider manual states 'Auth: 6 months' for Entyvio.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2024-01-01",
+            "value": 6,
+            "weight": "high"
+          }
+        ]
+      },
+      "auth_period_initial_months": {
+        "selected_value": "not_specified",
+        "confidence": 0.7,
+        "reasoning": "Sources only mention general authorization period.",
+        "sources_considered": []
+      },
+      "auth_period_renewal_months": {
+        "selected_value": "not_specified",
+        "confidence": 0.7,
+        "reasoning": "Sources only mention general authorization period.",
+        "sources_considered": []
+      },
+      "specialist_required": {
+        "selected_value": false,
+        "confidence": 0.75,
+        "reasoning": "No sources mention specialist requirement for Entyvio submissions.",
+        "sources_considered": []
+      },
+      "specific_testing": {
+        "selected_value": [],
+        "confidence": 0.8,
+        "reasoning": "No sources mention specific laboratory tests required for Entyvio authorization.",
+        "sources_considered": []
+      },
+      "indication_specific_requirements": {
+        "selected_value": "not_specified",
+        "confidence": 0.7,
+        "reasoning": "Sources mention anti-TNF failure requirement but do not specify if requirements vary by specific indication.",
+        "sources_considered": []
+      },
+      "diagnosis_restrictions": {
+        "selected_value": "not_specified",
+        "confidence": 0.7,
+        "reasoning": "Sources do not specify which diagnoses are covered for Entyvio, though it's typically used for IBD.",
+        "sources_considered": []
+      },
+      "notes": {
+        "selected_value": "Anti-TNF failure or contraindication documentation required.",
+        "confidence": 0.9,
+        "reasoning": "Key requirement consistently mentioned across sources.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2024-01-01",
+            "value": "Anti-TNF failure requirement",
+            "weight": "high"
+          }
+        ]
+      },
+      "drug_specific_turnaround": {
+        "selected_value": "not_specified",
+        "confidence": 0.7,
+        "reasoning": "No sources mention drug-specific turnaround times for Entyvio.",
+        "sources_considered": []
+      }
+    },
+    "Ocrevus": {
+      "step_therapy_required": {
+        "selected_value": false,
+        "confidence": 0.85,
+        "reasoning": "No sources mention step therapy requirements for Ocrevus.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2024-01-01",
+            "value": false,
+            "weight": "medium"
+          },
+          {
+            "source": "web_page",
+            "date": "2025-04-01",
+            "value": false,
+            "weight": "medium"
+          }
+        ]
+      },
+      "prior_treatment_failure_required": {
+        "selected_value": false,
+        "confidence": 0.85,
+        "reasoning": "No sources mention prior treatment failure requirements for Ocrevus.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2024-01-01",
+            "value": false,
+            "weight": "medium"
+          },
+          {
+            "source": "web_page",
+            "date": "2025-04-01",
+            "value": false,
+            "weight": "medium"
+          }
+        ]
+      },
+      "biosimilar_requirement": {
+        "selected_value": "not_applicable",
+        "confidence": 0.9,
+        "reasoning": "Ocrevus (ocrelizumab) does not have biosimilar versions currently available.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2024-01-01",
+            "value": "not_stated",
+            "weight": "medium"
+          },
+          {
+            "source": "web_page",
+            "date": "2025-04-01",
+            "value": "not_stated",
+            "weight": "medium"
+          }
+        ]
+      },
+      "preferred_biosimilars": {
+        "selected_value": "not_applicable",
+        "confidence": 0.9,
+        "reasoning": "Ocrevus does not have biosimilar versions.",
+        "sources_considered": []
+      },
+      "auth_period_months": {
+        "selected_value": 12,
+        "confidence": 0.9,
+        "reasoning": "Provider manual clearly states 'Auth: 12 months' for Ocrevus.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2024-01-01",
+            "value": 12,
+            "weight": "high"
+          }
+        ]
+      },
+      "auth_period_initial_months": {
+        "selected_value": "not_specified",
+        "confidence": 0.7,
+        "reasoning": "Sources only mention general authorization period.",
+        "sources_considered": []
+      },
+      "auth_period_renewal_months": {
+        "selected_value": "not_specified",
+        "confidence": 0.7,
+        "reasoning": "Sources only mention general authorization period.",
+        "sources_considered": []
+      },
+      "specialist_required": {
+        "selected_value": true,
+        "confidence": 0.95,
+        "reasoning": "Both sources consistently state MS specialist requirement. Provider manual: 'MS specialist must submit'. Web page: 'MS specialist submission required'.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2024-01-01",
+            "value": true,
+            "weight": "high"
+          },
+          {
+            "source": "web_page",
+            "date": "2025-04-01",
+            "value": true,
+            "weight": "high"
+          }
+        ]
+      },
+      "specific_testing": {
+        "selected_value": [
+          "JCV testing"
+        ],
+        "confidence": 0.8,
+        "reasoning": "Provider manual states 'JCV testing recommended' for Ocrevus. Web page does not mention specific testing for Ocrevus in extracted data.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2024-01-01",
+            "value": [
+              "JCV testing"
+            ],
+            "weight": "high"
+          }
+        ]
+      },
+      "indication_specific_requirements": {
+        "selected_value": "not_specified",
+        "confidence": 0.7,
+        "reasoning": "Sources do not specify different requirements by MS indication type.",
+        "sources_considered": []
+      },
+      "diagnosis_restrictions": {
+        "selected_value": [
+          "multiple_sclerosis"
+        ],
+        "confidence": 0.85,
+        "reasoning": "MS specialist requirement implies this is for multiple sclerosis indications.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2024-01-01",
+            "value": [
+              "MS"
+            ],
+            "weight": "high"
+          }
+        ]
+      },
+      "notes": {
+        "selected_value": "MS specialist must submit. JCV testing recommended.",
+        "confidence": 0.9,
+        "reasoning": "Key requirements from provider manual.",
+        "sources_considered": [
+          {
+            "source": "provider_manual",
+            "date": "2024-01-01",
+            "value": "Specialist and testing requirements",
+            "weight": "high"
+          }
+        ]
+      },
+      "drug_specific_turnaround": {
+        "selected_value": "not_specified",
+        "confidence": 0.7,
+        "reasoning": "No sources mention drug-specific turnaround times for Ocrevus.",
+        "sources_considered": []
+      }
+    },
+    "Tysabri": {
+      "step_therapy_required": {
+        "selected_value": false,
+        "confidence": 0.75,
+        "reasoning": "Web page does not mention step therapy requirements for Tysabri.",
+        "sources_considered": [
+          {
+            "source": "web_page",
+            "date": "2025-04-01",
+            "value": false,
+            "weight": "medium"
+          }
+        ]
+      },
+      "prior_treatment_failure_required": {
+        "selected_value": false,
+        "confidence": 0.75,
+        "reasoning": "Web page does not mention prior treatment failure requirements for Tysabri.",
+        "sources_considered": [
+          {
+            "source": "web_page",
+            "date": "2025-04-01",
+            "value": false,
+            "weight": "medium"
+          }
+        ]
+      },
+      "biosimilar_requirement": {
+        "selected_value": "not_applicable",
+        "confidence": 0.9,
+        "reasoning": "Tysabri (natalizumab) does not have biosimilar versions currently available.",
+        "sources_considered": [
+          {
+            "source": "web_page",
+            "date": "2025-04-01",
+            "value": "not_stated",
+            "weight": "medium"
+          }
+        ]
+      },
+      "preferred_biosimilars": {
+        "selected_value": "not_applicable",
+        "confidence": 0.9,
+        "reasoning": "Tysabri does not have biosimilar versions.",
+        "sources_considered": []
+      },
+      "auth_period_months": {
+        "selected_value": "not_specified",
+        "confidence": 0.7,
+        "reasoning": "Web page mentions requirements but not authorization period for Tysabri.",
+        "sources_considered": []
+      },
+      "auth_period_initial_months": {
+        "selected_value": "not_specified",
+        "confidence": 0.7,
+        "reasoning": "Not specified in available sources.",
+        "sources_considered": []
+      },
+      "auth_period_renewal_months": {
+        "selected_value": "not_specified",
+        "confidence": 0.7,
+        "reasoning": "Not specified in available sources.",
+        "sources_considered": []
+      },
+      "specialist_required": {
+        "selected_value": "not_specified",
+        "confidence": 0.6,
+        "reasoning": "Web page does not specify specialist requirement, though TOUCH enrollment suggests specialist involvement is likely.",
+        "sources_considered": []
+      },
+      "specific_testing": {
+        "selected_value": [
+          "JCV testing",
+          "TOUCH enrollment"
+        ],
+        "confidence": 0.9,
+        "reasoning": "Web page clearly states 'JCV testing + TOUCH enrollment' requirements for Tysabri.",
+        "sources_considered": [
+          {
+            "source": "web_page",
+            "date": "2025-04-01",
+            "value": [
+              "JCV testing",
+              "TOUCH enrollment"
+            ],
+            "weight": "high"
+          }
+        ]
+      },
+      "indication_specific_requirements": {
+        "selected_value": "not_specified",
+        "confidence": 0.7,
+        "reasoning": "Sources do not specify different requirements by indication.",
+        "sources_considered": []
+      },
+      "diagnosis_restrictions": {
+        "selected_value": [
+          "multiple_sclerosis"
+        ],
+        "confidence": 0.8,
+        "reasoning": "TOUCH enrollment and JCV testing are specific to MS use of Tysabri.",
+        "sources_considered": []
+      },
+      "notes": {
+        "selected_value": "JCV testing and TOUCH enrollment required.",
+        "confidence": 0.9,
+        "reasoning": "Key requirements from web page.",
+        "sources_considered": [
+          {
+            "source": "web_page",
+            "date": "2025-04-01",
+            "value": "Testing and enrollment requirements",
+            "weight": "high"
+          }
+        ]
+      },
+      "drug_specific_turnaround": {
+        "selected_value": "not_specified",
+        "confidence": 0.7,
+        "reasoning": "No sources mention drug-specific turnaround times for Tysabri.",
+        "sources_considered": []
+      }
+    }
+  },
+  "missing_fields": []
+}
